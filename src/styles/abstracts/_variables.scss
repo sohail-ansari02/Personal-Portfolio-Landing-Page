@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$roboto-font-stack: "Roboto", sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Monaco", monospace !default;
+
+$--primary: --primary;
+$--secondary: --secondary;
+$--neutral: --neutral;
+$--background: --background;
+$--surface: --surface;
+$--alert: --alert;
+
+$colors-light: (
+  $--primary: hsl(230, 7%, 16%),
+  $--secondary: hsl(67.83deg 81.18% 66.67%),
+  $--neutral: hsl(230deg 4.76% 24.71%),
+  $--background: hsl(240deg 10% 96.08%),
+  $--surface: hsl(0deg 0% 100%),
+  $--alert: hsl(6.27deg 70.53% 62.75%),
+);
+
+$colors-dark: (
+  $--primary: hsl(233, 13%, 13%),
+  $--secondary: hsl(68, 58%, 48%),
+  $--neutral: hsl(225, 2%, 48%),
+  $--background: hsl(240, 10%, 8%),
+  $--surface: hsl(0, 1%, 26%),
+  $--alert: hsl(6.27deg 70.53% 42.75%),
+);
+
+/// Container's maximum width
+/// @type Length
+$max-width: 120em !default; //1920px
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "small": 20em,
+  "medium": 48em,
+  "large": 64em,
+) !default;
+
+/// Z-indexes map, gathering all Z layers of the application
+/// @access private
+/// @type Map
+/// @prop {String} key - Layer’s name
+/// @prop {Number} value - Z value mapped to the key
+$z-indexes: (
+  "below": -1,
+  "default": 1,
+  "top-bar": 2,
+  "dropdown": 3,
+  "modal": 4,
+);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'https://cdn.example.com/assets/';
+$base-url: "/assets/" !default;

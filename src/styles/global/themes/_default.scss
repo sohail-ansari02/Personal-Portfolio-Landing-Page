@@ -1,0 +1,8 @@
+:root,
+.light {
+  @include theme($colors-light);
+}
+
+.dark {
+  @include theme($colors-dark);
+}
