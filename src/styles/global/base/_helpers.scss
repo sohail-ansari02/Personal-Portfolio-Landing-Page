@@ -10,6 +10,7 @@
     &-full {
       @extend .container;
       width: 100%;
+      max-width: none;
       display: block;
     }
   }

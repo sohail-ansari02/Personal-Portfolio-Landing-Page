@@ -1,12 +1,12 @@
 @import "abstracts";
 .header {
-  @extend .font-600 !optional;
   $gap: toRem(120);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: toRem(22);
+  padding-block: toRem(15);
 
   &__logo {
     width: 175;
