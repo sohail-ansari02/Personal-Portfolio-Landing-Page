@@ -2,3 +2,30 @@
 // This file contains very basic styles.
 // i.e all links should have red underline
 // -----------------------------------------------------------------------------
+body{
+  color: #222222;
+  font-family: 'Work Sans', sans-serif;
+}
+.special {
+  color: #07f;
+}
+h1 {
+  font-size: toRem(60);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25em;
+}
+h2 {
+  font-size: toRem(20);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: toRem(50);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
