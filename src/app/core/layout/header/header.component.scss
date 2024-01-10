@@ -1,0 +1,41 @@
+@import "abstracts";
+.header {
+  $gap: toRem(120);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: toRem(22);
+  padding-block: toRem(15);
+
+  &__logo {
+    width: 175;
+    height: auto;
+    aspect-ratio: 175/50;
+    flex-shrink: 0;
+  }
+  &__nav {
+    display: flex;
+    flex-shrink: 1;
+    gap: $gap;
+  }
+  &__btn {
+    flex-shrink: 0;
+    align-self: center;
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: toRem(40);
+    flex-wrap: wrap;
+    row-gap: toRem(12);
+  }
+  &__link {
+    color: #333;
+    font-size: toRem(18);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+}
