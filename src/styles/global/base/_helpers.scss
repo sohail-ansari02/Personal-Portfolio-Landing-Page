@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .container {
-    max-width: var($max-width);
+    max-width: $max-width;
     margin-inline: auto;
     width: calc(100% - 8.75rem);
     display: block;
@@ -13,7 +13,7 @@
       display: block;
     }
   }
-  
+
   /**
      * Hide text while making it readable for screen readers
      * 1. Needed in WebKit-based browsers because of an implementation bug;
@@ -25,7 +25,7 @@
     text-indent: 101%;
     white-space: nowrap;
   }
-  
+
   /**
      * Hide element while making it readable for screen readers
      * Shamelessly borrowed from HTML5Boilerplate:
@@ -41,4 +41,3 @@
     position: absolute;
     width: 1px;
   }
-  
