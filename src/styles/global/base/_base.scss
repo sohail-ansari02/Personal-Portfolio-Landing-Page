@@ -10,9 +10,6 @@ body{
   color: #222222;
   font-family: 'Work Sans', sans-serif;
 }
-.special {
-  color: #07f;
-}
 h1 {
   font-size: toRem(60);
   font-style: normal;
@@ -35,4 +32,8 @@ h3 {
 }
 a {
   cursor: pointer;
+}
+
+.special {
+  color: #07f;
 }
