@@ -3,11 +3,11 @@
 // i.e all links should have red underline
 // -----------------------------------------------------------------------------
 *::selection{
-  background-color: var($--clr-primary-1);
-  color: var($--clr-white-8);
+  background-color: $--clr-primary-1;
+  color: $--clr-white-8;
 }
 body{
-  color: var($--clr-secondary-1);
+  color: $--clr-secondary-1;
   font-family: 'Work Sans', sans-serif;
 }
 h1 {
@@ -35,5 +35,5 @@ a {
 }
 
 .special {
-  color: var($--clr-primary-1);
+  color: $--clr-primary-1;
 }
