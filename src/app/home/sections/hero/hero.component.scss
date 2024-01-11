@@ -1,9 +1,17 @@
 @import "abstracts";
 .hero {
+  $header-height: toRem(95);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  // old code
   padding-block: toRem(95) toRem(100);
+
+  // ṇew code
+  // height: calc(100vh - $header-height);
+  // padding: 0;
+
   &__content {
     display: flex;
     flex-direction: column;
