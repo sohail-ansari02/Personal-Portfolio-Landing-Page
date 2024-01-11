@@ -3,9 +3,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: toRem(50) toRem(81);
   &-wrapper{
     background: #07f;
-    padding: toRem(50) toRem(81);
   }
   &__right {
     display: flex;
