@@ -6,12 +6,12 @@
   padding: toEm(17) toEm(33);
   text-align: center;
   border-radius: 50px;
-  background: #07F;
-  color: #FFF;
+  background: var($--clr-primary-1);
+  color: var($--clr-white-8);
 }
 .btn-outlined{
   @extend .btn;
-  background-color: white;
-  color: #07F;
-  border: 1px solid #07F;
+  background-color: var($--clr-white-8);
+  color: var($--clr-primary-1);
+  border: 1px solid var($--clr-primary-1);
 }

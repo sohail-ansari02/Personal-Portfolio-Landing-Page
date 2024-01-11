@@ -5,14 +5,14 @@
   align-items: center;
   &-wrapper{
     padding: toRem(50);
-    background: #07f;
+    background: var($--clr-primary-1);
   }
   &__right {
     display: flex;
     align-items: center;
     gap: toRem(30);
     &-text {
-      color: #79b2f2;
+      color: var($--clr-primary-2);
       font-size: toRem(16);
       font-style: normal;
       font-weight: 400;
@@ -32,7 +32,7 @@
       gap: toRem(33);
     }
     &-text {
-      color: #79b2f2;
+      color: var($--clr-primary-2);
       font-size: toRem(18);
       font-style: normal;
       font-weight: 600;
