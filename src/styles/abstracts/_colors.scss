@@ -1,24 +1,74 @@
-:root {
-    --clr-primary: #0077FF;
-    --clr-primary2: #79B2F2;
-    --clr-primary3: #0078FF;
-    --clr-primary4: #00489A;
+$clr-primary-1: --clr-primary-1;
+$clr-primary-2: --clr-primary-2;
+$clr-primary-3: --clr-primary-3;
+$clr-primary-4: --clr-primary-4;
 
-    --clr-secondary: #FFFFFF;
-    --clr-secondary1: #DDDDDD;
-    --clr-secondary2: #E9EFFF;
-    --clr-secondary3: #EEEEEE;
-    --clr-secondary4: #CCCCCC;
-    --clr-secondary5: #F2F2F2;
-    --clr-secondary6: #F8F8F8;
-    --clr-secondary7: #E6E6E6;
+$clr-secondary-1: --clr-secondary-1;
+$clr-secondary-2: --clr-secondary-2;
+$clr-secondary-3: --clr-secondary-3;
+$clr-secondary-4: --clr-secondary-4;
+$clr-secondary-5: --clr-secondary-5;
+$clr-secondary-6: --clr-secondary-6;
 
-    --clr-on-primary: #FFB400;
+$clr-white-1: --clr-white-1;
+$clr-white-2: --clr-white-2;
+$clr-white-3: --clr-white-3;
+$clr-white-4: --clr-white-4;
+$clr-white-5: --clr-white-5;
+$clr-white-6: --clr-white-6;
+$clr-white-7: --clr-white-7;
+$clr-white-8: --clr-white-8;
 
-    --clr-on-secondary: #333333;
-    --clr-on-secondary1: #222222;
-    --clr-on-secondary2: #000000;
-    --clr-on-secondary3: #666666;
-    --clr-on-secondary4: #333333;
-    --clr-on-secondary5: #141B34;
-  }
+$--clr-yellow: --clr-yellow;
+
+
+$colors-light: (
+  $--clr-primary-1: #0077ff,
+  $--clr-primary-2: #79b2f2,
+  $--clr-primary-3: #0078ff,
+  $--clr-primary-4: #00489a,
+
+  $--clr-secondary-1: #222222,
+  $--clr-secondary-2: #000000,
+  $--clr-secondary-3: #666666,
+  $--clr-secondary-4: #333333,
+  $--clr-secondary-5: #141b34,
+  $--clr-secondary-6: #333333,
+
+  $--clr-white-1: #dddddd,
+  $--clr-white-2: #e9efff,
+  $--clr-white-3: #eeeeee,
+  $--clr-white-4: #cccccc,
+  $--clr-white-5: #f2f2f2,
+  $--clr-white-6: #f8f8f8,
+  $--clr-white-7: #e6e6e6,
+  $--clr-white-8: #ffffff,
+
+  $--clr-yellow: #ffb400,
+);
+
+
+$colors-dark: (
+  $--clr-primary-1: #0077ff,
+  $--clr-primary-2: #79b2f2,
+  $--clr-primary-3: #0078ff,
+  $--clr-primary-4: #00489a,
+
+  $--clr-secondary-1: #222222,
+  $--clr-secondary-2: #000000,
+  $--clr-secondary-3: #666666,
+  $--clr-secondary-4: #333333,
+  $--clr-secondary-5: #141b34,
+  $--clr-secondary-6: #333333,
+
+  $--clr-white-1: #dddddd,
+  $--clr-white-2: #e9efff,
+  $--clr-white-3: #eeeeee,
+  $--clr-white-4: #cccccc,
+  $--clr-white-5: #f2f2f2,
+  $--clr-white-6: #f8f8f8,
+  $--clr-white-7: #e6e6e6,
+  $--clr-white-8: #ffffff,
+
+  $--clr-yellow: #ffb400,
+);

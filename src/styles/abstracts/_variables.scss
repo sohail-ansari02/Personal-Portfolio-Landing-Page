@@ -11,31 +11,6 @@ $roboto-font-stack: "Roboto", sans-serif !default;
 $code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
   "Monaco", monospace !default;
 
-$--primary: --primary;
-$--secondary: --secondary;
-$--neutral: --neutral;
-$--background: --background;
-$--surface: --surface;
-$--alert: --alert;
-
-$colors-light: (
-  $--primary: hsl(230, 7%, 16%),
-  $--secondary: hsl(67.83deg 81.18% 66.67%),
-  $--neutral: hsl(230deg 4.76% 24.71%),
-  $--background: hsl(240deg 10% 96.08%),
-  $--surface: hsl(0deg 0% 100%),
-  $--alert: hsl(6.27deg 70.53% 62.75%),
-);
-
-$colors-dark: (
-  $--primary: hsl(233, 13%, 13%),
-  $--secondary: hsl(68, 58%, 48%),
-  $--neutral: hsl(225, 2%, 48%),
-  $--background: hsl(240, 10%, 8%),
-  $--surface: hsl(0, 1%, 26%),
-  $--alert: hsl(6.27deg 70.53% 42.75%),
-);
-
 /// Container's maximum width
 /// @type Length
 $max-width: 78.562em !default; //1257px
