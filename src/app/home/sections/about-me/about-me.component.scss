@@ -1,9 +1,9 @@
 @import "abstracts";
-.hero {
-  $header-height: toRem(95);
+.about-me {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
+  gap: toRem(30);
 
   // old code
   padding-block: toRem(95) toRem(100);
@@ -16,36 +16,34 @@
     display: flex;
     flex-direction: column;
     gap: toRem(10);
-    flex: 0 1 toRem(544);
+    flex: 0 1 toRem(620);
   }
   &__heading {
     text-align: left;
   }
-  &__sub-heading {
-    font-size: toRem(25);
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    color: $--clr-secondary-1;
-    text-transform: none;
-  }
   &__para {
     color: $--clr-secondary-1;
-    font-size: toRem(25);
+    font-size: toRem(18);
     font-style: normal;
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.38; /* 138.889% */
   }
   &__buttons {
     display: flex;
-    gap: toRem(44);
-    margin-block-start: toRem(40);
+    gap: toRem(25);
+    margin-block-start: toRem(100);
+    flex-wrap: wrap;
+  }
+  &__btn{
+    flex: 1;
+    min-width: max-content;
   }
   &__image {
+    align-self: center;
     border-radius: 50%;
-    width: toRem(553);
+    width: toRem(627);
     height: auto;
-    aspect-ratio: 1;
-    flex: 0 0.5 toRem(553);
+    aspect-ratio: 627/623;
+    flex: 0 0.5 toRem(627);
   }
 }

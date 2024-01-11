@@ -25,6 +25,8 @@ h2 {
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1px;
+  color: $--clr-primary-1;
+  text-transform: uppercase;
 }
 h3 {
   font-size: toRem(50);
@@ -38,4 +40,7 @@ a,button {
 
 .special {
   color: $--clr-primary-1;
+}
+.strong{
+  font-weight: 700;
 }
