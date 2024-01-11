@@ -1,1 +1,32 @@
-<p>footer works!</p>
+<div class="footer-wrapper container-full">
+  <footer class="footer container">
+    <span class="footer__right">
+      <img
+        class="footer__logo"
+        src="../../../../assets/images/logo/white-logo.svg"
+        alt="AeroVision"
+        width="175"
+        height="50"
+      />
+      <span class="footer__right-text"
+        >© Copyright 2023. All Rights Reserved.</span
+      >
+    </span>
+    <span class="footer__social-media">
+      <span class="footer__social-text"> FOLLOW US: </span>
+      <ul class="footer__social-links">
+        <li *ngFor="let i of [1, 2, 3, 4]" class="footer__social-link-item">
+          <a href="#" class="footer__social-link">
+            <img
+              class="footer__social-icon"
+              src="https://picsum.photos/30"
+              alt=""
+              width="30"
+              height="30"
+            />
+          </a>
+        </li>
+      </ul>
+    </span>
+  </footer>
+</div>

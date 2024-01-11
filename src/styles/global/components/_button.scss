@@ -1,0 +1,17 @@
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  gap: toRem(15);
+  font-size: toRem(20);
+  padding: toEm(17) toEm(33);
+  text-align: center;
+  border-radius: 50px;
+  background: #07F;
+  color: #FFF;
+}
+.btn-outlined{
+  @extend .btn;
+  background-color: white;
+  color: #07F;
+  border: 1px solid #07F;
+}

@@ -1,0 +1,46 @@
+@import "abstracts";
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: toRem(50) toRem(81);
+  &-wrapper{
+    background: #07f;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: toRem(30);
+    &-text {
+      color: #79b2f2;
+      font-size: toRem(16);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+  &__logo {
+    width: 175;
+    height: auto;
+    aspect-ratio: 175/50;
+    flex-shrink: 0;
+  }
+  &__social {
+    &-media {
+      display: flex;
+      align-items: center;
+      gap: toRem(33);
+    }
+    &-text {
+      color: #79b2f2;
+      font-size: toRem(18);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1; /* 100% */
+    }
+    &-links {
+      display: flex;
+      gap: toRem(8);
+    }
+  }
+}
