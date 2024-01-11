@@ -1,17 +1,29 @@
 .btn {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
   gap: toRem(15);
+
   font-size: toRem(20);
   padding: toEm(17) toEm(33);
   text-align: center;
   border-radius: 50px;
-  background: var($--clr-primary-1);
-  color: var($--clr-white-8);
+  background: $--clr-primary-1;
+  color: $--clr-white-8;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  & img{
+    width: 1.25rem;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain
+  }
 }
-.btn-outlined{
+.btn-outlined {
   @extend .btn;
-  background-color: var($--clr-white-8);
-  color: var($--clr-primary-1);
-  border: 1px solid var($--clr-primary-1);
+  background-color: $--clr-white-8;
+  color: $--clr-primary-1;
+  border: 1px solid $--clr-primary-1;
 }
