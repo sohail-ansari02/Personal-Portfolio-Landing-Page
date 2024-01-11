@@ -1,0 +1,35 @@
+@import "abstracts";
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: toRem(95) toRem(100);
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    flex: 0 1  toRem(544);
+  }
+  &__heading{
+    text-align: left;
+  }
+  &__para {
+    color: $--clr-secondary-1;
+    font-size: toRem(25);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  &__buttons {
+    display: flex;
+    gap: toRem(44);
+    margin-block-start: toRem(40);
+  }
+  &__image{
+    border-radius: 50%;
+    width: toRem(553);
+    height: auto;
+    aspect-ratio: 1;
+    flex: 0 .5  toRem(553);
+  }
+}
