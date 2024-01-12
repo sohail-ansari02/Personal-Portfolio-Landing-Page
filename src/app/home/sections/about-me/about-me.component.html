@@ -1,11 +1,20 @@
 <section class="about-me container">
-  <img
-    src="assets/images/profile/profile-pic.png"
-    alt="about-me image"
-    class="about-me__image"
-    width="627"
-    height="623"
-  />
+  <picture class="about-me__picture">
+    <img
+      src="assets/images/profile/profile-pic.png"
+      alt="about-me image"
+      class="about-me__image"
+      width="627"
+      height="623"
+    />
+    <img
+      src="assets/images/profile/profile-pic-bg.png"
+      alt="about-me image"
+      class="about-me__bg-image"
+      width="627"
+      height="623"
+    />
+  </picture>
 
   <div class="about-me__content">
     <h2>about me</h2>
@@ -25,5 +34,34 @@
       <button class="about-me__btn btn-outlined">Awards</button>
       <button class="about-me__btn btn-outlined">Education</button>
     </div>
+    <ul class="about-me__list">
+      <li class="about-me__list-item">
+        <span class="about-me__skill-name">
+          User Experience Design - UI/UX
+        </span>
+        <app-progress-bar
+          [value]="95"
+          class="about-me__progress"
+        ></app-progress-bar>
+      </li>
+      <li class="about-me__list-item">
+        <span class="about-me__skill-name">
+          Web & User Interface Design - Development
+        </span>
+        <app-progress-bar
+          [value]="80"
+          class="about-me__progress"
+        ></app-progress-bar>
+      </li>
+      <li class="about-me__list-item">
+        <span class="about-me__skill-name">
+          Interaction Design - Animation
+        </span>
+        <app-progress-bar
+          [value]="70"
+          class="about-me__progress"
+        ></app-progress-bar>
+      </li>
+    </ul>
   </div>
 </section>

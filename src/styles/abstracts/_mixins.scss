@@ -48,7 +48,7 @@
       inspect($raw-query)
     );
 
-    @media (min-width: #{$query}) {
+    @media (max-width: #{$query}) {
       @content;
     }
   } @else {

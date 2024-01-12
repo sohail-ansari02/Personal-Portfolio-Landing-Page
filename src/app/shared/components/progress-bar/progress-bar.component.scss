@@ -1,0 +1,20 @@
+@import "abstracts";
+:host{
+  width: 100%;
+  height: toRem(17);
+}
+.bar{
+  height: inherit;
+  width: inherit;
+  border-radius: 10px;
+
+}
+.bar-bg{
+  @extend .bar;
+  background-color: $--clr-white-3;
+
+}
+.bar-preogress{
+  @extend .bar;
+  background-color: $--clr-primary-1;
+}

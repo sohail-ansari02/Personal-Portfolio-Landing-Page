@@ -2,6 +2,12 @@
 // This file contains very basic styles.
 // i.e all links should have red underline
 // -----------------------------------------------------------------------------
+:root{
+  @include respond-to(large){
+    font-size: 1.1vw;
+  }
+}
+
 *::selection{
   background-color: $--clr-primary-1;
   color: $--clr-white-8;

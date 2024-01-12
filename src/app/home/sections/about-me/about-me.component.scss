@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: toRem(10);
-    flex: 0 1 toRem(620);
+    flex: 0 3 toRem(620);
   }
   &__heading {
     text-align: left;
@@ -30,20 +30,52 @@
   }
   &__buttons {
     display: flex;
+    justify-content: space-between;
     gap: toRem(25);
     margin-block-start: toRem(100);
-    flex-wrap: wrap;
   }
-  &__btn{
+  &__btn {
     flex: 1;
-    min-width: max-content;
+    min-width: fit-content;
+  }
+
+  &__picture {
+    position: relative;
+    // align-self: center;
+    flex: 0 1.6 toRem(627);
   }
   &__image {
-    align-self: center;
-    border-radius: 50%;
-    width: toRem(627);
+    width: 100%;
     height: auto;
     aspect-ratio: 627/623;
-    flex: 0 0.5 toRem(627);
+    border-radius: 50%;
+  }
+  &__bg-image {
+    position: absolute;
+    z-index: zIndex("below");
+
+    top: toRem(134);
+    right: toRem(20);
+
+    width: toRem(765);
+    height: auto;
+    aspect-ratio: 1;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(25);
+    margin-block-start: toRem(35);
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(9);
+    }
+  }
+  &__skill-name {
+    color: $--clr-secondary-1;
+    font-size: toRem(20);
+    font-weight: 600;
+    line-height: 1.5;
   }
 }
