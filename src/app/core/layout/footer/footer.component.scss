@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   &-wrapper{
-    padding: toRem(50);
+    padding-block: toRem(50);
     background: $--clr-primary-1;
   }
   &__right {
