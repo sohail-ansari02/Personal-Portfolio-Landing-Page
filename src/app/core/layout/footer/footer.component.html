@@ -15,12 +15,15 @@
     <span class="footer__social-media">
       <span class="footer__social-text"> FOLLOW US: </span>
       <ul class="footer__social-links">
-        <li *ngFor="let i of [1, 2, 3, 4]" class="footer__social-link-item">
+        <li
+          *ngFor="let name of ['facebook', 'x', 'linkedin', 'email']"
+          class="footer__social-link-item"
+        >
           <a href="#" class="footer__social-link">
             <img
               class="footer__social-icon"
               src="https://picsum.photos/30"
-              alt=""
+              alt="{{name}}"
               width="30"
               height="30"
             />
