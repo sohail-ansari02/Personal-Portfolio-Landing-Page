@@ -30,13 +30,16 @@
   }
   &__buttons {
     display: flex;
+    justify-content: space-between;
     gap: toRem(25);
     margin-block-start: toRem(100);
   }
   &__btn{
+
     flex: 1;
-    min-width: max-content;
+    min-width: auto;
   }
+
   &__image {
     align-self: center;
     border-radius: 50%;
