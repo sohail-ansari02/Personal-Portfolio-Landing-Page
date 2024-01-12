@@ -36,12 +36,12 @@
   }
   &__btn {
     flex: 1;
-    min-width: auto;
+    min-width: fit-content;
   }
 
   &__picture {
     position: relative;
-    align-self: center;
+    // align-self: center;
     flex: 0 1.6 toRem(627);
   }
   &__image {
@@ -52,9 +52,30 @@
   }
   &__bg-image {
     position: absolute;
-    z-index: zIndex('below');
+    z-index: zIndex("below");
 
     top: toRem(134);
     right: toRem(20);
+
+    width: toRem(765);
+    height: auto;
+    aspect-ratio: 1;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(25);
+    margin-block-start: toRem(35);
+    &-item {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(9);
+    }
+  }
+  &__skill-name {
+    color: $--clr-secondary-1;
+    font-size: toRem(20);
+    font-weight: 600;
+    line-height: 1.5;
   }
 }

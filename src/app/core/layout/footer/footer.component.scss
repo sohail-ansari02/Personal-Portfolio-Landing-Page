@@ -20,7 +20,7 @@
     }
   }
   &__logo {
-    width: 175;
+    width: toRem(175);
     height: auto;
     aspect-ratio: 175/50;
     flex-shrink: 0;
@@ -41,6 +41,11 @@
     &-links {
       display: flex;
       gap: toRem(8);
+    }
+    &-icon{
+      width: toRem(30);
+      height: auto;
+      aspect-ratio: 1;
     }
   }
 }
