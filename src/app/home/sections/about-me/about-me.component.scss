@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: toRem(10);
-    flex: 0 1 toRem(620);
+    flex: 0 3 toRem(620);
   }
   &__heading {
     text-align: left;
@@ -32,7 +32,6 @@
     display: flex;
     gap: toRem(25);
     margin-block-start: toRem(100);
-    flex-wrap: wrap;
   }
   &__btn{
     flex: 1;
@@ -44,6 +43,6 @@
     width: toRem(627);
     height: auto;
     aspect-ratio: 627/623;
-    flex: 0 0.5 toRem(627);
+    flex: 0 .6 toRem(627);
   }
 }
