@@ -34,18 +34,27 @@
     gap: toRem(25);
     margin-block-start: toRem(100);
   }
-  &__btn{
-
+  &__btn {
     flex: 1;
     min-width: auto;
   }
 
-  &__image {
+  &__picture {
+    position: relative;
     align-self: center;
-    border-radius: 50%;
-    width: toRem(627);
+    flex: 0 1.6 toRem(627);
+  }
+  &__image {
+    width: 100%;
     height: auto;
     aspect-ratio: 627/623;
-    flex: 0 .6 toRem(627);
+    border-radius: 50%;
+  }
+  &__bg-image {
+    position: absolute;
+    z-index: zIndex('below');
+
+    top: toRem(134);
+    right: toRem(20);
   }
 }

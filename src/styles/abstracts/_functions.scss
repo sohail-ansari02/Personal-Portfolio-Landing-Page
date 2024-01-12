@@ -53,6 +53,6 @@
 /// @param {String} $layer - Layer’s name
 /// @return {Number}
 /// @require $z-indexes
-@function z($layer) {
+@function zIndex($layer) {
   @return map-get($z-indexes, $layer);
 }
