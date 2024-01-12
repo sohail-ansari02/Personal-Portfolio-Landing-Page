@@ -7,7 +7,7 @@
   font-size: toRem(20);
   padding: toEm(17) toEm(33);
   text-align: center;
-  border-radius: 50px;
+  border-radius: toRem(50);
   background: $--clr-primary-1;
   color: $--clr-white-8;
   font-style: normal;

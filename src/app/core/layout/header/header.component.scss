@@ -28,6 +28,7 @@
   &__links {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: toRem(40);
     flex-wrap: wrap;
     row-gap: toRem(12);
