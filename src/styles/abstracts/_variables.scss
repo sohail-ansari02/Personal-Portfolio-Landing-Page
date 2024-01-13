@@ -13,7 +13,7 @@ $code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
 
 /// Container's maximum width
 /// @type Length
-$max-width: 78.562em !default; //1257px
+$max-width: 90em !default; //1180px
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
@@ -21,7 +21,7 @@ $max-width: 78.562em !default; //1257px
 $breakpoints: (
   "small": 20em,
   "medium": 48em,
-  "large": 64em,
+  "large": 90em,
 ) !default;
 
 /// Z-indexes map, gathering all Z layers of the application

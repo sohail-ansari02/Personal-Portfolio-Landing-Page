@@ -5,7 +5,7 @@
 .container {
     max-width: $max-width;
     margin-inline: auto;
-    width: calc(100% - 8.75rem);
+    width: calc(100% - toRem(70));
     display: block;
     &-full {
       @extend .container;
