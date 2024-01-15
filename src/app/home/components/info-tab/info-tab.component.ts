@@ -8,8 +8,8 @@ import { Tabs } from 'src/app/shared/interfaces/tabs';
   templateUrl: './info-tab.component.html',
   styleUrls: ['./info-tab.component.scss'],
 })
-export class InfoTabComponent implements OnInit, Tabs<Info, InfoList> {
-  tabData: InfoList[] = [];
+export class InfoTabComponent implements OnInit, Tabs<Info> {
+  tabData: InfoList<Info>[] = [];
   selectedTab: string = '';
   selectedData: Info[] = [];
   constructor() {}

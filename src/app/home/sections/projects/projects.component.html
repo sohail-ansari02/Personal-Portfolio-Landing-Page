@@ -1,0 +1,33 @@
+<section class="projects container">
+  <h2 class="projects__heading">Our projects</h2>
+  <h3 class="projects__sub-heading">
+    Presenting My Design <br />
+    Portfolio and Case Studies
+  </h3>
+  <div class="projects__buttons">
+    <ng-container *ngFor="let tab of tabs">
+      <button
+        (click)="onSelectTab(tab)"
+        [ngClass]="{
+          projects__btn: true,
+          btn: selectedTab == tab.toLowerCase(),
+          'btn-outlined': selectedTab != tab.toLowerCase()
+        }"
+      >
+        {{ tab }}
+      </button>
+    </ng-container>
+  </div>
+  <ul class="projects__list">
+    <li
+      *ngFor="let project of tabData | project : selectedTab"
+      class="projects__list-item"
+    >
+      <img
+        class="projects__image"
+        [src]="project.imgPath"
+        [alt]="project.name"
+      />
+    </li>
+  </ul>
+</section>

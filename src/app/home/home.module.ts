@@ -9,6 +9,8 @@ import { SharedModule } from '../shared/shared.module';
 import { InfoTabComponent } from './components/info-tab/info-tab.component';
 import { SupportsComponent } from './sections/supports/supports.component';
 import { StatsComponent } from './sections/stats/stats.component';
+import { ProjectsComponent } from './sections/projects/projects.component';
+import { ProjectPipe } from './pipes/project.pipe';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { StatsComponent } from './sections/stats/stats.component';
     AboutMeComponent,
     InfoTabComponent,
     SupportsComponent,
-    StatsComponent
+    StatsComponent,
+    ProjectsComponent,
+    ProjectPipe
   ],
   imports: [
     CommonModule,

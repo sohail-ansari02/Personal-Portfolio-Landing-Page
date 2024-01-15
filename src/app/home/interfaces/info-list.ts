@@ -1,6 +1,6 @@
 import { Info } from "./info";
 
-export interface InfoList {
+export interface InfoList<T> {
     name: string;
-    list: Info[];
+    list: Array<T>;
 }
