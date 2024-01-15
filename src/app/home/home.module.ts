@@ -6,13 +6,17 @@ import { HomeComponent } from './home.component';
 import { HeroComponent } from './sections/hero/hero.component';
 import { AboutMeComponent } from './sections/about-me/about-me.component';
 import { SharedModule } from '../shared/shared.module';
+import { InfoTabComponent } from './components/info-tab/info-tab.component';
+import { SupportsComponent } from './sections/supports/supports.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     HeroComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    InfoTabComponent,
+    SupportsComponent
   ],
   imports: [
     CommonModule,

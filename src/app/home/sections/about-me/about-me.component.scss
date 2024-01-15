@@ -28,16 +28,6 @@
     font-weight: 400;
     line-height: 1.38; /* 138.889% */
   }
-  &__buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: toRem(25);
-    margin-block-start: toRem(100);
-  }
-  &__btn {
-    flex: 1;
-    min-width: fit-content;
-  }
 
   &__picture {
     position: relative;
@@ -59,23 +49,6 @@
 
     width: toRem(765);
     height: auto;
-    aspect-ratio: .9;
-  }
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: toRem(25);
-    margin-block-start: toRem(35);
-    &-item {
-      display: flex;
-      flex-direction: column;
-      gap: toRem(9);
-    }
-  }
-  &__skill-name {
-    color: $--clr-secondary-1;
-    font-size: toRem(20);
-    font-weight: 600;
-    line-height: 1.5;
+    aspect-ratio: 0.9;
   }
 }
