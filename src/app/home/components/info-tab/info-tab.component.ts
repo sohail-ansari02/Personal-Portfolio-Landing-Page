@@ -1,24 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoList } from '../../interfaces/info-list';
 import { Info } from '../../interfaces/info';
+import { Tabs } from 'src/app/shared/interfaces/tabs';
 
 @Component({
   selector: 'app-info-tab',
   templateUrl: './info-tab.component.html',
   styleUrls: ['./info-tab.component.scss'],
 })
-export class InfoTabComponent implements OnInit {
+export class InfoTabComponent implements OnInit, Tabs<Info, InfoList> {
   tabData: InfoList[] = [];
   selectedTab: string = '';
   selectedData: Info[] = [];
   constructor() {}
 
   ngOnInit(): void {
-    this.initData();
+    this.initTabData();
     this.selectedTab = this.tabData[0].name;
     this.selectedData = this.tabData[0].list;
   }
-  initData() {
+  initTabData() {
     this.tabData = [
       {
         name: 'Main Skills',
@@ -42,11 +43,11 @@ export class InfoTabComponent implements OnInit {
         list: [
           {
             name: 'Best Execution in UX Stratagy',
-            text: 'Web Agency'
+            text: 'Web Agency',
           },
           {
             name: 'Best UI designer',
-            text: 'Web Agency'
+            text: 'Web Agency',
           },
         ],
       },
@@ -55,7 +56,7 @@ export class InfoTabComponent implements OnInit {
         list: [
           {
             name: 'Masters in Computer Science (2017-2020)',
-            text: 'Savitribai Phule University'
+            text: 'Savitribai Phule University',
           },
           {
             name: 'School Name',
