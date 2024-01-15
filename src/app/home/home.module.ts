@@ -11,6 +11,7 @@ import { SupportsComponent } from './sections/supports/supports.component';
 import { StatsComponent } from './sections/stats/stats.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ProjectPipe } from './pipes/project.pipe';
+import { ClientsComponent } from './sections/clients/clients.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProjectPipe } from './pipes/project.pipe';
     SupportsComponent,
     StatsComponent,
     ProjectsComponent,
-    ProjectPipe
+    ProjectPipe,
+    ClientsComponent
   ],
   imports: [
     CommonModule,
