@@ -1,0 +1,20 @@
+<div class="stats-wrapper container-full">
+  <section class="stats container">
+    <img class="stats__bg-img" src="assets\images\stats\stats-bg.png" alt="" />
+    <h2 class="stats__heading h2">Our Milestones</h2>
+    <h3 class="stats__sub-heading">
+      What sets our studio apart <br />
+      for your projects?
+    </h3>
+    <ul class="stats__card-list">
+      <li *ngFor="let card of cards" class="stats__card-list-item">
+        <div class="stats__card card">
+          <span class="stats__card-value">
+            {{ card.value }}
+          </span>
+          <span class="stats__card-desc"> {{ card.desc }} </span>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
