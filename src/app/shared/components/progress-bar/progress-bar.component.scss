@@ -6,7 +6,7 @@
 .bar{
   height: inherit;
   width: inherit;
-  border-radius: 10px;
+  border-radius: toRem(10);
 
 }
 .bar-bg{

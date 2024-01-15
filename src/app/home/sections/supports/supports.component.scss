@@ -1,0 +1,18 @@
+@import "abstracts";
+.supports {
+  padding-block: toRem(80);
+  display: flex;
+  justify-content: stretch;
+  &-wrapper {
+    background-color: $--clr-white-6;
+  }
+  &-item {
+    flex: 1;
+  }
+  &-image {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 390/73;
+  }
+}

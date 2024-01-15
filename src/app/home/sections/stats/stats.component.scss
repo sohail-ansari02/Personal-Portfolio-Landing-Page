@@ -1,0 +1,62 @@
+@import "abstracts";
+.stats {
+  position: relative;
+  isolation: isolate;
+  padding-block: toRem(100) toRem(150);
+  text-align: center;
+  &-wrapper {
+    background-color: $--clr-primary-1;
+    overflow: hidden;
+  }
+  &__bg-img {
+    position: absolute;
+    top: toRem(9);
+    left: toRem(609);
+    width: toRem(890);
+    height: auto;
+    aspect-ratio: 1;
+    z-index: zIndex("below");
+  }
+  &__heading {
+    color: $--clr-white-2;
+    margin-block-end: toRem(24);
+  }
+  &__sub-heading {
+    color: $--clr-white-8;
+    margin-block-end: toRem(110);
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(30);
+    &-item {
+      // flex-grow: 1;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(15);
+    background-color: $--clr-white-8;
+    color: $--clr-secondary-6;
+    width: fit-content;
+    text-align: center;
+    &-list{
+      display: flex;
+      justify-content: space-between;
+      gap: toRem(30);
+    }
+    &-value {
+      font-size: toRem(50);
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1; /* 100% */
+    }
+    &-desc {
+      font-size: toRem(20);
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}

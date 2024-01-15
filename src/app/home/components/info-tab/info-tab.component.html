@@ -1,0 +1,29 @@
+<div class="tab-info__buttons">
+  <!-- <button class="tab-info__btn btn">Main Skills</button>
+  <button class="tab-info__btn btn-outlined">Awards</button> -->
+  <ng-container *ngFor="let tab of tabData">
+    <button
+      (click)="onSelectTab(tab.name)"
+      [ngClass]="{
+        'tab-info__btn': true,
+        btn: selectedTab == tab.name,
+        'btn-outlined': selectedTab != tab.name
+      }"
+    >
+      {{ tab.name }}
+    </button>
+  </ng-container>
+</div>
+<ul class="tab-info__list">
+  <li *ngFor="let data of selectedData" class="tab-info__list-item">
+    <span class="tab-info__skill-name"> {{ data.name }} </span>
+    <span *ngIf="data?.text" class="tab-info__skill-desc">
+      {{ data.text }}</span
+    >
+    <app-progress-bar
+      *ngIf="data?.progress"
+      [value]="data.progress"
+      class="tab-info__progress"
+    ></app-progress-bar>
+  </li>
+</ul>
