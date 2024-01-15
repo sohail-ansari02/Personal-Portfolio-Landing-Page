@@ -1,0 +1,82 @@
+@import "abstracts";
+.clients {
+  background-color: $--clr-white-8;
+  padding-block: toRem(80);
+  text-align: center;
+  &__heading {
+    margin-block-end: toRem(24);
+  }
+  &__sub-heading {
+    margin-block-end: toRem(50);
+  }
+  &__list {
+    @extend  %hideScrollbar;
+    display: flex;
+    gap: toRem(30);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+
+    &-item{
+      flex-shrink: 0;
+      scroll-snap-align: start;
+
+    }
+  }
+  &__card {
+    max-width: toRem(257);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(20);
+    border: 1px solid $--clr-white-1;
+    box-sizing: border-box;
+
+  }
+  &__photo {
+    width: toRem(150);
+    height: auto;
+    aspect-ratio: 1;
+  }
+  &__feedback {
+    color: $--clr-secondary-2;
+    font-size: toRem(16);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: toRem(5);
+    font-size: toRem(16);
+  }
+  &__name {
+    color: $--clr-secondary-2;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  &__position {
+    color: $--clr-secondary-3;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__ratings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: toRem(5);
+  }
+  &__star{
+    width: toRem(26);
+    height: auto;
+    aspect-ratio: 26/24.9;
+  }
+}
