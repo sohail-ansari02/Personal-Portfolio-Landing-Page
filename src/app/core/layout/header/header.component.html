@@ -1,4 +1,4 @@
-<header class="header container">
+<header id="home" class="header container">
   <img
     src="assets/images/logo/logo.svg"
     alt="AeroVision"
@@ -9,22 +9,9 @@
   />
   <nav class="header__nav">
     <ul class="header__links">
-      <li class="header__link-item">
-        <a class="header__link" href="#">Home</a>
+      <li *ngFor="let link of links" class="header__link-item">
+        <a class="header__link" href="#{{ link }}">{{ link }}</a>
       </li>
-      <li class="header__link-item">
-        <a class="header__link" href="#">About Me</a>
-      </li>
-      <li class="header__link-item">
-        <a class="header__link" href="#">Services</a>
-      </li>
-      <li class="header__link-item">
-        <a class="header__link" href="#">Blog</a>
-      </li>
-      <li class="header__link-item">
-        <a class="header__link" href="#">Contact Me</a>
-      </li>
-      <li class="header__link-item"></li>
     </ul>
 
     <button class="header__btn btn">Let’s chat</button>
