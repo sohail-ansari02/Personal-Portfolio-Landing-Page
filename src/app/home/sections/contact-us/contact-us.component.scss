@@ -87,6 +87,10 @@
       margin-inline-end: $gap;
       transform: scale(1.3);
       accent-color:  $--clr-primary-1;
+
+      cursor: pointer;
+      position: relative;
+      top: toRem(2);
     }
     &-submit-btn{
       width: fit-content;
@@ -94,6 +98,7 @@
     &__terms{
       color: $--clr-white-1;
       cursor: pointer;
+      line-height: 1;
     }
   }
 }
