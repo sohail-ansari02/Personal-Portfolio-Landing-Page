@@ -21,8 +21,9 @@
   }
   &__image {
     width: 100%;
-    height: auto;
-    aspect-ratio: 406/367;
+    height: 100%;
+    transition: 0.34s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    will-change: width, height;
   }
   &__list {
     transition: 0.34s;
@@ -32,6 +33,14 @@
     margin-block-start: toRem(50);
     &-item {
       @extend %fadeInEffect;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 406/367;
+      overflow: hidden;
+      cursor: pointer;
+      &:hover .projects__image {
+        transform: scale(1.05);
+      }
     }
   }
 }
