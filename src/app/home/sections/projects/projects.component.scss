@@ -39,7 +39,7 @@
       overflow: hidden;
       cursor: pointer;
       padding: 0;
-      border-radius: toRem(19);
+      // border-radius: toRem(19);
       &:hover .projects__image {
         transform: scale(1.05);
       }
