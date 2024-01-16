@@ -6,11 +6,11 @@
 .dark {
   @include theme($colors-dark);
 }
-:root {
-  @media (prefers-color-scheme: dark) {
-    @include theme($colors-dark);
-    img[class*="logo"]{
-      filter: grayscale(1) invert(1) brightness(1);
-    }
-  }
-}
+// :root {
+//   @media (prefers-color-scheme: dark) {
+//     @include theme($colors-dark);
+//     img[class*="logo"]{
+//       filter: grayscale(1) invert(1) brightness(1);
+//     }
+//   }
+// }
