@@ -19,6 +19,7 @@
     gap: toRem(25);
     margin-block-start: toRem(35);
     &-item {
+      @extend %fadeInEffect;
       display: flex;
       flex-direction: column;
       gap: toRem(6);

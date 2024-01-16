@@ -4,13 +4,15 @@
 // -----------------------------------------------------------------------------
 :root{
   @include respond-to(large){
-    font-size: 1.1vw;
+    // font-size: 1.1vw;
   }
 }
-
-*::selection{
-  background-color: $--clr-primary-1;
-  color: $--clr-white-8;
+*{
+  scroll-behavior: smooth;
+  &::selection{
+    background-color: $--clr-primary-1;
+    color: $--clr-white-8;
+  }
 }
 body{
   color: $--clr-secondary-1;
