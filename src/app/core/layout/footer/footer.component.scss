@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &-wrapper{
+  &-wrapper {
     padding-block: toRem(50);
     background: $--clr-primary-1;
   }
@@ -42,10 +42,8 @@
       display: flex;
       gap: toRem(8);
     }
-    &-icon{
-      width: toRem(30);
-      height: auto;
-      aspect-ratio: 1;
+    &-icon {
+      @include square(30);
     }
   }
 }

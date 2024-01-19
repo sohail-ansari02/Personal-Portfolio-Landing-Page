@@ -9,13 +9,12 @@
     overflow: hidden;
   }
   &__bg-img {
+    @include square(786);
     position: absolute;
     top: toRem(2);
     right: toRem(-246);
-    width: toRem(786);
-    height: auto;
-    aspect-ratio: 1;
     z-index: zIndex("below");
+
   }
   &__heading {
     color: $--clr-white-2;
@@ -74,28 +73,28 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $gap;
-    &-input{
+    &-input {
       background-color: $--clr-white-8;
       padding: toRem(15);
       border-radius: toRem(5);
-      &-full{
+      &-full {
         grid-column: span 2;
         text-align: left;
       }
     }
-    &-checkbox{
+    &-checkbox {
       margin-inline-end: $gap;
       transform: scale(1.3);
-      accent-color:  $--clr-primary-1;
+      accent-color: $--clr-primary-1;
 
       cursor: pointer;
       position: relative;
       top: toRem(2);
     }
-    &-submit-btn{
+    &-submit-btn {
       width: fit-content;
     }
-    &__terms{
+    &__terms {
       color: $--clr-white-1;
       cursor: pointer;
       line-height: 1;

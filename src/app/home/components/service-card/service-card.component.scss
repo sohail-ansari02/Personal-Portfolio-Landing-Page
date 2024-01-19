@@ -1,0 +1,11 @@
+@import "abstracts";
+.card {
+  border: 1px solid $--clr-white-1;
+  display: flex;
+  flex-direction: column;
+  gap: toRem(10);
+  &__icon{
+    @include square(75);
+
+  }
+}
