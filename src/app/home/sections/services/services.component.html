@@ -9,8 +9,11 @@
     <br />
     you and captivates your customers
   </p>
-  <ul>
-    <li>
+  <ul class="services__list swapper">
+    <li
+      class="services__list-item swapper-item"
+      *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+    >
       <app-service-card></app-service-card>
     </li>
   </ul>

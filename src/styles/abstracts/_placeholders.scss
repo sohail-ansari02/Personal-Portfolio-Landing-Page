@@ -12,5 +12,5 @@
 }
 
 %fadeInEffect{
-  animation: fadeIn .33s;
+  animation: fadeIn $transition-delay;
 }

@@ -9,13 +9,9 @@
     margin-block-end: toRem(50);
   }
   &__list {
-    @extend %hideScrollbar;
-    display: flex;
-    gap: toRem(30);
-    overflow-x: auto;
+
 
     &-item {
-      flex-shrink: 0;
     }
   }
   &__card {
