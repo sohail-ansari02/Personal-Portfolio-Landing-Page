@@ -1,0 +1,8 @@
+.swapper {
+  scroll-snap-type: both mandatory;
+  scroll-behavior: smooth;
+  &-item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}

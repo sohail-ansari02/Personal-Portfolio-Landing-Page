@@ -9,18 +9,13 @@
     margin-block-end: toRem(50);
   }
   &__list {
-    @extend  %hideScrollbar;
+    @extend %hideScrollbar;
     display: flex;
     gap: toRem(30);
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
 
-
-    &-item{
+    &-item {
       flex-shrink: 0;
-      scroll-snap-align: start;
-
     }
   }
   &__card {
@@ -32,7 +27,6 @@
     gap: toRem(20);
     border: 1px solid $--clr-white-1;
     box-sizing: border-box;
-
   }
   &__photo {
     width: toRem(150);
@@ -67,13 +61,13 @@
     font-weight: 400;
     line-height: normal;
   }
-  &__ratings{
+  &__ratings {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: toRem(5);
   }
-  &__star{
+  &__star {
     width: toRem(26);
     height: auto;
     aspect-ratio: 26/24.9;
