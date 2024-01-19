@@ -9,12 +9,11 @@
     overflow: hidden;
   }
   &__bg-img {
+    @include square(890);
     position: absolute;
     top: toRem(9);
     left: toRem(609);
-    width: toRem(890);
-    height: auto;
-    aspect-ratio: 1;
+
     z-index: zIndex("below");
   }
   &__heading {
@@ -41,7 +40,7 @@
     color: $--clr-secondary-6;
     width: fit-content;
     text-align: center;
-    &-list{
+    &-list {
       display: flex;
       justify-content: space-between;
       gap: toRem(30);

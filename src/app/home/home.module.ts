@@ -13,6 +13,9 @@ import { ProjectsComponent } from './sections/projects/projects.component';
 import { ProjectPipe } from './pipes/project.pipe';
 import { ClientsComponent } from './sections/clients/clients.component';
 import { ContactUsComponent } from './sections/contact-us/contact-us.component';
+import { ServicesComponent } from './sections/services/services.component';
+import { ClientCardComponent } from './components/client-card/client-card.component';
+import { ServiceCardComponent } from './components/service-card/service-card.component';
 // import { ContactUsComponent } from './sections/contact-/contact-us.component';
 
 
@@ -28,6 +31,9 @@ import { ContactUsComponent } from './sections/contact-us/contact-us.component';
     ProjectPipe,
     ClientsComponent,
     ContactUsComponent,
+    ServicesComponent,
+    ClientCardComponent,
+    ServiceCardComponent,
     // ContactUsComponent
   ],
   imports: [

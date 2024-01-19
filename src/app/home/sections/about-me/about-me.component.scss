@@ -11,7 +11,7 @@
   // ṇew code
   // height: calc(100vh - $header-height);
   // padding: 0;
-  transition: height .23s;
+  transition: height $transition-delay;
 
   &__content {
     display: flex;

@@ -63,8 +63,12 @@
   }
 }
 
-@mixin zIndex($type: 'default') {
-  z-index: map.get($z-indexes,$type);
+@mixin zIndex($type: "default") {
+  z-index: map.get($z-indexes, $type);
 }
 
-
+@mixin square($width: auto) {
+  width: toRem($width);
+  height: auto;
+  aspect-ratio: 1;
+}

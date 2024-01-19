@@ -1,6 +1,5 @@
 @import "abstracts";
 .projects {
-  background-color: $--clr-white-8;
   padding-block: toRem(80);
   text-align: center;
   &__heading {
@@ -16,17 +15,17 @@
   }
   &__btn {
     $animated-properties: color, background-color;
-    transition: 0.23s;
+    transition: $transition-delay;
     will-change: $animated-properties;
   }
   &__image {
     width: 100%;
     height: 100%;
-    transition: 0.34s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: $transition-delay cubic-bezier(0.455, 0.03, 0.515, 0.955);
     will-change: width, height;
   }
   &__list {
-    transition: 0.34s;
+    transition: $transition-delay;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: toRem(30);
@@ -38,6 +37,8 @@
       aspect-ratio: 406/367;
       overflow: hidden;
       cursor: pointer;
+      padding: 0;
+      // border-radius: toRem(19);
       &:hover .projects__image {
         transform: scale(1.05);
       }

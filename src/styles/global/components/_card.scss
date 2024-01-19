@@ -1,8 +1,5 @@
 .card {
-    transition: backgroud;
     padding: toRem(40) toRem(33);
-    border-radius: toRem(10);
-    &__heading{
-        margin-block-end: .9rem;
-    }
+    border-radius: toRem(15);
+    width: fit-content;
   }

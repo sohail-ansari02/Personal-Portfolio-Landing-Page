@@ -1,0 +1,14 @@
+.swapper {
+  @extend %hideScrollbar;
+  display: flex;
+  gap: toRem(30);
+  overflow-x: auto;
+
+  scroll-snap-type: both mandatory;
+  scroll-behavior: smooth;
+  &-item {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
