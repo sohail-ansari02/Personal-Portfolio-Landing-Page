@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { InfoList } from '../../interfaces/info-list';
 import { Info } from '../../interfaces/info';
 import { Tabs } from 'src/app/shared/interfaces/tabs';
@@ -7,6 +7,7 @@ import { Tabs } from 'src/app/shared/interfaces/tabs';
   selector: 'app-info-tab',
   templateUrl: './info-tab.component.html',
   styleUrls: ['./info-tab.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfoTabComponent implements OnInit, Tabs<Info> {
   tabData: InfoList<Info>[] = [];

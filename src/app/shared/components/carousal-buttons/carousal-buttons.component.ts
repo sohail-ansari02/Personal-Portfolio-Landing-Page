@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carousal-buttons',
   templateUrl: './carousal-buttons.component.html',
-  styleUrls: ['./carousal-buttons.component.scss']
+  styleUrls: ['./carousal-buttons.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CarousalButtonsComponent implements OnInit {
 
