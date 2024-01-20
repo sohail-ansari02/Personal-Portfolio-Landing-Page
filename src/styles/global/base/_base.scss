@@ -4,7 +4,7 @@
 // -----------------------------------------------------------------------------
 :root {
   @include respond-to(large) {
-    font-size: 1.1vmin;
+    font-size: 1.1vmax;
   }
   @include respond-to(small) {
     font-size: 13.51vmin;
@@ -43,7 +43,7 @@ h2 {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  letter-spacing: 1px;
+  letter-spacing: toEm(.8);
   color: $--clr-primary-1;
   text-transform: uppercase;
 }
