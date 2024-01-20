@@ -14,14 +14,24 @@
   font-weight: 600;
   line-height: normal;
 
-  & img{
+  & img {
     @include square(20);
-    object-fit: contain
+
+    object-fit: contain;
   }
+
+  &-outlined {
+    @extend .btn;
+    background-color: $--clr-white-8;
+    color: $--clr-primary-1;
+    border: 1px solid $--clr-primary-1;
+  }
+
+  &-group{
+    display: flex;
+    justify-content: center;
+    gap: toRem(24);
+  }
+
 }
-.btn-outlined {
-  @extend .btn;
-  background-color: $--clr-white-8;
-  color: $--clr-primary-1;
-  border: 1px solid $--clr-primary-1;
-}
+

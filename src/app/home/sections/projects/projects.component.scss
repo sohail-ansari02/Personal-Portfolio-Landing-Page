@@ -9,9 +9,7 @@
     margin-block-end: toRem(50);
   }
   &__buttons {
-    display: flex;
-    justify-content: center;
-    gap: toRem(24);
+
   }
   &__btn {
     $animated-properties: color, background-color;

@@ -1,9 +1,6 @@
 @import "abstracts";
 .tab-info {
   &__buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: toRem(25);
     margin-block-start: toRem(100);
   }
   &__btn {
