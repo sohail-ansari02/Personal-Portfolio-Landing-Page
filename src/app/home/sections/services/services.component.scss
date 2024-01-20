@@ -6,6 +6,7 @@
   &__heading,
   &__sub-heading {
     margin-block-end: toRem(15);
+    color: $--clr-white-8;
   }
   &__desc {
     color: $--clr-secondary-1;
