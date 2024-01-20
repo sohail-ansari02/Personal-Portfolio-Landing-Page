@@ -1,15 +1,46 @@
 @import "abstracts";
 .header {
   $gap: toRem(120);
-
+  $mobileNavGap: toRem(38);
   position: relative;
-  z-index: zIndex('top-bar');
+  z-index: zIndex("top-bar");
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: toRem(22);
   padding-block: toRem(15);
 
+  &__mobile-nav-btn {
+    display: none;
+    width: 31px;
+    aspect-ratio: 1;
+    transition: $transition-delay;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-to(small) {
+      display: flex;
+      // z-index: zIndex(modal);
+      display: flex;
+      flex-direction: column;
+      gap: toRem(7);
+    }
+    // outline: 1px solid currentColor;
+    svg {
+      width: 100%;
+      &:first-child path {
+        // transform: scaleX(0.7);
+      }
+      &:nth-child(2) path {
+        // transform: scaleX(1);
+      }
+      &:last-child path {
+        // transform: scaleX(0.5);
+      }
+    }
+
+  }
   &__logo {
     width: toRem(175);
     height: auto;
@@ -20,10 +51,50 @@
     display: flex;
     flex-shrink: 1;
     gap: $gap;
+    transition: $transition-delay;
+    @include respond-to(small) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      position: absolute;
+      top: 0;
+      right: -25px;
+      gap: $mobileNavGap;
+      padding: $mobileNavGap;
+      padding-block-start: toRem(13);
+      padding-inline-start: toRem(70);
+      padding-inline-end: 0;
+      z-index: zIndex(top-bar);
+      background-color: $--clr-white-8;
+      height: 100vh;
+      width: 56vmin;
+      // outline: 1px solid currentColor;
+
+
+      // display: none;
+      transform-origin: right;
+      transform: translateX(100%);
+
+      position: fixed;
+
+    }
+    &--show {
+      display: flex;
+      transform: translate(0%);
+      box-shadow: -6px -2px 5px 0px #3c3a3a54;
+    }
+    &-btn{
+      // align-self:;
+    }
   }
   &__btn {
     flex-shrink: 0;
     align-self: center;
+
+    @include respond-to(small) {
+      align-self: flex-start;
+    }
   }
   &__links {
     display: flex;
@@ -32,6 +103,12 @@
     gap: toRem(40);
     flex-wrap: wrap;
     row-gap: toRem(12);
+    @include respond-to(small) {
+      flex-direction: column;
+      gap: $mobileNavGap;
+      align-items: flex-start;
+      margin-block-start: toRem(30);
+    }
   }
   &__link {
     color: $--clr-secondary-6;
