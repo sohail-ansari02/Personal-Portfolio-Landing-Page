@@ -7,7 +7,7 @@ import { Project, ProjectType } from '../../interfaces/project';
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent implements OnInit, Tabs<Project> {
   tabData: Project[] = [];
@@ -112,6 +112,8 @@ export class ProjectsComponent implements OnInit, Tabs<Project> {
     ];
   }
   onSelectTab(tabName: string): void {
+    if (this.selectedTab === <ProjectType>tabName.toLowerCase()) return;
+
     this.selectedTab = <ProjectType>tabName.toLowerCase();
     console.log(this.selectedTab, ' is selected');
   }
