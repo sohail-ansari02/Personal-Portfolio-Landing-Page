@@ -7,7 +7,7 @@ import { Tabs } from 'src/app/shared/interfaces/tabs';
   selector: 'app-info-tab',
   templateUrl: './info-tab.component.html',
   styleUrls: ['./info-tab.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InfoTabComponent implements OnInit, Tabs<Info> {
   tabData: InfoList<Info>[] = [];
@@ -67,6 +67,7 @@ export class InfoTabComponent implements OnInit, Tabs<Info> {
     ];
   }
   onSelectTab(tabName: string) {
+    if (tabName == this.selectedTab) return;
     this.selectedTab = tabName;
     this.selectedData = <Info[]>(
       this.tabData.find((info) => info.name == tabName)?.list
