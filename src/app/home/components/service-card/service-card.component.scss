@@ -9,7 +9,7 @@
   max-width: toRem(360);
   fill: $--clr-primary-1;
   stroke: $--clr-primary-1;
-  transition: $transition-delay;
+  transition: $transition-duration;
   &:hover {
     background-color: $--clr-primary-1;
     color: $--clr-white-8;
@@ -60,7 +60,7 @@
       width: toRem(25);
       height: auto;
       aspect-ratio: 25/12;
-      transition: $transition-delay;
+      transition: $transition-duration;
 
       path {
         stroke: $--clr-primary-1;
