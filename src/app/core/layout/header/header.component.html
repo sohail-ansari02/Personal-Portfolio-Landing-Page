@@ -7,45 +7,27 @@
     class="header__logo"
     fetchpriority="high"
   />
-  <div class="header__mobile-nav-btn" (click)="onToggle()">
-    <svg
-      *ngFor="let svg of [1, 2, 3]"
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="2"
-      viewBox="0 0 16 2"
-      fill="none"
-    >
-      <path
-        d="M0 1H16"
-        stroke="#141B34"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </div>
+  <button class="header__mobile-nav-btn" (click)="onToggle()">
+    <img
+      src="assets/images/icons/menu.svg"
+      alt="menu button"
+      width="31.333"
+      height="32"
+    />
+  </button>
   <nav
     [ngClass]="{
       header__nav: true,
       'header__nav--show': openMenu
     }"
   >
-    <div class="header__mobile-nav-btn" (click)="onToggle()">
-      <svg
-        *ngFor="let svg of [1, 2, 3]"
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="2"
-        viewBox="0 0 16 2"
-        fill="none"
-      >
-        <path
-          d="M0 1H16"
-          stroke="#141B34"
-          stroke-width="1.5"
-          stroke-linejoin="round"
-        />
-      </svg>
+    <div class="header__mobile-nav-btn header__nav-btn" (click)="onToggle()">
+      <img
+        src="assets/images/icons/menu.svg"
+        alt="menu button"
+        width="31.333"
+        height="32"
+      />
     </div>
     <ul class="header__links">
       <li *ngFor="let link of links" class="header__link-item">
@@ -55,4 +37,11 @@
 
     <button class="header__btn btn">Let’s chat</button>
   </nav>
+  <div
+    (click)="onToggle()"
+    [ngClass]="{
+      'header__nav-overlay': true,
+      'header__nav-overlay--show': openMenu
+    }"
+  ></div>
 </header>
