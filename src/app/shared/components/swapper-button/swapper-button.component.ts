@@ -16,9 +16,6 @@ export class SwapperButtonComponent implements OnInit, AfterViewInit {
   }
   _swapper!: HTMLElement;
   counter: number = 1;
-  disabled: any = {
-    next: false,
-  };
 
   ngOnInit(): void {
     // console.log('SwapperButtonComponent', this.swapper.swapper);
@@ -30,17 +27,18 @@ export class SwapperButtonComponent implements OnInit, AfterViewInit {
   }
   move(dir: direction): void {
     if (dir == 'next') {
-      if (
-        this.swapper.offsetWidth * (this.counter + 1) >
-        this.swapper.scrollWidth
-      ) {
+      var left = this.swapper.scrollLeft;
+      var viewBox = this.swapper.scrollWidth - this.swapper.offsetWidth;
+      var total = parseInt((left / viewBox).toFixed(0.2));
+      if (total == 1) {
         this.swapper.scrollTo(this.swapper.scrollWidth, 0);
-        console.log('object');
       } else {
         this.swapper.scrollTo(this.swapper.offsetWidth, 0);
-        this.counter++;
       }
+      // console.log(left, viewBox, total);
+    } else {
+      this.swapper.scrollTo(this.swapper.scrollLeft / 2, 0);
+
     }
-    console.log(this.counter);
   }
 }
