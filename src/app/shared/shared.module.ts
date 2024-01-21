@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
-import { CarousalButtonsComponent } from './components/carousal-buttons/carousal-buttons.component';
 import { RangePipe } from './pipes/range.pipe';
+import { SwapperButtonComponent } from './components/swapper-button/swapper-button.component';
 
 
 
 @NgModule({
   declarations: [
     ProgressBarComponent,
-    CarousalButtonsComponent,
-    RangePipe
+    RangePipe,
+    SwapperButtonComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
     ProgressBarComponent,
-    CarousalButtonsComponent,
-    RangePipe
+    RangePipe,
+    SwapperButtonComponent
   ]
 })
 export class SharedModule { }

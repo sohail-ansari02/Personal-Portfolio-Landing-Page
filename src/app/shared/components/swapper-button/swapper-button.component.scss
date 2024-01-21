@@ -1,0 +1,26 @@
+@import "abstracts";
+:host{
+  display: inline-block;
+  width: fit-content;
+}
+.buttons{
+  @extend %center;
+  gap: toRem(20);
+  &-btn{
+    @include square(50);
+    @extend %center;
+    padding-inline: toRem(12.5);
+    border-radius: 50%;
+    border: toRem(1) solid $--clr-primary-1;
+    transition: $transition-delay;
+    &:last-child{
+      transform: rotate(180deg);
+    }
+    &:active{
+      background-color: $--clr-primary-1;
+      & path{
+        fill: $--clr-white-8;
+      }
+    }
+  }
+}
