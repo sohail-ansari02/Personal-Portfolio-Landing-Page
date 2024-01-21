@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {}
 
   onToggle() {
+    if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      return
+    }
     this.openMenu = !this.openMenu;
     // @ts-ignore
     // document.body.inert = this.openMenu;
