@@ -7,7 +7,7 @@
     $animated-properties: color, background-color;
     flex: 1;
     min-width: fit-content;
-    transition: $transition-delay;
+    transition: $transition-duration;
     will-change: $animated-properties;
   }
   &__list {

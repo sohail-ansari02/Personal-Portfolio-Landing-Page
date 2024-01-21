@@ -35,7 +35,7 @@
     display: flex;
     flex-shrink: 1;
     gap: $gap;
-    transition: $transition-delay;
+    transition: $transition-duration;
 
     @include respond-to(small) {
       display: flex;
@@ -73,7 +73,7 @@
       inset: 0;
       width: 100vw;
       height: 100vh;
-      transition: $transition-delay;
+      transition: $transition-duration;
       opacity: 0;
       &--show {
         display: block;

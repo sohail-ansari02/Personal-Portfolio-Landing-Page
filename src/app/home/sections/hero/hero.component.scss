@@ -75,6 +75,7 @@
     @include respond-to(small) {
       width: 100%;
       flex: auto;
+      flex-grow: 0;
     }
   }
 }

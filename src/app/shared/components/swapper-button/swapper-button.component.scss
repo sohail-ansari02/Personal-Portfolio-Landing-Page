@@ -12,7 +12,7 @@
     padding-inline: toRem(12.5);
     border-radius: 50%;
     border: toRem(1) solid $--clr-primary-1;
-    transition: $transition-delay;
+    transition: $transition-duration;
     &:last-child{
       transform: rotate(180deg);
     }
