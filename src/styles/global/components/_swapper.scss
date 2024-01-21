@@ -12,5 +12,8 @@
     flex-shrink: 0;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    @include respond-to(small) {
+      scroll-snap-align: center;
+    }
   }
 }

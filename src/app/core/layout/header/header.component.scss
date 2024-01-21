@@ -58,6 +58,8 @@
       // display: none;
       transform-origin: right;
       transform: translateX(1000%);
+
+      transition: $transition-duration;
       &--show {
         transform: translateX(0%);
       }
@@ -76,14 +78,13 @@
       transition: $transition-duration;
       opacity: 0;
       &--show {
-        display: block;
         @include zIndex(default);
+        @extend %fadeInEffect;
+        display: block;
         opacity: 1;
       }
       background-color: $--clr-secondary-7;
     }
-
-
   }
   &__btn {
     flex-shrink: 0;
@@ -114,5 +115,27 @@
     font-weight: 600;
     line-height: normal;
     text-transform: capitalize;
+    transition: $transition-duration;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 2px;
+
+      background-color: $--clr-primary-1;
+      position: absolute;
+      bottom: toEm(-4);
+      left: 0;
+      transition: inherit;
+    }
+
+    &:hover {
+      color: $--clr-primary-1;
+      &::after {
+        width: 100%;
+      }
+    }
   }
 }

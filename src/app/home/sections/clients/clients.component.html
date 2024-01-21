@@ -1,11 +1,13 @@
 <section class="clients container">
   <h2 class="clients__heading">Testimonials</h2>
   <h3 class="clients__sub-heading">The Trust From Clients</h3>
-  <ul class="clients__list swapper">
-    <li
-      *ngFor="let client of clients"
-      class="clients__list-item swapper-item"
-    >
+  <app-swapper-button
+    [swapper]="swapper"
+    class="clients__swapper-btn"
+  ></app-swapper-button>
+
+  <ul #swapper="swapper" class="clients__list swapper">
+    <li *ngFor="let client of clients" class="clients__list-item swapper-item">
       <app-client-card [data]="client"></app-client-card>
     </li>
   </ul>
