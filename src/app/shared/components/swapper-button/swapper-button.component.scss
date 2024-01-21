@@ -16,6 +16,9 @@
     &:last-child {
       transform: rotate(180deg);
     }
+    &:disabled{
+      opacity: .7;
+    }
     &:active,
     &:hover {
       background-color: $--clr-primary-1;

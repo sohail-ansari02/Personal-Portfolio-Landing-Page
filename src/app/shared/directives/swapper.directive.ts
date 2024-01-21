@@ -2,11 +2,11 @@ import { Directive, ElementRef, HostBinding, OnInit } from '@angular/core';
 
 @Directive({
   selector: '.swapper',
-  exportAs: 'swapper,'
+  exportAs: 'swapper,',
 })
 export class SwapperDirective implements OnInit {
-  swapper!: HTMLElement;
-  constructor(private e1: ElementRef) {}
+  public swapper!: HTMLElement;
+  constructor(public e1: ElementRef) {}
 
   ngOnInit(): void {
     this.swapper = this.e1.nativeElement;
@@ -16,17 +16,17 @@ export class SwapperDirective implements OnInit {
       this.onApearInView();
     }, 0);
   }
-  initScroll(): void {
+  private initScroll(): void {
     this.swapper.style.scrollBehavior = 'auto';
     this.swapper.scrollTo(this.swapper.scrollWidth, 0);
     this.swapper.style.scrollBehavior = 'smooth';
   }
 
-  scrollToStart(): void {
+  private scrollToStart(): void {
     this.swapper.style.scrollBehavior = 'smooth';
     this.swapper.scrollTo(0, 0);
   }
-  onApearInView(): void {
+  private onApearInView(): void {
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
         // If intersectionRatio is 0, the target is out of view
@@ -42,4 +42,6 @@ export class SwapperDirective implements OnInit {
     );
     intersectionObserver.observe(this.swapper);
   }
+
+
 }
