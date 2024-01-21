@@ -2,7 +2,6 @@
 .services {
   padding-block: toRem(80);
   text-align: center;
-
   &__heading,
   &__sub-heading {
     margin-block-end: toRem(15);
@@ -17,5 +16,8 @@
     font-weight: 400;
     line-height: 1.38;
     margin-block-end: toRem(60);
+  }
+  &__swapper-btn{
+    margin-block-end: toRem(50);
   }
 }
