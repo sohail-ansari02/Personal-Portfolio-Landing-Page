@@ -6,6 +6,8 @@
 
   scroll-snap-type: both mandatory;
   scroll-behavior: smooth;
+
+  // transition: $transition-delay;
   &-item {
     flex-shrink: 0;
     scroll-snap-align: start;

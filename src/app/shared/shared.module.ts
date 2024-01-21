@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { RangePipe } from './pipes/range.pipe';
 import { SwapperButtonComponent } from './components/swapper-button/swapper-button.component';
+import { SwapperDirective } from './directives/swapper.directive';
 
 
 
@@ -10,7 +11,8 @@ import { SwapperButtonComponent } from './components/swapper-button/swapper-butt
   declarations: [
     ProgressBarComponent,
     RangePipe,
-    SwapperButtonComponent
+    SwapperButtonComponent,
+    SwapperDirective
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { SwapperButtonComponent } from './components/swapper-button/swapper-butt
   exports: [
     ProgressBarComponent,
     RangePipe,
-    SwapperButtonComponent
+    SwapperButtonComponent,
+    SwapperDirective
   ]
 })
 export class SharedModule { }
