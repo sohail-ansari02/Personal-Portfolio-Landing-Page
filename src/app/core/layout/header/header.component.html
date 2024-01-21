@@ -30,7 +30,11 @@
       />
     </div>
     <ul class="header__links">
-      <li *ngFor="let link of links" class="header__link-item">
+      <li
+        (click)="onToggle()"
+        *ngFor="let link of links"
+        class="header__link-item"
+      >
         <a class="header__link" href="#{{ link }}">{{ link }}</a>
       </li>
     </ul>
