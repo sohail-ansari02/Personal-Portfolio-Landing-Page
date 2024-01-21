@@ -2,6 +2,7 @@ import { Directive, ElementRef, HostBinding, OnInit } from '@angular/core';
 
 @Directive({
   selector: '.swapper',
+  exportAs: 'swapper,'
 })
 export class SwapperDirective implements OnInit {
   swapper!: HTMLElement;

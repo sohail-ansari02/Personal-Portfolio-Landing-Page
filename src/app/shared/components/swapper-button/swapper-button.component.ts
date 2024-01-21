@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { SwapperDirective } from '../../directives/swapper.directive';
 
 @Component({
   selector: 'app-swapper-button',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./swapper-button.component.scss']
 })
 export class SwapperButtonComponent implements OnInit {
-
+  @Input() swapper!: SwapperDirective;
   constructor() { }
 
   ngOnInit(): void {
