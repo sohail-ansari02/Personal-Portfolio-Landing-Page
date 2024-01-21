@@ -30,23 +30,17 @@ export class SwapperButtonComponent implements OnInit, AfterViewInit {
   }
   move(dir: direction): void {
     if (dir == 'next') {
-      this.counter++;
-      if (this.swapper.offsetWidth * this.counter > this.swapper.scrollWidth) {
-        this.counter--;
+      if (
+        this.swapper.offsetWidth * (this.counter + 1) >
+        this.swapper.scrollWidth
+      ) {
         this.swapper.scrollTo(this.swapper.scrollWidth, 0);
+        console.log('object');
       } else {
         this.swapper.scrollTo(this.swapper.offsetWidth, 0);
+        this.counter++;
       }
-      this.disabled.next =
-        this.swapper.scrollWidth ==
-        parseInt(this.swapper.scrollLeft.toFixed()) +
-          parseInt(this.swapper.offsetWidth.toFixed());
-      console.log(this.swapper.scrollWidth);
-      console.log();
     }
-    // console.log(this.swapper.offsetWidth, this.counter);
-    // console.log(
-    //   this.swapper.offsetWidth * this.counter > this.swapper.scrollWidth
-    // );
+    console.log(this.counter);
   }
 }
