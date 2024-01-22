@@ -15,6 +15,7 @@
   scroll-snap-type: both mandatory;
   scroll-behavior: smooth;
 
+  // formula for finding perfext column layout in grid
   // grid-template-columns: repeat(
   //   $total-card,
   //   calc(
@@ -22,15 +23,14 @@
   //      / $show-card)
   // );
   @include respond-to(small) {
+    position: relative;
+    left: -$mobile-space;
     display: flex;
 
     padding-inline: calc($gap * 3);
     width: 100vw;
-    margin-left: -$mobile-space;
-    padding-left: calc(100vw - $mobile-space);
   }
 
-  // transition: $transition-duration;
   &-item {
     scroll-snap-stop: always;
     scroll-snap-align: start;
