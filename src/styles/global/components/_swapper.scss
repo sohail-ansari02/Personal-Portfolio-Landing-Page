@@ -1,25 +1,38 @@
-
 .swapper {
   $gap: toRem(30);
+  $total-card: 10;
+  $card-width: toRem(360);
+  $show-card: 4;
+
+  $mobile-space: 9.5vw;
   @extend %hideScrollbar;
-  display: flex;
   gap: $gap;
   overflow-x: auto;
 
   scroll-snap-type: both mandatory;
   scroll-behavior: smooth;
-  @include respond-to(small){
-    padding-inline: calc($gap * 3 );
+
+  display: grid;
+  grid-template-columns: repeat(
+    $total-card,
+    calc((100% - $gap * ($show-card - 1)) / $show-card)
+  );
+  @include respond-to(small) {
+    display: flex;
+
+    padding-inline: calc($gap * 3);
     width: 100vw;
-    margin-left: -7vw;
+    margin-left: -$mobile-space;
+    padding-left: calc(100vw - $mobile-space);
   }
 
   // transition: $transition-duration;
   &-item {
-    flex-shrink: 0;
-    scroll-snap-align: start;
     scroll-snap-stop: always;
+    scroll-snap-align: start;
+
     @include respond-to(small) {
+      flex-shrink: 0;
       scroll-snap-align: center;
     }
   }
