@@ -10,7 +10,6 @@ export class SwapperDirective implements OnInit {
 
   ngOnInit(): void {
     this.swapper = this.e1.nativeElement;
-    this.swapper.style.scrollBehavior = 'auto';
     setTimeout(() => {
       this.initScroll();
       this.onApearInView();
