@@ -6,7 +6,14 @@
     class="clients__swapper-btn"
   ></app-swapper-button>
 
-  <ul #swapper="swapper" class="clients__list swapper">
+  <ul
+    #swapper="swapper"
+    [total]="clients.length"
+    [cardWidth]="297"
+    [cardToShow]="4"
+    [gap]="30"
+    class="clients__list swapper"
+  >
     <li *ngFor="let client of clients" class="clients__list-item swapper-item">
       <app-client-card [data]="client"></app-client-card>
     </li>
