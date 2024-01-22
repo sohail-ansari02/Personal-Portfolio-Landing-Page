@@ -1,7 +1,6 @@
-import { AfterViewInit, Component, Directive, Input } from '@angular/core';
+import { AfterViewInit, Directive, Input } from '@angular/core';
+import { toRem } from 'src/app/core/utils';
 
-// const toRem = (val: number): string => val + 'px';
-const toRem = (val: number): string => val / 16 + 'rem';
 
 @Directive()
 export abstract class Swapper implements AfterViewInit {
