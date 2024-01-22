@@ -24,21 +24,29 @@ export class SwapperButtonComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // console.log('SwapperButtonComponent', this.swapper);
     // throw new Error('Method not implemented.');
+    for (let i = 0; i < this.swapper.children.length; i++) {
+      let child = <HTMLElement>this.swapper.children.item(i);
+      let pos = child.getBoundingClientRect();
+
+      console.log( i+1, pos.left + 68 < window.innerWidth);
+    }
   }
   move(dir: direction): void {
     if (dir == 'next') {
       var left = this.swapper.scrollLeft;
       var viewBox = this.swapper.scrollWidth - this.swapper.offsetWidth;
       var total = parseInt((left / viewBox).toFixed(0.2));
+      console.log(left, viewBox, total);
       if (total == 1) {
         this.swapper.scrollTo(this.swapper.scrollWidth, 0);
       } else {
+        console.log(1, this.swapper.offsetWidth);
         this.swapper.scrollTo(this.swapper.offsetWidth, 0);
       }
       // console.log(left, viewBox, total);
     } else {
       this.swapper.scrollTo(this.swapper.scrollLeft / 2, 0);
-
     }
   }
+
 }

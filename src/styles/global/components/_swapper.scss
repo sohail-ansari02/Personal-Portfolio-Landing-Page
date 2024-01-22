@@ -1,11 +1,18 @@
+
 .swapper {
+  $gap: toRem(30);
   @extend %hideScrollbar;
   display: flex;
-  gap: toRem(30);
+  gap: $gap;
   overflow-x: auto;
 
   scroll-snap-type: both mandatory;
   scroll-behavior: smooth;
+  @include respond-to(small){
+    padding-inline: calc($gap * 3 );
+    width: 100vw;
+    margin-left: -7vw;
+  }
 
   // transition: $transition-duration;
   &-item {
