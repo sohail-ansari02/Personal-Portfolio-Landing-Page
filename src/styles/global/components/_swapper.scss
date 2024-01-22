@@ -1,8 +1,8 @@
 .swapper {
-  $gap: toRem(30);
   $total-card: 10;
   $card-width: toRem(360);
   $show-card: 4;
+  $gap: toRem(30);
 
   $mobile-space: 9.5vw;
   @extend %hideScrollbar;
