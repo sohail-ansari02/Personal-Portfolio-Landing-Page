@@ -1,5 +1,8 @@
 import { AfterViewInit, Component, Directive, Input } from '@angular/core';
 
+// const toRem = (val: number): string => val + 'px';
+const toRem = (val: number): string => val / 16 + 'rem';
+
 @Directive()
 export abstract class Swapper implements AfterViewInit {
   @Input() total: number = 0;
@@ -12,6 +15,7 @@ export abstract class Swapper implements AfterViewInit {
     this.swapper = swapper;
   }
   ngAfterViewInit(): void {
+    this.initStyling();
     this.initScroll();
     this.onApearInView();
   }
@@ -42,5 +46,18 @@ export abstract class Swapper implements AfterViewInit {
       }
     );
     intersectionObserver.observe(this.swapper);
+  }
+  initStyling(): void {
+    this.swapper.style.gap = toRem(30);
+    let s = `repeat(${this.total},  calc(
+      (100% - ${toRem(this.gap)} * ( ${this.cardToShow} - 1) )
+      / ${this.cardToShow})
+      )`;
+
+    this.swapper.style.gridTemplateColumns = s;
+  }
+  private calc(val: number): string {
+    return val + 'px';
+    return val / 16 + 'rem';
   }
 }

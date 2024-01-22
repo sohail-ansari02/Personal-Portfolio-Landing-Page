@@ -6,17 +6,21 @@
 
   $mobile-space: 9.5vw;
   @extend %hideScrollbar;
+
+  display: grid;
+
   gap: $gap;
   overflow-x: auto;
 
   scroll-snap-type: both mandatory;
   scroll-behavior: smooth;
 
-  display: grid;
-  grid-template-columns: repeat(
-    $total-card,
-    calc((100% - $gap * ($show-card - 1)) / $show-card)
-  );
+  // grid-template-columns: repeat(
+  //   $total-card,
+  //   calc(
+  //     (100% - $gap * ($show-card - 1) )
+  //      / $show-card)
+  // );
   @include respond-to(small) {
     display: flex;
 

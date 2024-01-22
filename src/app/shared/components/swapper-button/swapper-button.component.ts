@@ -8,7 +8,7 @@ type direction = 'prev' | 'next';
 })
 export class SwapperButtonComponent implements OnInit, AfterViewInit {
   @Input() set swapper(swapperDirective: SwapperDirective | HTMLElement) {
-    console.log(swapperDirective);
+    // console.log(swapperDirective);
     this._swapper = (swapperDirective as SwapperDirective).e1.nativeElement;
   }
   get swapper(): HTMLElement {
@@ -28,7 +28,7 @@ export class SwapperButtonComponent implements OnInit, AfterViewInit {
       let child = <HTMLElement>this.swapper.children.item(i);
       let pos = child.getBoundingClientRect();
 
-      console.log( i+1, pos.left + 68 < window.innerWidth);
+      // console.log( i+1, pos.left + 68 < window.innerWidth);
     }
   }
   move(dir: direction): void {
