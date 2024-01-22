@@ -1,7 +1,19 @@
-export abstract class Swapper {
+import { AfterViewInit, Component, Directive, Input } from '@angular/core';
+
+@Directive()
+export abstract class Swapper implements AfterViewInit {
+  @Input() total: number = 0;
+  @Input() cardWidth: number = 0;
+  @Input() cardToShow: number = 0;
+  @Input() gap: number = 0;
+
   swapper: HTMLElement;
   constructor(swapper: HTMLElement) {
-    this.swapper = swapper
+    this.swapper = swapper;
+  }
+  ngAfterViewInit(): void {
+    this.initScroll();
+    this.onApearInView();
   }
 
   initScroll(): void {
