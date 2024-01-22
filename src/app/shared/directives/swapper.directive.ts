@@ -25,6 +25,7 @@ export class SwapperDirective implements OnInit {
     this.swapper.style.scrollBehavior = 'smooth';
     this.swapper.scrollTo(0, 0);
   }
+
   private onApearInView(): void {
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
