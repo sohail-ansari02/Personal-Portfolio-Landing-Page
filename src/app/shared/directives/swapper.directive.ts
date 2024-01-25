@@ -12,7 +12,7 @@ import { toRem } from 'src/app/core/utils';
   selector: '.swapper',
   exportAs: 'swapper,',
 })
-export class SwapperDirective implements OnInit {
+export class SwapperDirective implements OnInit, AfterViewInit {
   @Input() total: number = 0;
   @Input() cardWidth: number = 0;
   @Input() cardToShow: number = 0;
@@ -24,18 +24,16 @@ export class SwapperDirective implements OnInit {
   }
   ngOnInit(): void {
     this.initStyling();
-    setTimeout(() => {
-      this.initScroll();
-      if (this.swapper.children.length == 0) return;
-      this.onApearInView(
-        <HTMLElement>(
-          this.swapper.children.item(this.swapper.children.length - 1)
-        )
-      );
-    }, 0);
+
+  }
+  ngAfterViewInit(): void {
+    this.initScroll();
+    if (this.swapper.children.length == 0) return;
+    this.onApearInView(
+      <HTMLElement>this.swapper.children.item(this.swapper.children.length - 1)
+    );
   }
   initScroll(): void {
-    console.log('this.initScroll');
     this.swapper.style.scrollBehavior = 'auto';
 
     // in mobile view, I changed the styling so
@@ -47,7 +45,6 @@ export class SwapperDirective implements OnInit {
   }
 
   scrollToStart(): void {
-    console.log('this.scrollToStart');
     this.swapper.style.scrollBehavior = 'smooth';
     this.swapper.scrollTo(0, 0);
   }
