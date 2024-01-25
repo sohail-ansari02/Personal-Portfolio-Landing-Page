@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  ContactFormUrl: 'https://send.pageclip.co/api_KNyOF93kzEVv3SvHDLZZVgvr7AYlX5FW/contact-us',
+  ContactFormUrl: 'https://send.pageclip.co/8wWJqlNB8xmXWaXgx0tBwEgqbxlMSk1D',
 };
 
 /*
