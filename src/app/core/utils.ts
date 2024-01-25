@@ -9,3 +9,5 @@ export const isMobile = (): boolean =>
     navigator.userAgent
   ) || window.matchMedia(Breakpoints.small).matches;
 export const toRem = (val: number): string => val / 16 + 'rem';
+
+export const AnimationTransitionDelay = .34 * (10 ^ 3); // [seconds] * 10^3

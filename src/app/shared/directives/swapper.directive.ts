@@ -56,7 +56,7 @@ export class SwapperDirective implements OnInit, AfterViewInit {
         // and we do not need to do anything.
         if (entries[0].intersectionRatio <= 0) return;
 
-        console.log(entries[0].intersectionRatio);
+        // console.log(entries[0].intersectionRatio);
         this.scrollToStart();
         intersectionObserver.disconnect();
       },
