@@ -1,0 +1,6 @@
+.section {
+  padding-block: toRem(100);
+  @include respond-to(small) {
+    padding-block: toRem(70);
+  }
+}

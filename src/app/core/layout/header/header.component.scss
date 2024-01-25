@@ -15,6 +15,7 @@
     width: toRem(31.3333);
     height: auto;
     aspect-ratio: 31.333/32;
+    cursor: pointer;
 
     @include respond-to(small) {
       display: inline-block;
@@ -35,7 +36,6 @@
     display: flex;
     flex-shrink: 1;
     gap: $gap;
-    transition: $transition-duration;
 
     @include respond-to(small) {
       display: flex;
@@ -60,6 +60,7 @@
       transform: translateX(1000%);
 
       transition: $transition-duration;
+
       &--show {
         transform: translateX(0%);
       }

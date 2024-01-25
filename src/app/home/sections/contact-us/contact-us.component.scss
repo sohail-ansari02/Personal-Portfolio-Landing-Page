@@ -2,8 +2,8 @@
 .contact {
   position: relative;
   isolation: isolate;
-  padding-block: toRem(100) toRem(150);
   text-align: center;
+
   &-wrapper {
     background-color: $--clr-primary-1;
     overflow: hidden;
@@ -14,7 +14,6 @@
     top: toRem(2);
     right: toRem(-246);
     z-index: zIndex("below");
-
   }
   &__heading {
     color: $--clr-white-8;
@@ -29,6 +28,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: toRem(30);
     align-items: start;
+    @include respond-to(small) {
+      grid-template-columns: 1fr;
+    }
   }
   &__info {
     background-color: $--clr-white-8;
@@ -70,7 +72,7 @@
     }
   }
   &__form {
-    $gap: toRem(15);
+    $gap: toRem(18);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $gap;
@@ -78,6 +80,9 @@
       background-color: $--clr-white-8;
       padding: toRem(15);
       border-radius: toRem(5);
+      @include respond-to(small) {
+        grid-column: span 2;
+      }
       &-full {
         grid-column: span 2;
         text-align: left;

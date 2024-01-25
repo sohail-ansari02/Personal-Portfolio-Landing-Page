@@ -31,6 +31,10 @@
     display: flex;
     justify-content: center;
     gap: toRem(24);
+    @include respond-to(small) {
+      flex-direction: column;
+      gap: toRem(15);
+    }
   }
 
 }

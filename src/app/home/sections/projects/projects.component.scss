@@ -1,6 +1,5 @@
 @import "abstracts";
 .projects {
-  padding-block: toRem(80);
   text-align: center;
   &__heading {
     margin-block-end: toRem(24);
@@ -9,7 +8,6 @@
     margin-block-end: toRem(50);
   }
   &__buttons {
-
   }
   &__btn {
     $animated-properties: color, background-color;
@@ -28,6 +26,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: toRem(30);
     margin-block-start: toRem(50);
+    @include respond-to(small) {
+      grid-template-columns: 1fr;
+    }
     &-item {
       @extend %fadeInEffect;
       width: 100%;
