@@ -3,14 +3,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include respond-to(small) {
+    flex-direction: column;
+    gap: toRem(30);
+  }
   &-wrapper {
-    padding-block: toRem(50);
+    padding-block: toRem(30);
     background: $--clr-primary-1;
   }
   &__right {
     display: flex;
     align-items: center;
     gap: toRem(30);
+    @include respond-to(small) {
+      flex-direction: column;
+      gap: toRem(15);
+    }
     &-text {
       color: $--clr-primary-2;
       font-size: toRem(16);

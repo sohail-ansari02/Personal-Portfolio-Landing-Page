@@ -9,7 +9,6 @@
     margin-block-end: toRem(50);
   }
   &__buttons {
-
   }
   &__btn {
     $animated-properties: color, background-color;
@@ -28,6 +27,9 @@
     grid-template-columns: repeat(3, 1fr);
     gap: toRem(30);
     margin-block-start: toRem(50);
+    @include respond-to(small) {
+      grid-template-columns: 1fr;
+    }
     &-item {
       @extend %fadeInEffect;
       width: 100%;

@@ -24,14 +24,6 @@
     color: $--clr-white-8;
     margin-block-end: toRem(110);
   }
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    gap: toRem(30);
-    &-item {
-      // flex-grow: 1;
-    }
-  }
   &__card {
     display: flex;
     flex-direction: column;
@@ -44,6 +36,9 @@
       display: flex;
       justify-content: space-between;
       gap: toRem(30);
+      @include respond-to(small) {
+        flex-direction: column;
+      }
     }
     &-value {
       font-size: toRem(50);
