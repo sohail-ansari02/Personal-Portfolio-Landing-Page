@@ -2,6 +2,9 @@
 // This file contains very basic styles.
 // i.e all links should have red underline
 // -----------------------------------------------------------------------------
+.pageclip-form__success{
+  display: none;
+}
 :root {
   @include respond-to(large) {
     font-size: 1.1vw;
