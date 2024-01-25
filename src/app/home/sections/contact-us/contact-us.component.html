@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <form method="post" [action]="url" class="contact__form">
+      <form #form [action]="url" class="contact__form">
         <input
           class="contact__form-input"
           placeholder="Name*"
@@ -58,7 +58,7 @@
           <input class="contact__form-checkbox" type="checkbox" />
           <span>By submitting, i’m agreed to the Terms & Conditons</span>
         </label>
-        <button class="contact__form-submit-btn btn-outlined" type="submit">Request Now</button>
+        <button (click)="onSubmit($event)" class="contact__form-submit-btn btn-outlined pageclip-form__submit" type="submit">Request Now</button>
       </form>
     </div>
   </section>
