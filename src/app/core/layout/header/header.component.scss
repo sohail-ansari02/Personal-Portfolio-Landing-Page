@@ -49,7 +49,7 @@
       padding: $mobileNavGap;
       padding-block-start: toRem(22.5);
       padding-inline-start: toRem(70);
-      z-index: zIndex(modal);
+      z-index: zIndex(below);
       background-color: $--clr-white-8;
       height: 100vh;
       width: 56vw;
@@ -57,11 +57,11 @@
 
       // display: none;
       transform-origin: right;
-      transform: translateX(1000%);
 
       transition: $transition-duration;
-
-      &--show {
+      transform: translateX(100%);
+      &--open {
+        z-index: zIndex(modal);
         transform: translateX(0%);
       }
     }

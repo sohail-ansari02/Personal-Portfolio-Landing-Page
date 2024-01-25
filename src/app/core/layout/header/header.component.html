@@ -16,9 +16,10 @@
     />
   </button>
   <nav
+  *ngIf="showMobileMenu"
     [ngClass]="{
       header__nav: true,
-      'header__nav--show': openMenu
+      'header__nav--open': openMenu
     }"
   >
     <div class="header__mobile-nav-btn header__nav-btn" (click)="onToggle()">
