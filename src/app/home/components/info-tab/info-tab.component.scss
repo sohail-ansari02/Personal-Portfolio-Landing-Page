@@ -1,7 +1,9 @@
 @import "abstracts";
+:host{
+  display: inline-block;
+}
 .tab-info {
   &__buttons {
-    margin-block-start: toRem(100);
   }
   &__btn {
     $animated-properties: color, background-color;
