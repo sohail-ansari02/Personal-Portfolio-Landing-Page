@@ -33,34 +33,32 @@
           </div>
         </div>
       </div>
-      <form class="contact__form">
+      <form #form [action]="url" class="contact__form">
         <input
           class="contact__form-input"
           placeholder="Name*"
           type="text"
           required
-        />
-        <input
+          name="name"
+          />
+          <input
           class="contact__form-input"
           placeholder="Email Address*"
           type="email"
           required
-        />
-        <textarea
+          name="email"
+          />
+          <textarea
           class="contact__form-input contact__form-input-full"
           rows="1"
           placeholder="How can we help you?"
-        ></textarea>
-        <textarea
-          class="contact__form-input contact__form-input-full"
-          rows="6"
-          placeholder="How can we help you?"
-        ></textarea>
+          name="message"
+          ></textarea>
         <label class="contact__form__terms contact__form-input-full">
           <input class="contact__form-checkbox" type="checkbox" />
           <span>By submitting, i’m agreed to the Terms & Conditons</span>
         </label>
-        <button class="contact__form-submit-btn btn-outlined" type="submit">Request Now</button>
+        <button (click)="onSubmit($event)" class="contact__form-submit-btn btn-outlined pageclip-form__submit" type="submit">Request Now</button>
       </form>
     </div>
   </section>
