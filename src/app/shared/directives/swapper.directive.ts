@@ -50,18 +50,18 @@ export class SwapperDirective implements OnInit, AfterViewInit {
   }
 
   onApearInView(element: HTMLElement): void {
+
     const intersectionObserver = new IntersectionObserver(
       (entries) => {
         // If intersectionRatio is 0, the target is out of view
         // and we do not need to do anything.
         if (entries[0].intersectionRatio <= 0) return;
-
         // console.log(entries[0].intersectionRatio);
         this.scrollToStart();
         intersectionObserver.disconnect();
       },
       {
-        threshold: 1, //for 100% element appears in screen
+        threshold: .9, //for 100% element appears in screen
       }
     );
     intersectionObserver.observe(element);

@@ -40,25 +40,32 @@
           type="text"
           required
           name="name"
-          />
-          <input
+        />
+        <input
           class="contact__form-input"
           placeholder="Email Address*"
           type="email"
           required
           name="email"
-          />
-          <textarea
+        />
+        <textarea
           class="contact__form-input contact__form-input-full"
           rows="1"
           placeholder="How can we help you?"
+          required
           name="message"
-          ></textarea>
+        ></textarea>
         <label class="contact__form__terms contact__form-input-full">
-          <input class="contact__form-checkbox" type="checkbox" />
+          <input class="contact__form-checkbox" type="checkbox" required />
           <span>By submitting, i’m agreed to the Terms & Conditons</span>
         </label>
-        <button (click)="onSubmit($event)" class="contact__form-submit-btn btn-outlined pageclip-form__submit" type="submit">Request Now</button>
+        <button
+          (click)="onSubmit($event)"
+          class="contact__form-submit-btn btn-outlined pageclip-form__submit"
+          type="submit"
+        >
+          Request Now
+        </button>
       </form>
     </div>
   </section>
