@@ -52,6 +52,7 @@
     }
     &-icon {
       @include square(30);
+      color: $--clr-white-8;
     }
   }
 }
