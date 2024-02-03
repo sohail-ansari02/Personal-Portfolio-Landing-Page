@@ -19,6 +19,7 @@
     width: 100%;
     height: auto;
     aspect-ratio: 390/73;
+    filter: brightness(.4);
     @include respond-to(small) {
       aspect-ratio: 267/50;
     }

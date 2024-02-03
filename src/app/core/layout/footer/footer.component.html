@@ -1,13 +1,15 @@
 <div class="footer-wrapper container-full">
   <footer class="footer container">
     <span class="footer__right">
-      <img
+      <!-- <img
         class="footer__logo"
         src="../../../../assets/images/logo/white-logo.svg"
         alt="AeroVision"
         width="175"
         height="50"
-      />
+      /> -->
+      <h3>LOGO</h3>
+
       <span class="footer__right-text"
         >© Copyright 2023. All Rights Reserved.</span
       >
@@ -16,17 +18,23 @@
       <span class="footer__social-text"> FOLLOW US: </span>
       <ul class="footer__social-links">
         <li
-          *ngFor="let name of ['facebook', 'x', 'linkedin', 'email']"
+          *ngFor="let social of socialMedias"
           class="footer__social-link-item"
         >
           <a href="#" class="footer__social-link">
-            <img
-              class="footer__social-icon"
-              src="../../../../assets/images/icons/{{name}}.svg"
-              alt="{{name}}"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
               width="30"
               height="30"
-            />
+              viewBox="0 0 50 50"
+              class="footer__social-icon"
+              title="{{ social.name }}"
+              fill="currentColor"
+            >
+              <path
+              [attr.d]="social.svgPath"
+              ></path>
+            </svg>
           </a>
         </li>
       </ul>

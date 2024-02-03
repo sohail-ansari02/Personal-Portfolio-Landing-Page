@@ -37,15 +37,15 @@ h6 {
 }
 h1 {
   font-size: toRem(60);
-  font-style: normal;
+  // font-style: normal;
   font-weight: 700;
-  line-height: 1.25em;
+  line-height: 1.1em;
 }
 h2 {
   font-size: toRem(20);
   font-style: normal;
   font-weight: 600;
-  line-height: normal;
+  // line-height: normal;
   letter-spacing: toEm(.8);
   color: $--clr-primary-1;
   text-transform: uppercase;
@@ -54,7 +54,7 @@ h3 {
   font-size: toRem(50);
   font-style: normal;
   font-weight: 800;
-  line-height: normal;
+  // line-height: normal;
 }
 a,
 button {

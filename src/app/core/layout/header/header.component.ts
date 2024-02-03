@@ -1,4 +1,9 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+} from '@angular/core';
 import { AnimationTransitionDelay, Breakpoints, isMobile } from '../../utils';
 
 @Component({
@@ -13,16 +18,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   links: string[] = ['home', 'about me', 'services', 'projects', 'contact me'];
   constructor() {}
   ngAfterViewInit(): void {
-    if (isMobile()) {
-      setTimeout(() => {
-        console.log('object')
-        this.showMobileMenu = true;
-      }, AnimationTransitionDelay);
-    }  }
-
-  ngOnInit(): void {
-
+    // if (isMobile()) {
+    setTimeout(() => {
+      console.log('object');
+      this.showMobileMenu = true;
+    }, AnimationTransitionDelay);
+    // }
   }
+
+  ngOnInit(): void {}
 
   onToggle() {
     if (!isMobile()) {
