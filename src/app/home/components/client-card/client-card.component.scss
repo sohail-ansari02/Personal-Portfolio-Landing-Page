@@ -16,7 +16,7 @@
 
   }
   &__feedback {
-    color: $--clr-secondary-2;
+    color: $--clr-secondary;
     font-size: toRem(16);
     font-weight: 400;
     line-height: 1.25;
@@ -29,7 +29,7 @@
     font-size: toRem(16);
   }
   &__name {
-    color: $--clr-secondary-2;
+    color: $--clr-secondary;
     text-align: center;
     font-style: normal;
     font-weight: 600;
@@ -37,7 +37,7 @@
     text-transform: uppercase;
   }
   &__position {
-    color: $--clr-secondary-3;
+    color: $--clr-secondary;
     text-align: center;
     font-style: normal;
     font-weight: 400;

@@ -9,7 +9,7 @@
   text-align: center;
   border-radius: toRem(50);
   background: $--clr-primary;
-  color: $--clr-white-8;
+  color: $--clr-background;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -25,7 +25,7 @@
 
   &-outlined {
     @extend .btn;
-    background-color: $--clr-white-8;
+    background-color: $--clr-background;
     color: $--clr-primary;
     border: 1px solid $--clr-primary;
   }

@@ -5,15 +5,15 @@
   flex-direction: column;
   align-items: flex-start;
   gap: toRem(10);
-  color: $--clr-secondary-2;
+  color: $--clr-secondary;
   max-width: toRem(360);
   fill: $--clr-primary;
   stroke: $--clr-primary;
   transition: $transition-duration;
   &:hover {
     background-color: $--clr-primary;
-    color: $--clr-white-8;
-    stroke: $--clr-white-8;
+    color: $--clr-background;
+    stroke: $--clr-background;
   }
   &__icon {
     @include square(75);
@@ -68,8 +68,8 @@
       }
       .card:hover & {
         path {
-          fill: $--clr-white-8;
-          stroke: $--clr-white-8;
+          fill: $--clr-background;
+          stroke: $--clr-background;
         }
       }
     }

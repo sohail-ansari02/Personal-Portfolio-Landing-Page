@@ -19,12 +19,12 @@
   scroll-behavior: smooth;
   &::selection {
     background-color: $--clr-primary;
-    color: $--clr-white-8;
+    color: $--clr-background;
   }
 }
 body {
-  color: $--clr-secondary-1;
-  background-color: $--clr-white-8;
+  color: $--clr-secondary;
+  background-color: $--clr-background;
   font-family: "Work Sans", sans-serif;
 }
 h1,

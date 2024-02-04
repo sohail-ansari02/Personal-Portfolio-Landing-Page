@@ -16,19 +16,19 @@
     z-index: zIndex("below");
   }
   &__heading {
-    color: $--clr-white-8;
+    color: $--clr-background;
     margin-block-end: toRem(24);
   }
   &__sub-heading {
-    color: $--clr-white-8;
+    color: $--clr-background;
     margin-block-end: toRem(110);
   }
   &__card {
     display: flex;
     flex-direction: column;
     gap: toRem(15);
-    background-color: $--clr-white-8;
-    color: $--clr-secondary-6;
+    background-color: $--clr-background;
+    color: $--clr-secondary;
     width: auto;
     text-align: center;
     &-list {
