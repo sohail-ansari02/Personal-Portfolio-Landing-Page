@@ -23,14 +23,14 @@ export class InfoTabComponent implements OnInit, Tabs<Info> {
   initTabData() {
     this.tabData = [
       {
-        name: 'Main Skills',
+        name: 'Skills',
         list: [
           {
-            name: 'User Experience Design - UI/UX',
+            name: 'Website Development',
             progress: 95,
           },
           {
-            name: 'Web & User Interface Design - Development',
+            name: 'Web Application Development',
             progress: 80,
           },
           {
@@ -61,6 +61,7 @@ export class InfoTabComponent implements OnInit, Tabs<Info> {
           },
           {
             name: 'School Name',
+            text: '[School Name]'
           },
         ],
       },
