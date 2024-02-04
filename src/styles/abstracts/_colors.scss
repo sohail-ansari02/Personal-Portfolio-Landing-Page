@@ -21,11 +21,14 @@ $--clr-white-8: var(--clr-white-8);
 
 $--clr-yellow-1: var(--clr-yellow);
 
+$--clr-grey: var(--clr-grey);
+
 $colors-light: (
   --clr-primary-1: #333D79FF,
   --clr-primary-2: #333D79FF,
   --clr-primary-3: #333D79FF,
 
+  --clr-grey: #f3dde4,
 
   --clr-secondary-1: #021528,
   --clr-secondary-2: #021528,
@@ -35,7 +38,7 @@ $colors-light: (
   --clr-secondary-6: #021528,
   --clr-secondary-7: #021528,
 
-  --clr-white-1: rgb(216, 241, 248),
+  --clr-white-1: #FAEBEFFF,
   --clr-white-2: #FAEBEFFF,
   --clr-white-3: #FAEBEFFF,
   --clr-white-4: #FAEBEFFF,

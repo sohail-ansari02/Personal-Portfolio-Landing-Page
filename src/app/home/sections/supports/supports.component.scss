@@ -2,14 +2,14 @@
 .supports {
   display: flex;
   justify-content: stretch;
+  gap: toRem(30);
   @include respond-to(small) {
-    padding-block: toRem(40);
     flex-direction: column;
-    gap: toRem(20);
+    gap: toRem(30);
     align-items: center;
   }
   &-wrapper {
-    background-color: $--clr-white-6;
+    background-color: $--clr-grey;
   }
   &-item {
     flex: 1;
@@ -18,15 +18,18 @@
     object-fit: contain;
     width: 100%;
     height: auto;
-    aspect-ratio: 3/1;
+    aspect-ratio: 1;
     // filter: brightness(.4);
+    aspect-ratio: 4/2;
     filter: grayscale(1);
     transition: filter $transition-duration;
     &:hover{
       filter: none;
     }
     @include respond-to(small) {
-      aspect-ratio: 3/1;
+      aspect-ratio: 1;
+      // aspect-ratio: 3/1;
+      width: toRem(130);
     }
   }
 }

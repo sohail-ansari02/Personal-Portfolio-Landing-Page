@@ -78,13 +78,13 @@
       height: 100vh;
       transition: $transition-duration;
       opacity: 0;
+      background-color: $--clr-secondary-7;
       &--show {
         @include zIndex(default);
         @extend %fadeInEffect;
         display: block;
         opacity: 1;
       }
-      background-color: $--clr-secondary-7;
     }
   }
   &__btn {
