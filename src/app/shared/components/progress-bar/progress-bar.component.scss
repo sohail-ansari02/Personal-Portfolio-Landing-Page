@@ -11,10 +11,10 @@
 }
 .bar-bg{
   @extend .bar;
-  background-color: $--clr-white-3;
+  background-color: $--clr-background;
 
 }
 .bar-preogress{
   @extend .bar;
-  background-color: $--clr-primary-1;
+  background-color: $--clr-primary;
 }

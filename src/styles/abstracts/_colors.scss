@@ -1,49 +1,24 @@
-$--clr-primary-1: var(--clr-primary-1);
-$--clr-primary-2: var(--clr-primary-2);
-$--clr-primary-3: var(--clr-primary-3);
+$--clr-primary: var(--clr-primary);
+$--clr-primary-transparent: var(--clr-primary-transparent);
 
-$--clr-secondary-1: var(--clr-secondary-1);
-$--clr-secondary-2: var(--clr-secondary-2);
-$--clr-secondary-3: var(--clr-secondary-3);
-$--clr-secondary-4: var(--clr-secondary-4);
-$--clr-secondary-5: var(--clr-secondary-5);
-$--clr-secondary-6: var(--clr-secondary-6);
-$--clr-secondary-7: var(--clr-secondary-7);
+$--clr-neutral: var(--clr-neutral);
 
-$--clr-white-1: var(--clr-white-1);
-$--clr-white-2: var(--clr-white-2);
-$--clr-white-3: var(--clr-white-3);
-$--clr-white-4: var(--clr-white-4);
-$--clr-white-5: var(--clr-white-5);
-$--clr-white-6: var(--clr-white-6);
-$--clr-white-7: var(--clr-white-7);
-$--clr-white-8: var(--clr-white-8);
+$--clr-secondary: var(--clr-secondary);
+
+$--clr-background: var(--clr-background);
 
 $--clr-yellow-1: var(--clr-yellow);
 
+$--clr-grey: var(--clr-grey);
+
 $colors-light: (
-  --clr-primary-1: #333D79FF,
-  --clr-primary-2: #333D79FF,
-  --clr-primary-3: #333D79FF,
+  --clr-primary: #333D79FF,
+  // transparent version of primarycolor
+  --clr-primary-transparent: #333e79b0,
 
-
-  --clr-secondary-1: #021528,
-  --clr-secondary-2: #021528,
-  --clr-secondary-3: #021528,
-  --clr-secondary-4: #021528,
-  --clr-secondary-5: #021528,
-  --clr-secondary-6: #021528,
-  --clr-secondary-7: #021528,
-
-  --clr-white-1: rgb(216, 241, 248),
-  --clr-white-2: #FAEBEFFF,
-  --clr-white-3: #FAEBEFFF,
-  --clr-white-4: #FAEBEFFF,
-  --clr-white-5: #FAEBEFFF,
-  --clr-white-6: #FAEBEFFF,
-  --clr-white-7: #FAEBEFFF,
-  --clr-white-8: #FAEBEFFF,
-
+  --clr-neutral: #ecd9df,
+  --clr-secondary: #021528,
+  --clr-background: #FAEBEFFF,
   --clr-yellow-1: #ffb400,
 );
 

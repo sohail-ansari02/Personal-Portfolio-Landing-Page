@@ -50,7 +50,7 @@
       padding-block-start: toRem(22.5);
       padding-inline-start: toRem(70);
       z-index: zIndex(below);
-      background-color: $--clr-white-8;
+      background-color: $--clr-background;
       height: 100vh;
       width: 56vw;
       // outline: 1px solid currentColor;
@@ -78,13 +78,13 @@
       height: 100vh;
       transition: $transition-duration;
       opacity: 0;
+      background-color: $--clr-primary-transparent;
       &--show {
         @include zIndex(default);
         @extend %fadeInEffect;
         display: block;
         opacity: 1;
       }
-      background-color: $--clr-secondary-7;
     }
   }
   &__btn {
@@ -110,7 +110,7 @@
     }
   }
   &__link {
-    color: $--clr-secondary-6;
+    color: $--clr-secondary;
     font-size: toRem(18);
     font-style: normal;
     font-weight: 600;
@@ -125,7 +125,7 @@
       width: 0;
       height: 2px;
 
-      background-color: $--clr-primary-1;
+      background-color: $--clr-primary;
       position: absolute;
       bottom: toEm(-4);
       left: 0;
@@ -133,7 +133,7 @@
     }
 
     &:hover {
-      color: $--clr-primary-1;
+      color: $--clr-primary;
       &::after {
         width: 100%;
       }

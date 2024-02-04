@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   selector: 'app-stats',
   templateUrl: './stats.component.html',
   styleUrls: ['./stats.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StatsComponent implements OnInit {
   cards: card[] = [];
@@ -16,20 +16,20 @@ export class StatsComponent implements OnInit {
   initCardData() {
     this.cards = [
       {
-        value: '8300+',
-        desc: 'Figma ipsum component variant main layer. Hand.',
+        value: '500+',
+        desc: 'Projects Completed',
       },
       {
-        value: '100%',
-        desc: 'Figma ipsum component variant main layer. Hand.',
+        value: '98%',
+        desc: 'Client Satisfaction',
       },
       {
-        value: '3.5K',
-        desc: 'Figma ipsum component variant main layer. Hand.',
+        value: '5K',
+        desc: 'Lines of Code Written',
       },
       {
-        value: '240+',
-        desc: 'Figma ipsum component variant main layer. Hand.',
+        value: '120+',
+        desc: 'Cups of Coffee Consumed',
       },
     ];
   }

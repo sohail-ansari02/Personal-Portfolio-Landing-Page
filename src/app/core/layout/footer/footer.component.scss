@@ -9,7 +9,7 @@
   }
   &-wrapper {
     padding-block: toRem(30);
-    background: $--clr-primary-1;
+    background: $--clr-primary;
   }
   &__right {
     display: flex;
@@ -20,7 +20,7 @@
       gap: toRem(15);
     }
     &-text {
-      color: $--clr-white-5;
+      color: $--clr-background;
       font-size: toRem(16);
       font-style: normal;
       font-weight: 400;
@@ -40,7 +40,7 @@
       gap: toRem(33);
     }
     &-text {
-      color: $--clr-white-5;
+      color: $--clr-background;
       font-size: toRem(18);
       font-style: normal;
       font-weight: 600;
@@ -52,7 +52,7 @@
     }
     &-icon {
       @include square(30);
-      color: $--clr-white-8;
+      color: $--clr-background;
     }
   }
 }

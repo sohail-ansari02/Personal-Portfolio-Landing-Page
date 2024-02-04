@@ -18,14 +18,14 @@
 * {
   scroll-behavior: smooth;
   &::selection {
-    background-color: $--clr-primary-1;
-    color: $--clr-white-8;
+    background-color: $--clr-primary;
+    color: $--clr-background;
   }
 }
 body {
-  color: $--clr-secondary-1;
-  background-color: $--clr-white-8;
-  font-family: "Work Sans", sans-serif;
+  color: $--clr-secondary;
+  background-color: $--clr-background;
+  font-family: 'Lato', sans-serif;
 }
 h1,
 h2,
@@ -39,15 +39,15 @@ h1 {
   font-size: toRem(60);
   // font-style: normal;
   font-weight: 700;
-  line-height: 1.1em;
+  line-height: 1;
 }
 h2 {
   font-size: toRem(20);
   font-style: normal;
   font-weight: 600;
-  // line-height: normal;
+  line-height: 1.2;
   letter-spacing: toEm(.8);
-  color: $--clr-primary-1;
+  color: $--clr-primary;
   text-transform: uppercase;
 }
 h3 {
@@ -62,7 +62,7 @@ button {
 }
 
 .special {
-  color: $--clr-primary-1;
+  color: $--clr-primary;
 }
 .strong {
   font-weight: 700;

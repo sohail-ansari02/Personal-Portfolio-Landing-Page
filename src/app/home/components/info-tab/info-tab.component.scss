@@ -26,13 +26,13 @@
   }
   &__skill {
     &-name {
-      color: $--clr-secondary-1;
+      color: $--clr-secondary;
       font-size: toRem(20);
       font-weight: 600;
       line-height: 1.5;
     }
     &-desc {
-      color: $--clr-secondary-1;
+      color: $--clr-secondary;
       font-size: toRem(18);
       font-weight: 400;
       line-height: 1;

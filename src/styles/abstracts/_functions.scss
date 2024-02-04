@@ -56,3 +56,7 @@
 @function zIndex($layer) {
   @return map-get($z-indexes, $layer);
 }
+
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
