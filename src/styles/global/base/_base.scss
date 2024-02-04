@@ -18,7 +18,7 @@
 * {
   scroll-behavior: smooth;
   &::selection {
-    background-color: $--clr-primary-1;
+    background-color: $--clr-primary;
     color: $--clr-white-8;
   }
 }
@@ -47,7 +47,7 @@ h2 {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: toEm(.8);
-  color: $--clr-primary-1;
+  color: $--clr-primary;
   text-transform: uppercase;
 }
 h3 {
@@ -62,7 +62,7 @@ button {
 }
 
 .special {
-  color: $--clr-primary-1;
+  color: $--clr-primary;
 }
 .strong {
   font-weight: 700;

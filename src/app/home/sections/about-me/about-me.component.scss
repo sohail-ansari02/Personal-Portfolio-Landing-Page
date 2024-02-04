@@ -71,6 +71,9 @@
     width: toRem(765);
     height: auto;
     aspect-ratio: 765/766;
+
+    filter: brightness(0.7);
+
     @include respond-to(small) {
       display: none;
     }

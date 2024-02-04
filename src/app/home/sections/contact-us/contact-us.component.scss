@@ -5,7 +5,7 @@
   text-align: center;
 
   &-wrapper {
-    background-color: $--clr-primary-1;
+    background-color: $--clr-primary;
     overflow: hidden;
   }
   &__bg-img {
@@ -92,7 +92,7 @@
     &-checkbox {
       margin-inline-end: $gap;
       // transform: scale(1.3);
-      accent-color: $--clr-primary-1;
+      accent-color: $--clr-primary;
 
       cursor: pointer;
       position: relative;

@@ -12,7 +12,7 @@
     @extend %center;
     padding-inline: toRem(12.5);
     border-radius: 50%;
-    border: toRem(1) solid $--clr-primary-1;
+    border: toRem(1) solid $--clr-primary;
     transition: $transition-duration;
     &:last-child {
       transform: rotate(180deg);
@@ -22,7 +22,7 @@
     }
     &:active,
     &:hover {
-      background-color: $--clr-primary-1;
+      background-color: $--clr-primary;
       & path {
         fill: $--clr-white-8;
       }

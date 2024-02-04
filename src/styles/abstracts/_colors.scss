@@ -1,6 +1,6 @@
-$--clr-primary-1: var(--clr-primary-1);
-$--clr-primary-2: var(--clr-primary-2);
-$--clr-primary-3: var(--clr-primary-3);
+$--clr-primary: var(--clr-primary);
+
+$--clr-neutral: var(--clr-neutral);
 
 $--clr-secondary-1: var(--clr-secondary-1);
 $--clr-secondary-2: var(--clr-secondary-2);
@@ -24,11 +24,9 @@ $--clr-yellow-1: var(--clr-yellow);
 $--clr-grey: var(--clr-grey);
 
 $colors-light: (
-  --clr-primary-1: #333D79FF,
-  --clr-primary-2: #333D79FF,
-  --clr-primary-3: #333D79FF,
+  --clr-primary: #333D79FF,
 
-  --clr-grey: #f3dde4,
+  --clr-neutral: #ecd9df,
 
   --clr-secondary-1: #021528,
   --clr-secondary-2: #021528,

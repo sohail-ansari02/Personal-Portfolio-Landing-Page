@@ -1,17 +1,17 @@
 @import "abstracts";
 .card {
-  border: 1px solid $--clr-white-1;
+  border: 1px solid $--clr-neutral;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: toRem(10);
   color: $--clr-secondary-2;
   max-width: toRem(360);
-  fill: $--clr-primary-1;
-  stroke: $--clr-primary-1;
+  fill: $--clr-primary;
+  stroke: $--clr-primary;
   transition: $transition-duration;
   &:hover {
-    background-color: $--clr-primary-1;
+    background-color: $--clr-primary;
     color: $--clr-white-8;
     stroke: $--clr-white-8;
   }
@@ -38,7 +38,7 @@
     text-align: left;
   }
   &__btn {
-    color: $--clr-primary-1;
+    color: $--clr-primary;
     font-size: toRem(18);
     font-weight: 400;
     line-height: 1.55;
@@ -63,8 +63,8 @@
       transition: $transition-duration;
 
       path {
-        stroke: $--clr-primary-1;
-        fill: $--clr-primary-1;
+        stroke: $--clr-primary;
+        fill: $--clr-primary;
       }
       .card:hover & {
         path {
