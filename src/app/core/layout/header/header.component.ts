@@ -20,7 +20,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // if (isMobile()) {
     setTimeout(() => {
-      console.log('object');
       this.showMobileMenu = true;
     }, AnimationTransitionDelay);
     // }
