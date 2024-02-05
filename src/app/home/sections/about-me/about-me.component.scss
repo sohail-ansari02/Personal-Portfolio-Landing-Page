@@ -56,9 +56,8 @@
     }
   }
   &__image {
+    @include square(627);
     width: 100%;
-    height: auto;
-    aspect-ratio: 627/623;
     border-radius: 50%;
   }
   &__bg-image {

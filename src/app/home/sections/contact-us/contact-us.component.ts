@@ -24,14 +24,14 @@ export class ContactUsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    console.log(this.form.nativeElement);
+    // console.log(this.form.nativeElement);
   }
 
   onSubmit(evt: Event): void {
     // @ts-ignore
     window.Pageclip.form(this.form.nativeElement, {
       onSubmit: () => {
-        console.log('submitted');
+        // console.log('submitted');
       },
       onResponse: () => {
       toast('Sumitted successfully!🚀');

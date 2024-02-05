@@ -69,7 +69,7 @@
     border-radius: 50%;
     width: toRem(553);
     height: auto;
-    aspect-ratio: 553/561;
+    aspect-ratio: 1;
     flex: 0 0.5 toRem(553);
     @include respond-to(small) {
       width: 100%;
