@@ -5,23 +5,19 @@ import { RangePipe } from './pipes/range.pipe';
 import { SwapperButtonComponent } from './components/swapper-button/swapper-button.component';
 import { SwapperDirective } from './directives/swapper.directive';
 
-
-
 @NgModule({
   declarations: [
     ProgressBarComponent,
     RangePipe,
     SwapperButtonComponent,
-    SwapperDirective
+    SwapperDirective,
   ],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   exports: [
     ProgressBarComponent,
     RangePipe,
     SwapperButtonComponent,
-    SwapperDirective
-  ]
+    SwapperDirective,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
