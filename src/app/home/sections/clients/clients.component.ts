@@ -23,7 +23,7 @@ export class ClientsComponent implements OnInit {
         feedback:
           'I am truly impressed with their work. Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus',
         ratings: 4,
-        profileImg: 'assets/images/clients/client (4).png',
+        profileImg: 'assets/images/clients/client (4).webp',
       },
       {
         name: 'Emma Johnson',
@@ -31,7 +31,7 @@ export class ClientsComponent implements OnInit {
         feedback:
           'Exceptional service and attention to detail. Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus',
         ratings: 5,
-        profileImg: 'assets/images/clients/client (3).png',
+        profileImg: 'assets/images/clients/client (3).webp',
       },
       {
         name: 'Alex Rodriguez',
@@ -39,7 +39,7 @@ export class ClientsComponent implements OnInit {
         feedback:
           'Consistently delivers outstanding results. Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus',
         ratings: 4,
-        profileImg: 'assets/images/clients/client (1).png',
+        profileImg: 'assets/images/clients/client (1).webp',
       },
       {
         name: 'John Williams',
@@ -47,7 +47,7 @@ export class ClientsComponent implements OnInit {
         feedback:
           'Highly professional and creative team. Lorem ipsum dolor sit amet consectetur. Nibh porttitor aliquet tellus eget egestas. Enim ultrices dictumst tortor in eget neque vestibulum potenti tempus',
         ratings: 5,
-        profileImg: 'assets/images/clients/client (2).png',
+        profileImg: 'assets/images/clients/client (2).webp',
       },
     ];
   }
