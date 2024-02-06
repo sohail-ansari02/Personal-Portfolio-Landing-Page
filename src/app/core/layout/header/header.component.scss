@@ -1,4 +1,16 @@
 @import "abstracts";
+.skip-to-content-link {
+  left: 50%;
+  position: absolute;
+  transform: translateY(-100%);
+  z-index: zIndex(modal);
+  transition: $transition-duration;
+
+  &:focus {
+    transform: translateY(0%);
+  }
+}
+
 .header {
   $gap: toRem(120);
   $mobileNavGap: toRem(38);
