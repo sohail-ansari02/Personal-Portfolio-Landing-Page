@@ -42,13 +42,14 @@
     </div>
   </div>
   <img
-    src="assets/images/profile/hero-image.webp"
-    srcset="
-      /assets/images/profile/hero-image.webp        553w,
-      /assets/images/profile/mobile-hero-image.webp 350w
-    "
-    alt="hero image"
+    ngSrc="assets/images/profile/hero-image.webp"
+    [srcset]="[
+    '/assets/images/profile/hero-image.webp 553w',
+    '/assets/images/profile/mobile-hero-image.webp 350w'
+  ]"    alt="hero image"
     class="hero__image"
     width="553"
+    height="553"
+    priority
   />
 </section>
