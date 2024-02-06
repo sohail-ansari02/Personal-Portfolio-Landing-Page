@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
@@ -18,7 +18,6 @@ import { ClientCardComponent } from './components/client-card/client-card.compon
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 // import { ContactUsComponent } from './sections/contact-/contact-us.component';
 
-
 @NgModule({
   declarations: [
     HomeComponent,
@@ -36,10 +35,6 @@ import { ServiceCardComponent } from './components/service-card/service-card.com
     ServiceCardComponent,
     // ContactUsComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    SharedModule
-  ]
+  imports: [CommonModule, HomeRoutingModule, NgOptimizedImage, SharedModule],
 })
-export class HomeModule { }
+export class HomeModule {}
