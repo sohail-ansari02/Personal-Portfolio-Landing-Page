@@ -10,4 +10,7 @@
 
 *{
   // outline: 1px solid;
+  &:focus{
+    outline: 1px solid currentColor;
+  }
 }
