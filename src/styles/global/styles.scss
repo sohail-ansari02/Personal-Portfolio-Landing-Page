@@ -14,3 +14,8 @@
     outline: 1px solid currentColor;
   }
 }
+app-projects .om-starry-sky .om-starry-sky-background{
+  z-index: zIndex("below");
+
+}
+

@@ -1,21 +1,26 @@
-<section class="clients container section">
-  <h2 class="clients__heading">Testimonials</h2>
-  <h3 class="clients__sub-heading">Building Trust with Our Clients</h3>
-  <app-swapper-button
-    [swapper]="swapper"
-    class="clients__swapper-btn"
-  ></app-swapper-button>
+<om-flickering-grid>
+  <section class="clients container section">
+    <h2 class="clients__heading">Testimonials</h2>
+    <h3 class="clients__sub-heading">Building Trust with Our Clients</h3>
+    <app-swapper-button
+      [swapper]="swapper"
+      class="clients__swapper-btn"
+    ></app-swapper-button>
 
-  <ul
-    #swapper="swapper"
-    [total]="clients.length"
-    [cardWidth]="297"
-    [cardToShow]="4"
-    [gap]="30"
-    class="clients__list swapper"
-  >
-    <li *ngFor="let client of clients" class="clients__list-item swapper-item">
-      <app-client-card [data]="client"></app-client-card>
-    </li>
-  </ul>
-</section>
+    <ul
+      #swapper="swapper"
+      [total]="clients.length"
+      [cardWidth]="297"
+      [cardToShow]="4"
+      [gap]="30"
+      class="clients__list swapper"
+    >
+      <li
+        *ngFor="let client of clients"
+        class="clients__list-item swapper-item"
+      >
+        <app-client-card [data]="client"></app-client-card>
+      </li>
+    </ul>
+  </section>
+</om-flickering-grid>

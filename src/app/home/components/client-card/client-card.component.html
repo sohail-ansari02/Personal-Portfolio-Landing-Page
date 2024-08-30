@@ -1,26 +1,28 @@
-<div *ngIf="data" class="card">
-  <img
-    class="card__photo"
-    src="{{ data.profileImg }}"
-    alt="{{ data.name }}"
-    width="150"
-    height="150"
-  />
-  <p class="card__feedback">
-    {{ data.feedback }}
-  </p>
-  <div class="card__ratings">
+<om-shine-border>
+  <div *ngIf="data" class="card">
     <img
-      *ngFor="let star of data.ratings | range"
-      src="assets/images/icons/star.svg"
-      alt="rating"
-      width="26"
-      height="24.9"
-      class="card__star"
+      class="card__photo"
+      src="{{ data.profileImg }}"
+      alt="{{ data.name }}"
+      width="150"
+      height="150"
     />
+    <p class="card__feedback">
+      {{ data.feedback }}
+    </p>
+    <div class="card__ratings">
+      <img
+        *ngFor="let star of data.ratings | range"
+        src="assets/images/icons/star.svg"
+        alt="rating"
+        width="26"
+        height="24.9"
+        class="card__star"
+      />
+    </div>
+    <div class="card__info">
+      <span class="card__name">{{ data.name }}</span>
+      <span class="card__position">{{ data.position }}</span>
+    </div>
   </div>
-  <div class="card__info">
-    <span class="card__name">{{ data.name }}</span>
-    <span class="card__position">{{ data.position }}</span>
-  </div>
-</div>
+</om-shine-border>

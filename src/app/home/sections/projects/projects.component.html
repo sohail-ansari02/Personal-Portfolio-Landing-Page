@@ -1,32 +1,52 @@
-<section class="projects container section">
-  <h2 class="projects__heading">Our projects</h2>
-  <h3 class="projects__sub-heading">
-    Explore My Design Portfolio <br /> and Case Studies
-  </h3>
-  <div class="projects__buttons btn-group">
-    <ng-container *ngFor="let tab of tabs">
-      <button
-        (click)="onSelectTab(tab)"
-        [ngClass]="{
-          projects__btn: true,
-          btn: selectedTab == tab.toLowerCase(),
-          'btn-outlined': selectedTab != tab.toLowerCase()
-        }"
+<om-starry-sky
+  [starsBackgroundConfig]="{
+    starDensity: 0.0002,
+    allStarsTwinkle: true,
+    twinkleProbability: 0.8,
+
+  }"
+  [shootingStarsConfig]="{
+    minSpeed: 15,
+    maxSpeed: 35,
+    starColor: '#FFFFFF',
+    trailColor: '#FF6347',
+
+    minDelay: 500,
+    maxDelay: 3000
+  }"
+  [skyColor]="'var(--clr-background)'"
+>
+  <section class="projects container section">
+    <h2 class="projects__heading">Our projects</h2>
+    <h3 class="projects__sub-heading">
+      Explore My Design Portfolio <br />
+      and Case Studies
+    </h3>
+    <div class="projects__buttons btn-group">
+      <ng-container *ngFor="let tab of tabs">
+        <button
+          (click)="onSelectTab(tab)"
+          [ngClass]="{
+            projects__btn: true,
+            btn: selectedTab == tab.toLowerCase(),
+            'btn-outlined': selectedTab != tab.toLowerCase()
+          }"
+        >
+          {{ tab }}
+        </button>
+      </ng-container>
+    </div>
+    <ul class="projects__list">
+      <li
+        *ngFor="let project of tabData | project : selectedTab"
+        class="projects__list-item card"
       >
-        {{ tab }}
-      </button>
-    </ng-container>
-  </div>
-  <ul class="projects__list">
-    <li
-      *ngFor="let project of tabData | project : selectedTab"
-      class="projects__list-item card"
-    >
-      <img
-        class="projects__image"
-        [src]="project.imgPath"
-        [alt]="project.name"
-      />
-    </li>
-  </ul>
-</section>
+        <img
+          class="projects__image"
+          [src]="project.imgPath"
+          [alt]="project.name"
+        />
+      </li>
+    </ul>
+  </section>
+</om-starry-sky>
