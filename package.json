@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^18.2.2",
     "@angular/platform-browser-dynamic": "^18.2.2",
     "@angular/router": "^18.2.2",
+    "@omnedia/ngx-marquee": "^1.0.2",
     "pageclip": "^1.0.0",
     "pure-start": "^1.0.10",
     "rxjs": "~7.5.0",
