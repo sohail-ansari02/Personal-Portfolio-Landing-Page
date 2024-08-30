@@ -1,21 +1,23 @@
-import { NgModule } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeComponent } from './home.component';
-import { HeroComponent } from './sections/hero/hero.component';
 import { AboutMeComponent } from './sections/about-me/about-me.component';
-import { SharedModule } from '../shared/shared.module';
-import { InfoTabComponent } from './components/info-tab/info-tab.component';
-import { SupportsComponent } from './sections/supports/supports.component';
-import { StatsComponent } from './sections/stats/stats.component';
-import { ProjectsComponent } from './sections/projects/projects.component';
-import { ProjectPipe } from './pipes/project.pipe';
+import { ClientCardComponent } from './components/client-card/client-card.component';
 import { ClientsComponent } from './sections/clients/clients.component';
 import { ContactUsComponent } from './sections/contact-us/contact-us.component';
-import { ServicesComponent } from './sections/services/services.component';
-import { ClientCardComponent } from './components/client-card/client-card.component';
+import { HeroComponent } from './sections/hero/hero.component';
+import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home-routing.module';
+import { InfoTabComponent } from './components/info-tab/info-tab.component';
+import { NgModule } from '@angular/core';
+import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
+import { ProjectPipe } from './pipes/project.pipe';
+import { ProjectsComponent } from './sections/projects/projects.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
+import { ServicesComponent } from './sections/services/services.component';
+import { SharedModule } from '../shared/shared.module';
+import { StatsComponent } from './sections/stats/stats.component';
+import { SupportsComponent } from './sections/supports/supports.component';
+
 // import { ContactUsComponent } from './sections/contact-/contact-us.component';
 
 @NgModule({
@@ -35,6 +37,12 @@ import { ServiceCardComponent } from './components/service-card/service-card.com
     ServiceCardComponent,
     // ContactUsComponent
   ],
-  imports: [CommonModule, HomeRoutingModule, NgOptimizedImage, SharedModule],
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    NgOptimizedImage,
+    SharedModule,
+    NgxMarqueeComponent,
+  ],
 })
 export class HomeModule {}

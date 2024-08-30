@@ -3,6 +3,7 @@
   display: flex;
   justify-content: stretch;
   gap: toRem(30);
+  width: 100%;
   @include respond-to(small) {
     flex-direction: column;
     gap: toRem(30);
@@ -13,23 +14,57 @@
   }
   &-item {
     flex: 1;
+    flex-basis: toRem(120);
   }
   &-image {
     object-fit: contain;
-    width: 100%;
+    width: toRem(180);
     height: auto;
     aspect-ratio: 1;
-    // filter: brightness(.4);
     aspect-ratio: 4/2;
-    filter: grayscale(1);
-    transition: filter $transition-duration;
-    &:hover{
-      filter: none;
-    }
+    // filter: grayscale(1);
+    // transition: filter $transition-duration;
+    // &:hover{
+    //   filter: none;
+    // }
     @include respond-to(small) {
       aspect-ratio: 1;
       // aspect-ratio: 3/1;
       width: toRem(130);
     }
+  }
+}
+
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  gap: toRem(16);
+}
+
+.marquee-gradient {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: toRem(130);
+
+  &.left {
+    left: 0;
+    background-image: linear-gradient(
+      to right,
+      $--clr-neutral,
+      transparent
+    );
+  }
+
+  &.right {
+    right: 0;
+    background-image: linear-gradient(
+      to left,
+      $--clr-neutral,
+      transparent
+    );
   }
 }

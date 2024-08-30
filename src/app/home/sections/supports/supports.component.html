@@ -1,11 +1,37 @@
 <section class="supports-wrapper container-full section">
-  <ul class="supports container">
-    <li *ngFor="let tech of techList" class="supports-item">
-      <img
-        class="supports-image"
-        src="assets/images/techs/{{ tech }}"
-        alt="{{ tech }}"
-      />
-    </li>
-  </ul>
+  <div class="supports container">
+    <div class="marquee-wrapper">
+      <om-marquee>
+        <div
+          #OmMarqueeContent
+          *ngFor="let tech of firstRow"
+          class="supports-item"
+        >
+          <img
+            class="supports-image"
+            src="assets/images/techs/{{ tech }}"
+            alt="{{ tech.split('.')[0] }}"
+            title="{{tech.split('.')[0]}}"
+          />
+        </div>
+      </om-marquee>
+      <om-marquee [reverse]="true">
+        <div
+          #OmMarqueeContent
+          *ngFor="let tech of secondRow"
+          class="supports-item"
+        >
+          <img
+            class="supports-image"
+            src="assets/images/techs/{{ tech }}"
+            alt="{{ tech.split('.')[0] }}"
+            title="{{tech.split('.')[0]}}"
+          />
+        </div>
+      </om-marquee>
+
+      <div class="marquee-gradient left"></div>
+      <div class="marquee-gradient right"></div>
+    </div>
+  </div>
 </section>
