@@ -1,4 +1,12 @@
+@use 'sass:color';
 @import "abstracts";
+
+:host{
+  position: relative;
+  @include zIndex("top-bar");
+  width: 100%;
+  backdrop-filter: blur(4px) brightness(0.7);
+}
 .skip-to-content-link {
   left: 50%;
   position: absolute;
@@ -20,7 +28,7 @@
   justify-content: space-between;
   align-items: center;
   gap: toRem(22);
-  padding-block: toRem(15);
+  padding-block: toRem(20);
 
   &__mobile-nav-btn {
     display: none;
@@ -28,6 +36,7 @@
     height: auto;
     aspect-ratio: 31.333/32;
     cursor: pointer;
+    filter: invert(1);
 
     @include respond-to(small) {
       display: inline-block;

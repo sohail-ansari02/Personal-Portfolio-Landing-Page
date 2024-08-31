@@ -10,6 +10,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { InfoTabComponent } from './components/info-tab/info-tab.component';
 import { NgModule } from '@angular/core';
 import { NgxAuroraComponent } from '@omnedia/ngx-aurora';
+import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
 import { NgxDotpatternComponent } from '@omnedia/ngx-dotpattern';
 import { NgxFlickeringGridComponent } from '@omnedia/ngx-flickering-grid';
 import { NgxGridpatternComponent } from '@omnedia/ngx-gridpattern';
@@ -24,7 +25,6 @@ import { ServicesComponent } from './sections/services/services.component';
 import { SharedModule } from '../shared/shared.module';
 import { StatsComponent } from './sections/stats/stats.component';
 import { SupportsComponent } from './sections/supports/supports.component';
-import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
 
 // import { ContactUsComponent } from './sections/contact-/contact-us.component';
 
@@ -59,6 +59,7 @@ import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
     NgxFlickeringGridComponent,
     NgxShineBorderComponent,
     NgxBorderBeamComponent,
+
   ],
 })
 export class HomeModule {}
