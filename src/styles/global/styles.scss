@@ -7,19 +7,22 @@
 @import "components";
 @import "themes";
 
-
-*{
+* {
   // outline: 1px solid;
-  &:focus{
+  &:focus {
     outline: 1px solid currentColor;
   }
 }
-app-projects .om-starry-sky .om-starry-sky-background{
+app-projects .om-starry-sky .om-starry-sky-background {
   z-index: zIndex("below");
-
 }
 
+div.om-shine-border {
+  overflow: hidden;
+  width: fit-content;
 
-.om-shine-border .om-shine-border-border{
-  border-radius: toRem(15);
+  .card {
+    border-radius: 0;
+    width: 100%;
+  }
 }
