@@ -30,6 +30,7 @@
     "@omnedia/ngx-shine-border": "^1.1.0",
     "@omnedia/ngx-starry-sky": "^1.0.4",
     "@omnedia/ngx-typewriter": "^1.2.0",
+    "@omnedia/rxjs-typewriter": "^1.1.0",
     "pageclip": "^1.0.0",
     "pure-start": "^1.0.10",
     "rxjs": "~7.5.0",
