@@ -24,11 +24,9 @@ import { ServicesComponent } from './sections/services/services.component';
 import { SharedModule } from '../shared/shared.module';
 import { StatsComponent } from './sections/stats/stats.component';
 import { SupportsComponent } from './sections/supports/supports.component';
+import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
 
 // import { ContactUsComponent } from './sections/contact-/contact-us.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -59,7 +57,8 @@ import { SupportsComponent } from './sections/supports/supports.component';
     NgxGridpatternComponent,
     NgxStarrySkyComponent,
     NgxFlickeringGridComponent,
-    NgxShineBorderComponent
+    NgxShineBorderComponent,
+    NgxBorderBeamComponent,
   ],
 })
 export class HomeModule {}

@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^18.2.2",
     "@angular/router": "^18.2.2",
     "@omnedia/ngx-aurora": "^1.0.1",
+    "@omnedia/ngx-border-beam": "^1.1.2",
     "@omnedia/ngx-dotpattern": "^1.0.1",
     "@omnedia/ngx-flickering-grid": "^1.0.2",
     "@omnedia/ngx-gridpattern": "^1.1.2",

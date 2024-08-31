@@ -1,6 +1,7 @@
 @import "abstracts";
 .services {
   text-align: center;
+  position: relative;
   &__heading,
   &__sub-heading {
     margin-block-end: toRem(15);

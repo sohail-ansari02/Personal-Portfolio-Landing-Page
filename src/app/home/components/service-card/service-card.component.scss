@@ -10,6 +10,7 @@
   fill: $--clr-primary;
   stroke: $--clr-primary;
   transition: $transition-duration;
+  background-color: $--clr-background;
   &:hover {
     background-color: $--clr-primary;
     color: $--clr-background;

@@ -4,7 +4,7 @@
   justify-content: space-between;
   // align-items: center;
   gap: toRem(30);
-
+  position: relative;
   // old code
 
   // ṇew code
@@ -84,3 +84,7 @@
     }
   }
 }
+.dotpattern{
+  background-color: $--clr-background;
+}
+

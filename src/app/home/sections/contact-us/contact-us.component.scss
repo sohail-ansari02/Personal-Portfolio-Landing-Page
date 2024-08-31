@@ -1,11 +1,11 @@
 @import "abstracts";
 .contact {
   position: relative;
-  isolation: isolate;
+  // isolation: isolate;
   text-align: center;
 
   &-wrapper {
-    background-color: $--clr-primary;
+    // background-color: $--clr-primary;
     overflow: hidden;
   }
   &__bg-img {
@@ -16,11 +16,11 @@
     z-index: zIndex("below");
   }
   &__heading {
-    color: $--clr-background;
+    color: $--clr-secondary;
     margin-block-end: toRem(24);
   }
   &__sub-heading {
-    color: $--clr-background;
+    color: $--clr-secondary;
     margin-block-end: toRem(70);
   }
   &__content {
@@ -33,7 +33,7 @@
     }
   }
   &__info {
-    background-color: $--clr-background;
+    background-color: $--clr-neutral;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -78,7 +78,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: $gap;
     &-input {
-      background-color: $--clr-background;
+      background-color: $--clr-neutral;
       padding: toRem(15);
       border-radius: toRem(5);
       @include respond-to(small) {
@@ -102,7 +102,7 @@
       width: fit-content;
     }
     &__terms {
-      color: $--clr-background;
+      color: $--clr-secondary;
       cursor: pointer;
       line-height: 1;
     }

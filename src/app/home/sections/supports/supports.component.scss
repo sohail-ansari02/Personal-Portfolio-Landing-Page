@@ -4,10 +4,28 @@
   justify-content: stretch;
   gap: toRem(30);
   width: 100%;
+  text-align: center;
   @include respond-to(small) {
     flex-direction: column;
     gap: toRem(30);
     align-items: center;
+  }
+  &__heading,
+  &__sub-heading {
+    margin-block-end: toRem(15);
+    text-align: center;
+  }
+  &__sub-heading {
+    color: $--clr-secondary;
+    text-align: center;
+  }
+  &__desc {
+    color: $--clr-secondary;
+    text-align: center;
+    font-size: toRem(18);
+    font-weight: 400;
+    line-height: 1.38;
+    margin-block-end: toRem(60);
   }
   &-wrapper {
     background-color: $--clr-neutral;

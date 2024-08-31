@@ -1,19 +1,6 @@
 <om-starry-sky
-  [starsBackgroundConfig]="{
-    starDensity: 0.0002,
-    allStarsTwinkle: true,
-    twinkleProbability: 0.8,
-
-  }"
-  [shootingStarsConfig]="{
-    minSpeed: 15,
-    maxSpeed: 35,
-    starColor: '#FFFFFF',
-    trailColor: '#FF6347',
-
-    minDelay: 500,
-    maxDelay: 3000
-  }"
+  [shootingStarsConfig]="{ minDelay: 500, maxDelay: 3000}"
+  [starsBackgroundConfig]="{ starDensity: 0.0015 }"
   [skyColor]="'var(--clr-background)'"
 >
   <section class="projects container section">
@@ -41,11 +28,18 @@
         *ngFor="let project of tabData | project : selectedTab"
         class="projects__list-item card"
       >
-        <img
-          class="projects__image"
-          [src]="project.imgPath"
-          [alt]="project.name"
-        />
+        <om-shine-border>
+          <img
+            class="projects__image"
+            [src]="project.imgPath"
+            [alt]="project.name"
+          />
+          <div class="projects__list-item-name">
+            <span>
+              <h4>{{ project.name }}</h4>
+            </span>
+          </div>
+        </om-shine-border>
       </li>
     </ul>
   </section>

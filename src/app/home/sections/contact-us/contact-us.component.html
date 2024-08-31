@@ -1,75 +1,81 @@
 <om-flickering-grid>
-<div class="contact-wrapper container-full section">
-  <section class="contact container">
-    <img class="contact__bg-img" src="assets\images\contact\c-bg.svg" alt="" />
-    <h2 class="contact__heading h2">contact me</h2>
-    <h3 class="contact__sub-heading">Explore a Complimentary Consultation</h3>
-    <div class="contact__content">
-      <div class="contact__info card">
-        <div class="contact__phone">
-          <span class="contact__phone-title">Available 24/7</span>
-          <a class="contact__phone-no" href="tel: ">(+23) 5535 68 68</a>
-        </div>
-        <div class="contact__details">
-          <div class="contact__details-desc">
-            <span class="contact__details-title">Location: </span>
-            2972 Westheimer Rd. Santa Ana, Illinois 85486
-          </div>
+  <div class="contact-wrapper container-full section">
+    <section class="contact container">
+      <img
+        class="contact__bg-img"
+        src="assets\images\contact\c-bg.svg"
+        alt=""
+      />
+      <h2 class="contact__heading h2">contact me</h2>
+      <h3 class="contact__sub-heading">Explore a Complimentary Consultation</h3>
+      <div class="contact__content">
+        <om-border-beam>
+          <div class="contact__info card">
+            <div class="contact__phone">
+              <span class="contact__phone-title">Available 24/7</span>
+              <a class="contact__phone-no" href="tel: ">(+23) 5535 68 68</a>
+            </div>
+            <div class="contact__details">
+              <div class="contact__details-desc">
+                <span class="contact__details-title">Location: </span>
+                2972 Westheimer Rd. Santa Ana, Illinois 85486
+              </div>
 
-          <div class="contact__details-desc">
-            <span class="contact__details-title">Email: </span>
-            <a href="mailto:nevaeh.simmons@example.com"
-              >nevaeh.simmons&#64;example.com</a
-            >
-          </div>
+              <div class="contact__details-desc">
+                <span class="contact__details-title">Email: </span>
+                <a href="mailto:nevaeh.simmons@example.com"
+                  >nevaeh.simmons&#64;example.com</a
+                >
+              </div>
 
-          <div class="contact__details-desc">
-            <span class="contact__details-title">Fax: </span>
-            (702) 555-0122
-          </div>
+              <div class="contact__details-desc">
+                <span class="contact__details-title">Fax: </span>
+                (702) 555-0122
+              </div>
 
-          <div class="contact__details-desc">
-            <span class="contact__details-title">Business Hours: </span>
-            Mon - Sat: 9:00 AM - 6:00 PM
+              <div class="contact__details-desc">
+                <span class="contact__details-title">Business Hours: </span>
+                Mon - Sat: 9:00 AM - 6:00 PM
+              </div>
+            </div>
           </div>
-        </div>
+        </om-border-beam>
+
+        <form #form [action]="url" class="contact__form">
+          <input
+            class="contact__form-input"
+            placeholder="Name*"
+            type="text"
+            required
+            name="name"
+          />
+          <input
+            class="contact__form-input"
+            placeholder="Email Address*"
+            type="email"
+            required
+            name="email"
+          />
+          <textarea
+            class="contact__form-input contact__form-input-full"
+            rows="1"
+            placeholder="How can we help you?"
+            required
+            name="message"
+          ></textarea>
+          <label class="contact__form__terms contact__form-input-full">
+            <input class="contact__form-checkbox" type="checkbox" required />
+            <span>By submitting, i’m agreed to the Terms & Conditons</span>
+          </label>
+          <button
+            (click)="onSubmit($event)"
+            class="contact__form-submit-btn btn-outlined pageclip-form__submit"
+            type="submit"
+          >
+            Request Now
+          </button>
+        </form>
       </div>
-
-      <form #form [action]="url" class="contact__form">
-        <input
-          class="contact__form-input"
-          placeholder="Name*"
-          type="text"
-          required
-          name="name"
-        />
-        <input
-          class="contact__form-input"
-          placeholder="Email Address*"
-          type="email"
-          required
-          name="email"
-        />
-        <textarea
-          class="contact__form-input contact__form-input-full"
-          rows="1"
-          placeholder="How can we help you?"
-          required
-          name="message"
-        ></textarea>
-        <label class="contact__form__terms contact__form-input-full">
-          <input class="contact__form-checkbox" type="checkbox" required />
-          <span>By submitting, i’m agreed to the Terms & Conditons</span>
-        </label>
-        <button
-          (click)="onSubmit($event)"
-          class="contact__form-submit-btn btn-outlined pageclip-form__submit"
-          type="submit"
-        >
-          Request Now
-        </button>
-      </form>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 </om-flickering-grid>

@@ -9,6 +9,7 @@
   gap: toRem(20);
   border: 1px solid $--clr-neutral;
   box-sizing: border-box;
+  background-color: $--clr-background;
 
   &__photo {
     @include square(150);

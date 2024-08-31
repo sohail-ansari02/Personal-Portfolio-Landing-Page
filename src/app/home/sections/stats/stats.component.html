@@ -1,4 +1,4 @@
-<om-gridpattern>
+<om-dotpattern styleClass="dotpattern">
   <div class="stats-wrapper container-full section">
     <section class="stats container">
       <img
@@ -16,14 +16,16 @@
 
       <ul class="stats__card-list">
         <li *ngFor="let card of cards" class="stats__card-list-item">
-          <div class="stats__card card">
-            <span class="stats__card-value">
-              {{ card.value }}
-            </span>
-            <span class="stats__card-desc"> {{ card.desc }} </span>
-          </div>
+          <om-shine-border>
+            <div class="stats__card card">
+              <span class="stats__card-value">
+                {{ card.value }}
+              </span>
+              <span class="stats__card-desc"> {{ card.desc }} </span>
+            </div>
+          </om-shine-border>
         </li>
       </ul>
     </section>
   </div>
-</om-gridpattern>
+</om-dotpattern>

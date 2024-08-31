@@ -19,6 +19,8 @@
     height: 100%;
     transition: $transition-duration cubic-bezier(0.455, 0.03, 0.515, 0.955);
     will-change: width, height;
+    z-index: zIndex('below');
+    position: relative;
   }
   &__list {
     transition: $transition-duration;
@@ -37,9 +39,19 @@
       overflow: hidden;
       cursor: pointer;
       padding: 0;
+      position: relative;
       // border-radius: toRem(19);
       &:hover .projects__image {
         transform: scale(1.05);
+      }
+      &-name{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: $--clr-secondary;
+        background-color: $--clr-primary-transparent;
+        padding: toRem(14);
+        width: 100%;
       }
     }
   }
