@@ -18,6 +18,7 @@ import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
 import { NgxRetroGridComponent } from '@omnedia/ngx-retro-grid';
 import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 import { NgxStarrySkyComponent } from '@omnedia/ngx-starry-sky';
+import { NgxTypewriterComponent } from '@omnedia/ngx-typewriter';
 import { ProjectPipe } from './pipes/project.pipe';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
@@ -59,7 +60,7 @@ import { SupportsComponent } from './sections/supports/supports.component';
     NgxFlickeringGridComponent,
     NgxShineBorderComponent,
     NgxBorderBeamComponent,
-
+    NgxTypewriterComponent,
   ],
 })
 export class HomeModule {}

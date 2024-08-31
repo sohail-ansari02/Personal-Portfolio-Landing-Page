@@ -13,9 +13,16 @@
     <div class="hero__content">
       <h2 class="hero__sub-heading">Welcome to my Portfolio</h2>
       <h1 class="hero__heading h1">
-        Hi I’m <br />
-        <span class="special"> Mark Walker </span> <br />
-        Frontend Developer
+        <om-typewriter
+          [words]="['Hi I’m Mark Walker Frontend Developer']"
+          [writeDelay]="500"
+          [writeSpeed]="100"
+          styleClass="hero__heading h1"
+          [disableLoop]="true"
+        >
+        </om-typewriter>
+
+
       </h1>
       <p class="hero__para">
         Dive into my portfolio, where every pixel tells a unique story. Let's
