@@ -1,46 +1,49 @@
-<section class="supports-wrapper container-full section">
-  <h2 class="supports__heading">Technologies I Use</h2>
-  <h3 class="supports__sub-heading">
-    Tools & Frameworks Powering My
-    <span class="special">Frontend Development</span>
-  </h3>
-  <p class="supports__desc">
+<div class="container-full">
+  <section class="supports-wrapper container section">
+    <h2 class="supports__heading">Technologies I Use</h2>
+    <h3 class="supports__sub-heading">
+      Tools & Frameworks Powering My
+      <span class="special">Frontend Development</span>
+    </h3>
+    <p class="supports__desc">
+      I craft web applications and sites using Angular, React, TypeScript, SCSS,
+      and more to deliver efficient, modern, and visually appealing digital
+      experiences.
+    </p>
+    <div class="supports container">
+      <div class="marquee-wrapper">
+        <om-marquee>
+          <div
+            #OmMarqueeContent
+            *ngFor="let tech of firstRow"
+            class="supports-item"
+          >
+            <img
+              class="supports-image"
+              src="assets/images/techs/{{ tech }}"
+              alt="{{ tech.split('.')[0] }}"
+              title="{{ tech.split('.')[0] }}"
+            />
+          </div>
+        </om-marquee>
+        <om-marquee [reverse]="true">
+          <div
+            #OmMarqueeContent
+            *ngFor="let tech of secondRow"
+            class="supports-item"
+          >
+            <img
+              class="supports-image"
+              src="assets/images/techs/{{ tech }}"
+              alt="{{ tech.split('.')[0] }}"
+              title="{{ tech.split('.')[0] }}"
+            />
+          </div>
+        </om-marquee>
 
-I craft web applications and sites using Angular, React, TypeScript, SCSS, and more to deliver efficient, modern, and visually appealing digital experiences.
-  </p>
-  <div class="supports container">
-    <div class="marquee-wrapper">
-      <om-marquee>
-        <div
-          #OmMarqueeContent
-          *ngFor="let tech of firstRow"
-          class="supports-item"
-        >
-          <img
-            class="supports-image"
-            src="assets/images/techs/{{ tech }}"
-            alt="{{ tech.split('.')[0] }}"
-            title="{{ tech.split('.')[0] }}"
-          />
-        </div>
-      </om-marquee>
-      <om-marquee [reverse]="true">
-        <div
-          #OmMarqueeContent
-          *ngFor="let tech of secondRow"
-          class="supports-item"
-        >
-          <img
-            class="supports-image"
-            src="assets/images/techs/{{ tech }}"
-            alt="{{ tech.split('.')[0] }}"
-            title="{{ tech.split('.')[0] }}"
-          />
-        </div>
-      </om-marquee>
-
-      <div class="marquee-gradient left"></div>
-      <div class="marquee-gradient right"></div>
+        <div class="marquee-gradient left"></div>
+        <div class="marquee-gradient right"></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

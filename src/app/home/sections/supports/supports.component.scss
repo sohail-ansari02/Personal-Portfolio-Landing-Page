@@ -1,4 +1,8 @@
 @import "abstracts";
+.container-full{
+  background-color: $--clr-neutral;
+
+}
 .supports {
   display: flex;
   justify-content: stretch;
@@ -69,7 +73,7 @@
   width: toRem(130);
 
   &.left {
-    left: 0;
+    left: -4px;
     background-image: linear-gradient(
       to right,
       $--clr-neutral,
@@ -78,7 +82,7 @@
   }
 
   &.right {
-    right: 0;
+    right: -4px;
     background-image: linear-gradient(
       to left,
       $--clr-neutral,
