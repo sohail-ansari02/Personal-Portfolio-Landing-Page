@@ -1,4 +1,14 @@
 <!-- <om-aurora> -->
+<om-starry-sky
+  skyColor="var(--clr-background)"
+  [shootingStarsConfig]="{
+    minDelay: 500,
+    maxDelay: 1200,
+    starColor: 'var(--clr-secondary)',
+    trailColor: 'var(--clr-neutral)'
+  }"
+  [starsBackgroundConfig]="{ starDensity: 0.002, }"
+>
   <section class="hero container section">
     <div class="hero__content">
       <h2 class="hero__sub-heading">Welcome to my Portfolio</h2>
@@ -54,4 +64,5 @@
       height="553"
     />
   </section>
+</om-starry-sky>
 <!-- </om-aurora> -->
