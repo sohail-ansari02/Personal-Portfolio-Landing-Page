@@ -4,7 +4,6 @@
 :host{
   position: relative;
   @include zIndex("top-bar");
-  width: 100%;
   backdrop-filter: blur(4px) brightness(0.7);
 }
 .skip-to-content-link {

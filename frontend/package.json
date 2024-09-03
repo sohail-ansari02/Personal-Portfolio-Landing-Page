@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^18.2.2",
     "@angular/platform-browser-dynamic": "^18.2.2",
     "@angular/router": "^18.2.2",
+    "@nx/eslint-plugin": "^19.6.4",
     "@omnedia/ngx-aurora": "^1.0.1",
     "@omnedia/ngx-border-beam": "^1.1.2",
     "@omnedia/ngx-dotpattern": "^1.0.1",

@@ -9,7 +9,7 @@ import {
   input,
   signal,
 } from '@angular/core';
-import { Observable, combineLatest, forkJoin } from 'rxjs';
+import { Observable, combineLatest } from 'rxjs';
 
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
@@ -25,6 +25,7 @@ type MouseDirection = "UP" | "DOWN";
     '(mouseenter)': 'showOnHover()? hover.set(true) : null',
     '(mouseleave)': 'showOnHover()? hover.set(false) : null',
   },
+  exportAs: 'appStickyNavbar'
 })
 export class StickyNavbarDirective implements OnDestroy {
   showOnHover = input(false);
@@ -94,8 +95,11 @@ export class StickyNavbarDirective implements OnDestroy {
 
   private initCSSStyles(): void {
     this.element.style.transitionDuration = '.34s';
+    this.element.style.transitionTimingFunction = 'linear';
     this.element.style.position = 'fixed';
     this.element.style.top = '0';
     this.element.style.left = '0';
+    this.element.style.width = '100%';
+    this.element.style.zIndex = '2';
   }
 }
