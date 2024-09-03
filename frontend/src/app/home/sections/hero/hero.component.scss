@@ -5,8 +5,9 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  padding-block-start: toRem(150);
   @include zIndex("default");
-
+  height: 100vh;
   // old code
 
   // ṇew code
@@ -17,6 +18,7 @@
     flex-direction: column-reverse;
     gap: toRem(15);
     padding-bottom: toRem(30);
+    height: auto;
   }
 
   &__content {
