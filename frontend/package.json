@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve:ssr:sohail-portfolio-template": "node dist/personal-portfolio-landing-page/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -18,7 +19,9 @@
     "@angular/forms": "^18.2.2",
     "@angular/platform-browser": "^18.2.2",
     "@angular/platform-browser-dynamic": "^18.2.2",
+    "@angular/platform-server": "^18.2.2",
     "@angular/router": "^18.2.2",
+    "@angular/ssr": "^18.2.2",
     "@nx/eslint-plugin": "^19.6.4",
     "@omnedia/ngx-aurora": "^1.0.1",
     "@omnedia/ngx-border-beam": "^1.1.2",
@@ -34,6 +37,7 @@
     "@omnedia/rxjs-typewriter": "^1.1.0",
     "@sanity/client": "^6.21.3",
     "@sanity/image-url": "^1.0.2",
+    "express": "^4.18.2",
     "pageclip": "^1.0.0",
     "pure-start": "^1.0.10",
     "rxjs": "~7.5.0",
@@ -45,8 +49,9 @@
     "@angular-devkit/build-angular": "^18.2.2",
     "@angular/cli": "^18.2.2",
     "@angular/compiler-cli": "^18.2.2",
+    "@types/express": "^4.17.17",
     "@types/jasmine": "~3.10.0",
-    "@types/node": "^12.20.55",
+    "@types/node": "^18.18.0",
     "@types/toastify-js": "^1.12.3",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",
