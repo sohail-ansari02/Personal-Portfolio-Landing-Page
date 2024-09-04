@@ -6,10 +6,12 @@ import {
   OnInit,
   TemplateRef,
   ViewChild,
+  input
 } from '@angular/core';
-import { toast } from 'src/app/core/utils';
-import { environment } from 'src/environments/environment';
+
 import Toastify from 'toastify-js';
+import { environment } from 'src/environments/environment';
+import { toast } from 'src/app/core/utils';
 
 @Component({
   selector: 'app-contact-us',
@@ -20,6 +22,7 @@ export class ContactUsComponent implements OnInit, AfterViewInit {
   @ViewChild('form') form!: ElementRef;
   url: string = environment.ContactFormUrl;
   constructor() {}
+  data = input<any>();
 
   ngOnInit(): void {}
 

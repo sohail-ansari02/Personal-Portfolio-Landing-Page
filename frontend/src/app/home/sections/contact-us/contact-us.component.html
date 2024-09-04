@@ -1,3 +1,5 @@
+@if(data()){ @let info = data();
+
 <om-flickering-grid>
   <div class="contact-wrapper container-full section">
     <section class="contact container">
@@ -13,29 +15,32 @@
           <div class="contact__info card">
             <div class="contact__phone">
               <span class="contact__phone-title">Available 24/7</span>
-              <a class="contact__phone-no" href="tel: ">(+23) 5535 68 68</a>
+              <a class="contact__phone-no" href="tel:{{ info.phoneNumber }} ">
+                {{ info.phoneNumber }}
+              </a>
             </div>
             <div class="contact__details">
               <div class="contact__details-desc">
                 <span class="contact__details-title">Location: </span>
-                2972 Westheimer Rd. Santa Ana, Illinois 85486
+                {{ info.address }}
               </div>
 
               <div class="contact__details-desc">
                 <span class="contact__details-title">Email: </span>
-                <a href="mailto:nevaeh.simmons@example.com"
-                  >nevaeh.simmons&#64;example.com</a
-                >
+                <a href="mailto:{{ info.email }}">
+                  {{ info.email }}
+                </a>
               </div>
 
-              <div class="contact__details-desc">
-                <span class="contact__details-title">Fax: </span>
+              <!-- <div class="contact__details-desc">
+              <span class="contact__details-title">Fax: </span>
                 (702) 555-0122
-              </div>
+              </div> -->
 
               <div class="contact__details-desc">
                 <span class="contact__details-title">Business Hours: </span>
-                Mon - Sat: 9:00 AM - 6:00 PM
+                {{ info.businessHours.startTime }} -
+                {{ info.businessHours.endTime }}
               </div>
             </div>
           </div>
@@ -79,3 +84,4 @@
     </section>
   </div>
 </om-flickering-grid>
+}
