@@ -9,7 +9,6 @@
     "test": "ng test"
   },
   "private": true,
-
   "dependencies": {
     "@angular/animations": "^18.2.2",
     "@angular/cdk": "^18.2.2",
@@ -33,6 +32,8 @@
     "@omnedia/ngx-starry-sky": "^1.0.4",
     "@omnedia/ngx-typewriter": "^1.2.0",
     "@omnedia/rxjs-typewriter": "^1.1.0",
+    "@sanity/client": "^6.21.3",
+    "@sanity/image-url": "^1.0.2",
     "pageclip": "^1.0.0",
     "pure-start": "^1.0.10",
     "rxjs": "~7.5.0",

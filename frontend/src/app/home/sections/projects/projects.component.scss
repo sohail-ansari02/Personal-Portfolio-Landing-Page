@@ -35,7 +35,8 @@
       @extend %fadeInEffect;
       width: 100%;
       height: auto;
-      aspect-ratio: 406/367;
+      // aspect-ratio: 406/367;
+      aspect-ratio: 1;
       overflow: hidden;
       cursor: pointer;
       padding: 0;

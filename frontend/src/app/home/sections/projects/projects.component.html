@@ -1,15 +1,21 @@
+@if(data()){
+  @let info = data();
 <om-starry-sky
   [shootingStarsConfig]="{ minDelay: 500, maxDelay: 3000}"
   [starsBackgroundConfig]="{ starDensity: 0.0015 }"
   [skyColor]="'var(--clr-background)'"
 >
   <section class="projects container section">
-    <h2 class="projects__heading">Our projects</h2>
+    <h2 class="projects__heading">
+
+      {{info.heading}}
+    </h2>
     <h3 class="projects__sub-heading">
-      Explore My Design Portfolio <br />
-      and Case Studies
+      {{info.subheading}}
+      <!-- Explore My Design Portfolio <br />
+      and Case Studies -->
     </h3>
-    <div class="projects__buttons btn-group">
+    <!-- <div class="projects__buttons btn-group">
       <ng-container *ngFor="let tab of tabs">
         <button
           (click)="onSelectTab(tab)"
@@ -22,21 +28,25 @@
           {{ tab }}
         </button>
       </ng-container>
-    </div>
+    </div> -->
     <ul class="projects__list">
-      <li
+      <!-- <li
         *ngFor="let project of tabData | project : selectedTab"
+        class="projects__list-item card"
+      > -->
+      <li
+        *ngFor="let project of info.projectsList"
         class="projects__list-item card"
       >
         <om-shine-border>
           <img
             class="projects__image"
-            [src]="project.imgPath"
-            [alt]="project.name"
+            [src]="project?.imageUrl"
+            [alt]="project?.name"
           />
           <div class="projects__list-item-name">
             <span>
-              <h4>{{ project.name }}</h4>
+              <h4>{{ project?.name }}</h4>
             </span>
           </div>
         </om-shine-border>
@@ -44,3 +54,4 @@
     </ul>
   </section>
 </om-starry-sky>
+}

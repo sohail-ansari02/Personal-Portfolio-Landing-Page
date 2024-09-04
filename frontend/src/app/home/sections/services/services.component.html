@@ -1,13 +1,16 @@
-<om-retro-grid [gridColor]="'#fff'"
-[fadeColor]="'var(--clr-background)'" >
+@if(data()){
+  @let info = data();
+<om-retro-grid [gridColor]="'#fff'" [fadeColor]="'var(--clr-background)'">
   <section class="services container section">
-    <h2 class="services__heading">Services</h2>
+    <h2 class="services__heading"> {{info.heading}} </h2>
     <h3 class="services__sub-heading">
-      Elevating Design<span class="special"> Mastery</span>
+      {{info.subheading}}
+      <!-- Elevating Design<span class="special"> Mastery</span> -->
     </h3>
     <p class="services__desc">
-      Turning your ideas into a distinctive web project that not only inspires
-      but also captivates users.
+      {{info.paragraph}}
+      <!-- Turning your ideas into a distinctive web project that not only inspires
+      but also captivates users. -->
     </p>
 
     <app-swapper-button
@@ -22,9 +25,10 @@
       [gap]="30"
       class="services__list swapper"
     >
-      <li class="services__list-item swapper-item" *ngFor="let i of 10 | range">
+      <li class="services__list-item swapper-item" *ngFor="let i of info.servicesArray">
         <app-service-card></app-service-card>
       </li>
     </ul>
   </section>
 </om-retro-grid>
+}

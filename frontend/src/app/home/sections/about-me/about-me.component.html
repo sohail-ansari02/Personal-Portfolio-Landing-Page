@@ -1,12 +1,13 @@
-<om-dotpattern styleClass="dotpattern" patternColor="var(--clr-primary)" >
+@if(data()){ @let info = data();
+<om-dotpattern styleClass="dotpattern" patternColor="var(--clr-primary)">
   <section class="about-me container section">
     <picture class="about-me__picture">
+      <!-- srcset="
+        /assets/images/profile/profile-pic.webp        627w,
+        /assets/images/profile/mobile-profile-pic.webp 350w
+      " -->
       <img
-        src="assets/images/profile/profile-pic.webp"
-        srcset="
-          /assets/images/profile/profile-pic.webp        627w,
-          /assets/images/profile/mobile-profile-pic.webp 350w
-        "
+        src="{{ info.profilePhoto }}"
         alt="about-me image"
         class="about-me__image"
         width="627"
@@ -22,19 +23,22 @@
     </picture>
 
     <div class="about-me__content">
-      <h2 class="about-me__heading">about me</h2>
+      <h2 class="about-me__heading">{{ info.heading }}</h2>
       <h3 class="about-me__sub-heading">
-        <span class="special"> 6 Year’s Experience </span>
+        <!-- <span class="special"> 6 Year’s Experience </span>
         <br />
-        on Product Design
+        on Product Design -->
+        {{ info.subheading }}
       </h3>
       <p class="about-me__para">
-        Hey! I'm <strong class="special">Mark Walker</strong>, a frontend
+        {{ info.paragraph }}
+        <!-- Hey! I'm <strong class="special">Mark Walker</strong>, a frontend
         developer with <strong class="special">6 years</strong> of experience.
         Let's create something
-        <strong class="special">awesome</strong> together!
+        <strong class="special">awesome</strong> together! -->
       </p>
       <app-info-tab class="about-me__tabs"></app-info-tab>
     </div>
   </section>
 </om-dotpattern>
+}

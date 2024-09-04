@@ -1,49 +1,51 @@
+@if(data()){ @let info = data();
 <div class="container-full">
   <section class="supports-wrapper container section">
-    <h2 class="supports__heading">Technologies I Use</h2>
+    <h2 class="supports__heading">{{ info.subheading }}</h2>
     <h3 class="supports__sub-heading">
-      Tools & Frameworks Powering My
-      <span class="special">Frontend Development</span>
+      <!-- Tools & Frameworks Powering My
+      <span class="special">Frontend Development</span> -->
+      {{ info.heading }}
     </h3>
     <p class="supports__desc">
-      I craft web applications and sites using Angular, React, TypeScript, SCSS,
-      and more to deliver efficient, modern, and visually appealing digital
-      experiences.
+      {{ info.paragraph }}
     </p>
     <div class="supports container">
       <div class="marquee-wrapper">
+        @if(firstRow().length > 0 && secondRow().length > 0){
         <om-marquee>
           <div
             #OmMarqueeContent
-            *ngFor="let tech of firstRow"
+            *ngFor="let tech of firstRow()"
             class="supports-item"
           >
             <img
               class="supports-image"
-              src="assets/images/techs/{{ tech }}"
-              alt="{{ tech.split('.')[0] }}"
-              title="{{ tech.split('.')[0] }}"
+              src="{{ tech.imageUrl }}"
+              alt="{{ tech.name }}"
+              title="{{ tech.name }}"
             />
           </div>
         </om-marquee>
         <om-marquee [reverse]="true">
           <div
             #OmMarqueeContent
-            *ngFor="let tech of secondRow"
+            *ngFor="let tech of secondRow()"
             class="supports-item"
           >
             <img
               class="supports-image"
-              src="assets/images/techs/{{ tech }}"
-              alt="{{ tech.split('.')[0] }}"
-              title="{{ tech.split('.')[0] }}"
+              src="{{ tech.imageUrl }}"
+              alt="{{ tech.name }}"
+              title="{{ tech.name }}"
             />
           </div>
         </om-marquee>
-
+      }
         <div class="marquee-gradient left"></div>
         <div class="marquee-gradient right"></div>
       </div>
     </div>
   </section>
 </div>
+}

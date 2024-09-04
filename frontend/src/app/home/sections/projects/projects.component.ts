@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, OnInit } from '@angular/core';
 import { Tabs } from 'src/app/shared/interfaces/tabs';
 import { InfoList } from '../../interfaces/info-list';
 import { Project, ProjectType } from '../../interfaces/project';
@@ -10,6 +10,8 @@ import { Project, ProjectType } from '../../interfaces/project';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent implements OnInit, Tabs<Project> {
+  data = input<any>();
+
   tabData: Project[] = [];
   selectedTab!: ProjectType;
   tabs: string[] = ['All', 'UI/UX Design', 'Branding Design', 'Wordpress'];

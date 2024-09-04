@@ -1,4 +1,6 @@
 <!-- <om-aurora> -->
+@if(data()){
+  @let info = data();
 <om-starry-sky
   skyColor="var(--clr-background)"
   [shootingStarsConfig]="{
@@ -10,30 +12,28 @@
   [starsBackgroundConfig]="{ starDensity: 0.002, }"
 >
   <section class="hero container section">
+    <!-- {{ info?.heading }} -->
+    <!-- {{words?.[0]}} -->
     <div class="hero__content">
       <h2 class="hero__sub-heading">Welcome to my Portfolio</h2>
       <h1 class="hero__heading h1">
-        <om-typewriter
-          [words]="['Hi I’m Mark Walker Frontend Developer']"
+        {{ info.heading }}
+        <!-- <om-typewriter
+          [words]="[info?.heading]"
           [writeDelay]="500"
           [writeSpeed]="100"
           styleClass="hero__heading h1"
           [disableLoop]="true"
         >
-        </om-typewriter>
-
-
+        </om-typewriter> -->
       </h1>
-      <p class="hero__para">
-        Dive into my portfolio, where every pixel tells a unique story. Let's
-        create something extraordinary together!
-      </p>
+      <p class="hero__para">{{info.paragraph}}</p>
       <div class="hero__buttons">
         <button class="btn">
-          <a title="contact me" href="#contact me"> Hire Me! </a>
+          <a title="{{info.contactButton}}" href="#contact me"> {{info.contactButton}}</a>
         </button>
         <button class="btn-outlined">
-          <a href="#" title="see my cv"> See my CV </a>
+          <a href="#" title="{{info.downloadCVButton}}">{{info.downloadCVButton}}</a>
           <!-- <img
           src="/assets/images/icons/download.svg"
           alt=""
@@ -48,6 +48,7 @@
             fill="currentColor"
             class="bi bi-download"
             viewBox="0 0 16 16"
+            title="download Resume"
           >
             <path
               d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
@@ -59,12 +60,12 @@
         </button>
       </div>
     </div>
+    <!-- srcset="
+      /assets/images/profile/hero-image.webp        553w,
+      /assets/images/profile/mobile-hero-image.webp 350w
+    " -->
     <img
-      src="assets/images/profile/hero-image.webp"
-      srcset="
-        /assets/images/profile/hero-image.webp        553w,
-        /assets/images/profile/mobile-hero-image.webp 350w
-      "
+      src="{{info.profilePhoto}}"
       alt="hero image"
       class="hero__image"
       width="553"
@@ -73,3 +74,4 @@
   </section>
 </om-starry-sky>
 <!-- </om-aurora> -->
+}

@@ -1,14 +1,13 @@
-<app-hero id="hero"></app-hero>
-@defer{
-<app-supports></app-supports>
-}
-<app-about-me id="about me"></app-about-me>
+<app-hero [data]="masterData?.heroSection" id="hero"></app-hero>
+<!-- @defer{ -->
+<app-supports [data]="masterData?.technology"></app-supports>
+<!-- } -->
+<app-about-me id="about me" [data]="masterData?.aboutMe"></app-about-me>
 <app-services id="services"></app-services>
 @defer{
 <app-stats></app-stats>
-}
-@defer{
-<app-projects id="projects"></app-projects>
+} @defer{
+<app-projects id="projects" [data]="masterData?.projects"></app-projects>
 }
 <app-clients></app-clients>
 <app-contact-us id="contact me"></app-contact-us>

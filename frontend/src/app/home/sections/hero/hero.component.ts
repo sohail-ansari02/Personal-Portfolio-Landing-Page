@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit,
+  effect,
+  input,
+} from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -6,11 +13,15 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./hero.component.scss'],
   // changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeroComponent implements OnInit {
+export class HeroComponent implements OnDestroy {
+  data = input<any>();
+  words: any[] = [];
+  wordEffect = effect(() => {
+    this.words = [this.data()?.heading];
+  });
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {}
+  ngOnDestroy(): void {
+    this.wordEffect.destroy();
   }
-
 }

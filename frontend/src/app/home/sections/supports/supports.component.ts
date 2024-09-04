@@ -1,4 +1,13 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  effect,
+  input,
+  signal,
+} from '@angular/core';
+
+import { single } from 'rxjs';
 
 @Component({
   selector: 'app-supports',
@@ -7,45 +16,26 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SupportsComponent implements OnInit {
-  techList = [
-    'Angular.png',
-    'ReactJs.svg',
-    'SCSS.svg',
-    'TypeScript.svg',
-    'JavaScript.svg',
-    'ThreeJs.svg',
-    'HTML.svg',
-    'CSS.svg',
-    'tailwind CSS.svg',
-    'BootStrap.svg',
-    'Angular Material.svg',
-    'i18n.svg',
-    'Universal.svg',
-    'FabricJs.svg',
-    'PWA.svg',
-    'Git.svg',
-  ];
-  firstRow = [
-    'Angular.png',
-    'ReactJs.svg',
-    'SCSS.svg',
-    'TypeScript.svg',
-    'JavaScript.svg',
-    'ThreeJs.svg',
-    'HTML.svg',
-    'CSS.svg',
-    'tailwind CSS.svg',
-  ];
-  secondRow = [
-    'BootStrap.svg',
-    'Angular Material.svg',
-    'i18n.svg',
-    'Universal.svg',
-    'FabricJs.svg',
-    'PWA.svg',
-    'Git.svg',
-  ];
-  constructor() {}
+  data = input<any>();
+  list = effect(
+    () => {
+      this.firstRow.set(
+        (this.data()?.technologyList ?? []).slice(
+          0,
+          Math.round((this.data()?.technologyList ?? []).length / 2)
+        )
+      );
+      this.secondRow.set(
+        (this.data()?.technologyList ?? []).slice(
+          Math.round((this.data()?.technologyList ?? []).length / 2)
+        )
+      );
+    },
+    { allowSignalWrites: true }
+  );
+
+  firstRow = signal<any[]>([]);
+  secondRow = signal<any[]>([]);
 
   ngOnInit(): void {}
 }
