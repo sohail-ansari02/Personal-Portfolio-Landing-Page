@@ -9,6 +9,7 @@
     "test": "ng test"
   },
   "private": true,
+
   "dependencies": {
     "@angular/animations": "^18.2.2",
     "@angular/cdk": "^18.2.2",
@@ -34,7 +35,7 @@
     "@omnedia/rxjs-typewriter": "^1.1.0",
     "pageclip": "^1.0.0",
     "pure-start": "^1.0.10",
-    "rxjs": "~7.4",
+    "rxjs": "~7.5.0",
     "toastify-js": "^1.12.0",
     "tslib": "^2.6.2",
     "zone.js": "^0.14.10"
