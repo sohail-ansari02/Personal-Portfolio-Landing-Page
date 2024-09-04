@@ -1,7 +1,7 @@
 <div class="tab-info__buttons btn-group">
   <!-- <button class="tab-info__btn btn">Main Skills</button>
   <button class="tab-info__btn btn-outlined">Awards</button> -->
-  <ng-container *ngFor="let tab of tabData">
+  <ng-container *ngFor="let tab of tabData()">
     <button
       (click)="onSelectTab(tab.name)"
       [ngClass]="{

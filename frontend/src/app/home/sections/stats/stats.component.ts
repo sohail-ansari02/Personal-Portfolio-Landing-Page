@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
 
 @Component({
   selector: 'app-stats',
@@ -7,6 +7,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   // changeDetection: ChangeDestectionStrategy.OnPush,
 })
 export class StatsComponent implements OnInit {
+  data = input<any>();
+
   cards: card[] = [];
   constructor() {}
 

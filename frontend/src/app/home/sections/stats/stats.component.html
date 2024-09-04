@@ -1,3 +1,5 @@
+@if(data()){ @let info = data();
+
 <om-dotpattern styleClass="dotpattern">
   <div class="stats-wrapper container-full section">
     <section class="stats container">
@@ -8,20 +10,21 @@
         width="890"
         height="890"
       />
-      <h2 class="stats__heading h2">Milestones Achieved</h2>
+      <h2 class="stats__heading h2">
+        {{info.heading}}
+      </h2>
       <h3 class="stats__sub-heading">
-        Discover what distinguishes our studio <br />
-        for your projects.
+        {{info.subheading}}
       </h3>
 
       <ul class="stats__card-list">
-        <li *ngFor="let card of cards" class="stats__card-list-item">
+        <li *ngFor="let card of info.statInformation" class="stats__card-list-item">
           <om-shine-border>
             <div class="stats__card card">
               <span class="stats__card-value">
-                {{ card.value }}
+                {{ card.name }}
               </span>
-              <span class="stats__card-desc"> {{ card.desc }} </span>
+              <span class="stats__card-desc"> {{ card.info }} </span>
             </div>
           </om-shine-border>
         </li>
@@ -29,3 +32,4 @@
     </section>
   </div>
 </om-dotpattern>
+}

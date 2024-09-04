@@ -36,7 +36,23 @@ export default defineType({
       name: 'awards',
       title: 'Awards',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{
+        title: 'Award Item',
+        name: 'awardItem',
+        type: 'object',
+        fields: [
+          {
+            name: 'name',
+            type: 'string',
+            title: 'Award Name',
+          },
+          {
+            name: 'orgName',
+            type: 'string',
+            title: 'Organization Name',
+          },
+        ]
+      }],
       validation: (Rule) => Rule.required().min(1).warning('Add at least one award.'),
     }),
     defineField({

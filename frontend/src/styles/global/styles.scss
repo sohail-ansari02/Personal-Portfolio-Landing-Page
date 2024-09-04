@@ -17,16 +17,22 @@ app-projects .om-starry-sky .om-starry-sky-background {
   z-index: zIndex("below");
 }
 
+om-shine-border{
+  // width: fit-content;
+  display: inline-block;
+  width: 100%;
+}
 div.om-shine-border {
   overflow: hidden;
-  width: fit-content;
-
+  // width: fit-content;
+  // width: 100%;
   .card {
     border-radius: 0;
     width: 100%;
   }
   &-wrapper{
     width: fit-content;
+    width: 100%;
 
   }
 }

@@ -15,7 +15,8 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: toRem(25);
+    // gap: toRem(25);
+    gap: toRem(6);
     margin-block-start: toRem(35);
     &-item {
       @extend %fadeInEffect;

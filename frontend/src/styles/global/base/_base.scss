@@ -63,7 +63,10 @@ a,
 button {
   cursor: pointer;
 }
-
+input,textarea{
+  caret-color: $--clr-background;
+  color: $--clr-background;
+}
 .special {
   color: $--clr-primary;
 }
