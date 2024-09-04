@@ -13,7 +13,7 @@ export class StatsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.initCardData();
+    // this.initCardData();
   }
   initCardData() {
     this.cards = [
