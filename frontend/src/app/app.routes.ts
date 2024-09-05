@@ -1,16 +1,19 @@
 import { RouterModule, Routes } from '@angular/router';
 
+import { HomeComponent } from './home/home.component';
+import { LayoutComponent } from './core/layout/layout.component';
 import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./core/layout/layout.component').then(m => m.LayoutComponent),
+    component: LayoutComponent,
     children: [
       {
         path: '',
-        loadChildren: () =>
-          import('./home/home.module').then((m) => m.HomeModule),
+        component: HomeComponent
+        // loadComponent: () =>
+        //   import('./home/home.component').then((m) => m.HomeComponent),
       },
     ],
   },
