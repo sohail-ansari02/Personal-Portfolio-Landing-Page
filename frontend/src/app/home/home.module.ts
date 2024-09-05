@@ -23,7 +23,7 @@ import { ProjectPipe } from './pipes/project.pipe';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ServiceCardComponent } from './components/service-card/service-card.component';
 import { ServicesComponent } from './sections/services/services.component';
-import { SharedModule } from '../shared/shared.module';
+
 import { StatsComponent } from './sections/stats/stats.component';
 import { SupportsComponent } from './sections/supports/supports.component';
 
@@ -31,33 +31,32 @@ import { SupportsComponent } from './sections/supports/supports.component';
 
 @NgModule({
     imports: [
-        CommonModule,
-        HomeRoutingModule,
-        NgOptimizedImage,
-        SharedModule,
-        NgxMarqueeComponent,
-        NgxAuroraComponent,
-        NgxDotpatternComponent,
-        NgxRetroGridComponent,
-        NgxGridpatternComponent,
-        NgxStarrySkyComponent,
-        NgxFlickeringGridComponent,
-        NgxShineBorderComponent,
-        NgxBorderBeamComponent,
-        NgxTypewriterComponent,
-        HomeComponent,
-        HeroComponent,
-        AboutMeComponent,
-        InfoTabComponent,
-        SupportsComponent,
-        StatsComponent,
-        ProjectsComponent,
-        ProjectPipe,
-        ClientsComponent,
-        ContactUsComponent,
-        ServicesComponent,
-        ClientCardComponent,
-        ServiceCardComponent,
-    ],
+    CommonModule,
+    HomeRoutingModule,
+    NgOptimizedImage,
+    NgxMarqueeComponent,
+    NgxAuroraComponent,
+    NgxDotpatternComponent,
+    NgxRetroGridComponent,
+    NgxGridpatternComponent,
+    NgxStarrySkyComponent,
+    NgxFlickeringGridComponent,
+    NgxShineBorderComponent,
+    NgxBorderBeamComponent,
+    NgxTypewriterComponent,
+    HomeComponent,
+    HeroComponent,
+    AboutMeComponent,
+    InfoTabComponent,
+    SupportsComponent,
+    StatsComponent,
+    ProjectsComponent,
+    ProjectPipe,
+    ClientsComponent,
+    ContactUsComponent,
+    ServicesComponent,
+    ClientCardComponent,
+    ServiceCardComponent,
+],
 })
 export class HomeModule {}
