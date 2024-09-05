@@ -11,7 +11,6 @@ import { NgStyle } from '@angular/common';
 })
 export class ProgressBarComponent implements OnInit {
   @Input() value: number | undefined = 40;
-  constructor() { }
 
   ngOnInit(): void {
   }

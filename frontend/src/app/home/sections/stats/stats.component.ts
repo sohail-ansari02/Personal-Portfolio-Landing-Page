@@ -17,7 +17,6 @@ export class StatsComponent implements OnInit {
   data = input<any>();
 
   cards: card[] = [];
-  constructor() {}
 
   ngOnInit(): void {
     // this.initCardData();

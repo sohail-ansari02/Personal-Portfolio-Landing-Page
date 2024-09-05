@@ -21,7 +21,6 @@ import { ClientCardComponent } from '../../components/client-card/client-card.co
 })
 export class ClientsComponent implements OnInit {
   clients!: Client[];
-  constructor() {}
 
   ngOnInit(): void {
     this.initData();

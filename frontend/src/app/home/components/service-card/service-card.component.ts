@@ -9,9 +9,6 @@ import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
     imports: [NgxShineBorderComponent]
 })
 export class ServiceCardComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit(): void {
   }
 

@@ -14,7 +14,6 @@ import { RangePipe } from '../../../shared/pipes/range.pipe';
 })
 export class ClientCardComponent implements OnInit {
   @Input() data: Client | undefined = undefined;
-  constructor() { }
 
   ngOnInit(): void {
   }

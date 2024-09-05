@@ -25,7 +25,6 @@ import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
 export class ContactUsComponent implements OnInit, AfterViewInit {
   @ViewChild('form') form!: ElementRef;
   url: string = environment.ContactFormUrl;
-  constructor() {}
   data = input<any>();
 
   ngOnInit(): void {}

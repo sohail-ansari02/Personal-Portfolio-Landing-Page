@@ -17,9 +17,6 @@ import { FooterComponent } from './footer/footer.component';
     ],
 })
 export class LayoutComponent implements OnInit {
-
-  constructor() { }
-
   ngOnInit(): void {
   }
 

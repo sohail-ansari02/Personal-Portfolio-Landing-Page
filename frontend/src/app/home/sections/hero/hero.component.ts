@@ -22,7 +22,6 @@ export class HeroComponent implements OnDestroy {
     this.words = [this.data()?.heading];
   });
 
-  constructor() {}
   ngOnDestroy(): void {
     this.wordEffect.destroy();
   }

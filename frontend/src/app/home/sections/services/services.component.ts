@@ -16,8 +16,6 @@ import { ServiceCardComponent } from '../../components/service-card/service-card
 export class ServicesComponent implements OnInit {
   data = input<any>();
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 

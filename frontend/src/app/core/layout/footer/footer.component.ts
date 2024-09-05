@@ -22,7 +22,6 @@ export class FooterComponent implements OnInit {
       link: '#',
     },
   ];
-  constructor() {}
 
   ngOnInit(): void {}
 }

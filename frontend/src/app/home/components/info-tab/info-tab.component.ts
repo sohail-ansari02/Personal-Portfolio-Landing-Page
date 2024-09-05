@@ -17,7 +17,6 @@ export class InfoTabComponent implements OnInit, Tabs<Info> {
   tabData = input<InfoList<Info>[]>([]);
   selectedTab: string = '';
   selectedData: Info[] = [];
-  constructor() {}
 
   ngOnInit(): void {
   }
