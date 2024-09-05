@@ -50,7 +50,7 @@ export class SwapperButtonComponent implements OnInit, AfterViewInit {
     let totalWidth = this.swapperEl.scrollWidth;
     if (dir == 'next') {
       this.counter++;
-      let cardToShow = this._swapper.cardToShow;
+      let cardToShow = this._swapper.cardToShow();
       let showIndex = cardToShow + 1;
       this.swapperEl.offsetWidth;
       this.swapperEl.scrollTo(this.swapperEl.offsetWidth * (this.counter), 0);
