@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
 import { NgStyle } from '@angular/common';
 
 @Component({
@@ -10,9 +10,8 @@ import { NgStyle } from '@angular/common';
     imports: [NgStyle]
 })
 export class ProgressBarComponent implements OnInit {
-  @Input() value: number | undefined = 40;
+  value = input<number>(40);
 
   ngOnInit(): void {
   }
-
 }

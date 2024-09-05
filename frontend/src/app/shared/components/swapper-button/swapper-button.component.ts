@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnInit, inject } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, inject, input } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { SwapperDirective } from '../../directives/swapper.directive';
 import { Breakpoints } from 'src/app/core/utils';

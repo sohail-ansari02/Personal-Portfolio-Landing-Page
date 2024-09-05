@@ -1,18 +1,18 @@
 <om-shine-border>
-  @if (data) {
+  @if (data()) {
     <div class="card">
       <img
         class="card__photo"
-        src="{{ data.profileImg }}"
-        alt="{{ data.name }}"
+        src="{{ data().profileImg }}"
+        alt="{{ data().name }}"
         width="150"
         height="150"
         />
         <p class="card__feedback">
-          {{ data.feedback }}
+          {{ data().feedback }}
         </p>
         <div class="card__ratings">
-          @for (star of data.ratings | range; track star) {
+          @for (star of data().ratings | range; track star) {
             <img
               src="assets/images/icons/star.svg"
               alt="rating"
@@ -23,8 +23,8 @@
           }
         </div>
         <div class="card__info">
-          <span class="card__name">{{ data.name }}</span>
-          <span class="card__position">{{ data.position }}</span>
+          <span class="card__name">{{ data().name }}</span>
+          <span class="card__position">{{ data().position }}</span>
         </div>
       </div>
     }

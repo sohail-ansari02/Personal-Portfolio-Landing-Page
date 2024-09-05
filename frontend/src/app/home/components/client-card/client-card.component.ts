@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
 import { Client } from '../../interfaces/client';
 import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 
@@ -13,9 +13,8 @@ import { RangePipe } from '../../../shared/pipes/range.pipe';
     imports: [NgxShineBorderComponent, RangePipe]
 })
 export class ClientCardComponent implements OnInit {
-  @Input() data: Client | undefined = undefined;
+  data = input<Client | undefined>(undefined);
 
   ngOnInit(): void {
   }
-
 }
