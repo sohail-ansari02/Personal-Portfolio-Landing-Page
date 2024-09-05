@@ -13,10 +13,9 @@
         but also captivates users. -->
       </p>
 
-      <app-swapper-button
-        [swapper]="swapper"
+      <app-swapper-button [swapper]="swapper"
         class="services__swapper-btn"
-      ></app-swapper-button>
+       />
       <ul
         #swapper="swapper"
         [total]="10"
@@ -27,7 +26,7 @@
         >
         @for (i of info.servicesArray; track i) {
           <li class="services__list-item swapper-item">
-            <app-service-card></app-service-card>
+            <app-service-card  />
           </li>
         }
       </ul>
