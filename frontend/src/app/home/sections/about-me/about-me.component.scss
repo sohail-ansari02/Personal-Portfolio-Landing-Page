@@ -59,6 +59,12 @@
     @include square(627);
     width: 100%;
     border-radius: 50%;
+    transition: filter $transition-duration;
+    will-change: filter;
+    &:hover,
+    &:active {
+      filter: drop-shadow(0px 0px 4px $--clr-secondary);
+    }
   }
   &__bg-image {
     position: absolute;
@@ -84,7 +90,6 @@
     }
   }
 }
-.dotpattern{
+.dotpattern {
   background-color: $--clr-background;
 }
-
