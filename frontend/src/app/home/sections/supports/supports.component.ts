@@ -9,14 +9,14 @@ import {
 
 import { single } from 'rxjs';
 import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
-import { NgFor } from '@angular/common';
+
 
 @Component({
     selector: 'app-supports',
     templateUrl: './supports.component.html',
     styleUrls: ['./supports.component.scss'],
     standalone: true,
-    imports: [NgxMarqueeComponent, NgFor],
+    imports: [NgxMarqueeComponent],
 })
 export class SupportsComponent implements OnInit {
   data = input<any>();

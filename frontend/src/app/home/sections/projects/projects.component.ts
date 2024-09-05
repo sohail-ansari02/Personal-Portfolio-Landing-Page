@@ -3,7 +3,7 @@ import { Tabs } from 'src/app/shared/interfaces/tabs';
 import { InfoList } from '../../interfaces/info-list';
 import { Project, ProjectType } from '../../interfaces/project';
 import { NgxStarrySkyComponent } from '@omnedia/ngx-starry-sky';
-import { NgFor } from '@angular/common';
+
 import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 
 @Component({
@@ -13,10 +13,9 @@ import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
     changeDetection: ChangeDetectionStrategy.OnPush,
     standalone: true,
     imports: [
-        NgxStarrySkyComponent,
-        NgFor,
-        NgxShineBorderComponent,
-    ],
+    NgxStarrySkyComponent,
+    NgxShineBorderComponent
+],
 })
 export class ProjectsComponent implements OnInit, Tabs<Project> {
   data = input<any>();

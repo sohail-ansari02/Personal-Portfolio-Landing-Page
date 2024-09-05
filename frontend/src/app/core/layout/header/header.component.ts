@@ -5,7 +5,7 @@ import {
   OnInit,
 } from '@angular/core';
 import { AnimationTransitionDelay, Breakpoints, isMobile } from '../../utils';
-import { NgIf, NgClass, NgFor } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-header',
@@ -13,10 +13,8 @@ import { NgIf, NgClass, NgFor } from '@angular/common';
     styleUrls: ['./header.component.scss'],
     standalone: true,
     imports: [
-        NgIf,
-        NgClass,
-        NgFor,
-    ],
+    NgClass
+],
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   openMenu: boolean = false;

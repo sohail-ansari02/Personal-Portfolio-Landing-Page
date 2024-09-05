@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
 import { NgxDotpatternComponent } from '@omnedia/ngx-dotpattern';
-import { NgFor } from '@angular/common';
+
 import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 
 @Component({
@@ -9,10 +9,9 @@ import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
     styleUrls: ['./stats.component.scss'],
     standalone: true,
     imports: [
-        NgxDotpatternComponent,
-        NgFor,
-        NgxShineBorderComponent,
-    ],
+    NgxDotpatternComponent,
+    NgxShineBorderComponent
+],
 })
 export class StatsComponent implements OnInit {
   data = input<any>();
