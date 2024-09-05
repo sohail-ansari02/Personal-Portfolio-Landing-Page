@@ -1,10 +1,4 @@
-import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, Input, OnInit, inject } from '@angular/core';
 // import { Swapper } from '../classes/swapper';
 import { toRem } from 'src/app/core/utils';
 
@@ -14,13 +8,20 @@ import { toRem } from 'src/app/core/utils';
     standalone: true,
 })
 export class SwapperDirective implements OnInit, AfterViewInit {
+  e1 = inject(ElementRef);
+
   @Input() total: number = 0;
   @Input() cardWidth: number = 0;
   @Input() cardToShow: number = 0;
   @Input() gap: number = 0;
 
   swapper: HTMLElement;
-  constructor(public e1: ElementRef) {
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+  constructor() {
+    const e1 = this.e1;
+
     this.swapper = e1.nativeElement;
   }
   ngOnInit(): void {
