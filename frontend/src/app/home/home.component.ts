@@ -1,36 +1,38 @@
 import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 
-import { HomeService } from './home.service';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { HeroComponent } from './sections/hero/hero.component';
-import { SupportsComponent } from './sections/supports/supports.component';
 import { AboutMeComponent } from './sections/about-me/about-me.component';
+import { ContactUsComponent } from './sections/contact-us/contact-us.component';
+import { HeroComponent } from './sections/hero/hero.component';
+import { HomeService } from './home.service';
+import { ProjectsComponent } from './sections/projects/projects.component';
 import { ServicesComponent } from './sections/services/services.component';
 import { StatsComponent } from './sections/stats/stats.component';
-import { ProjectsComponent } from './sections/projects/projects.component';
-import { ContactUsComponent } from './sections/contact-us/contact-us.component';
+import { SupportsComponent } from './sections/supports/supports.component';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    standalone: true,
-    imports: [
-        HeroComponent,
-        SupportsComponent,
-        AboutMeComponent,
-        ServicesComponent,
-        StatsComponent,
-        ProjectsComponent,
-        ContactUsComponent,
-    ],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  standalone: true,
+  imports: [
+    HeroComponent,
+    SupportsComponent,
+    AboutMeComponent,
+    ServicesComponent,
+    StatsComponent,
+    ProjectsComponent,
+    ContactUsComponent
+  ],
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   private hs = inject(HomeService);
-  masterData:any;
-  constructor() {
-    this.hs.masterData
-      .pipe(takeUntilDestroyed())
+  private readonly destryRef = inject(DestroyRef);
+  masterData: any;
+  constructor() {}
+  ngOnInit(): void {
+    this.hs.getAllData()
+      .pipe(takeUntilDestroyed(this.destryRef))
       .subscribe((val) => (this.masterData = val));
   }
 }

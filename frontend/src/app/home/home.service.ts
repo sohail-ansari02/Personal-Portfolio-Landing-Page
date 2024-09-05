@@ -1,4 +1,4 @@
-import { BehaviorSubject, from } from 'rxjs';
+import { BehaviorSubject, from, map } from 'rxjs';
 
 import { Injectable } from '@angular/core';
 import { createClient } from '@sanity/client';
@@ -36,9 +36,9 @@ export class HomeService {
   private urlFor(source: any) {
     return this.builder.image(source).url();
   }
-  private getAllData() {
-    from(this.sanityClientCredentials.option.fetch(`*`)).subscribe(
-      (val: any[]) => {
+  getAllData() {
+    return from(this.sanityClientCredentials.option.fetch(`*`)).pipe(
+      map((val: any[]) => {
         let masterData = {
           heroSection: val.find((e) => e._type == 'heroSection'),
           technology: val.find((e) => e._type == 'technology'),
@@ -62,13 +62,15 @@ export class HomeService {
           masterData.aboutMe.profilePhoto
         );
 
-        masterData.projects.projectsList =
-          masterData.projects.projectsList.map((data: any) => {
+        masterData.projects.projectsList = masterData.projects.projectsList.map(
+          (data: any) => {
             return { ...data, imageUrl: this.urlFor(data.image) };
-          });
+          }
+        );
         console.log('masterData', masterData);
         this.masterData$.next(masterData);
-      }
+        return masterData;
+      })
     );
   }
 }
