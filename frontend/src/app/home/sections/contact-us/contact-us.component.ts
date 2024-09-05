@@ -12,11 +12,15 @@ import {
 import Toastify from 'toastify-js';
 import { environment } from 'src/environments/environment';
 import { toast } from 'src/app/core/utils';
+import { NgxFlickeringGridComponent } from '@omnedia/ngx-flickering-grid';
+import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
 
 @Component({
-  selector: 'app-contact-us',
-  templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss'],
+    selector: 'app-contact-us',
+    templateUrl: './contact-us.component.html',
+    styleUrls: ['./contact-us.component.scss'],
+    standalone: true,
+    imports: [NgxFlickeringGridComponent, NgxBorderBeamComponent],
 })
 export class ContactUsComponent implements OnInit, AfterViewInit {
   @ViewChild('form') form!: ElementRef;

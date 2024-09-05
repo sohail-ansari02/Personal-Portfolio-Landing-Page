@@ -10,12 +10,15 @@ import {
 
 import { Info } from '../../interfaces/info';
 import { InfoList } from '../../interfaces/info-list';
+import { NgxDotpatternComponent } from '@omnedia/ngx-dotpattern';
+import { InfoTabComponent } from '../../components/info-tab/info-tab.component';
 
 @Component({
-  selector: 'app-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-about-me',
+    templateUrl: './about-me.component.html',
+    styleUrls: ['./about-me.component.scss'],
+    standalone: true,
+    imports: [NgxDotpatternComponent, InfoTabComponent],
 })
 export class AboutMeComponent implements OnInit {
   data = input<any>();

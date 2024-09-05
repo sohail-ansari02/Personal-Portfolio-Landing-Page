@@ -1,11 +1,24 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Client } from '../../interfaces/client';
+import { NgxFlickeringGridComponent } from '@omnedia/ngx-flickering-grid';
+import { SwapperButtonComponent } from '../../../shared/components/swapper-button/swapper-button.component';
+import { SwapperDirective } from '../../../shared/directives/swapper.directive';
+import { NgFor } from '@angular/common';
+import { ClientCardComponent } from '../../components/client-card/client-card.component';
 
 @Component({
-  selector: 'app-clients',
-  templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-clients',
+    templateUrl: './clients.component.html',
+    styleUrls: ['./clients.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        NgxFlickeringGridComponent,
+        SwapperButtonComponent,
+        SwapperDirective,
+        NgFor,
+        ClientCardComponent,
+    ],
 })
 export class ClientsComponent implements OnInit {
   clients!: Client[];

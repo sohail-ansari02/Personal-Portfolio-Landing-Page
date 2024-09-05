@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Project, ProjectType } from '../interfaces/project';
 
 @Pipe({
-  name: 'project',
+    name: 'project',
+    standalone: true,
 })
 export class ProjectPipe implements PipeTransform {
   transform(projects: Project[], type: ProjectType): Project[] {

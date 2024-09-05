@@ -7,18 +7,15 @@ import { SwapperButtonComponent } from './components/swapper-button/swapper-butt
 import { SwapperDirective } from './directives/swapper.directive';
 
 @NgModule({
-  declarations: [
-    ProgressBarComponent,
-    RangePipe,
-    SwapperButtonComponent,
-    SwapperDirective,
-  ],
-  imports: [CommonModule],
-  exports: [
-    ProgressBarComponent,
-    RangePipe,
-    SwapperButtonComponent,
-    SwapperDirective,
-  ],
+    imports: [CommonModule, ProgressBarComponent,
+        RangePipe,
+        SwapperButtonComponent,
+        SwapperDirective],
+    exports: [
+        ProgressBarComponent,
+        RangePipe,
+        SwapperButtonComponent,
+        SwapperDirective,
+    ],
 })
 export class SharedModule {}

@@ -1,10 +1,18 @@
 import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
+import { NgxDotpatternComponent } from '@omnedia/ngx-dotpattern';
+import { NgFor } from '@angular/common';
+import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 
 @Component({
-  selector: 'app-stats',
-  templateUrl: './stats.component.html',
-  styleUrls: ['./stats.component.scss'],
-  // changeDetection: ChangeDestectionStrategy.OnPush,
+    selector: 'app-stats',
+    templateUrl: './stats.component.html',
+    styleUrls: ['./stats.component.scss'],
+    standalone: true,
+    imports: [
+        NgxDotpatternComponent,
+        NgFor,
+        NgxShineBorderComponent,
+    ],
 })
 export class StatsComponent implements OnInit {
   data = input<any>();

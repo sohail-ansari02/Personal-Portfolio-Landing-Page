@@ -7,18 +7,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
-    LayoutComponent,
-    StickyNavbarDirective
-  ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    LayoutComponent,
-  ]
+    imports: [
+        CommonModule,
+        RouterModule,
+        HeaderComponent,
+        FooterComponent,
+        LayoutComponent,
+        StickyNavbarDirective
+    ],
+    exports: [
+        LayoutComponent,
+    ]
 })
 export class CoreModule { }

@@ -4,9 +4,10 @@ import { SwapperDirective } from '../../directives/swapper.directive';
 import { Breakpoints } from 'src/app/core/utils';
 type direction = 'prev' | 'next';
 @Component({
-  selector: 'app-swapper-button',
-  templateUrl: './swapper-button.component.html',
-  styleUrls: ['./swapper-button.component.scss'],
+    selector: 'app-swapper-button',
+    templateUrl: './swapper-button.component.html',
+    styleUrls: ['./swapper-button.component.scss'],
+    standalone: true,
 })
 export class SwapperButtonComponent implements OnInit, AfterViewInit {
   @Input() set swapper(swapperDirective: SwapperDirective) {

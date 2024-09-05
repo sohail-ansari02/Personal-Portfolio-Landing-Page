@@ -9,8 +9,9 @@ import {
 import { toRem } from 'src/app/core/utils';
 
 @Directive({
-  selector: '.swapper',
-  exportAs: 'swapper,',
+    selector: '.swapper',
+    exportAs: 'swapper,',
+    standalone: true,
 })
 export class SwapperDirective implements OnInit, AfterViewInit {
   @Input() total: number = 0;
