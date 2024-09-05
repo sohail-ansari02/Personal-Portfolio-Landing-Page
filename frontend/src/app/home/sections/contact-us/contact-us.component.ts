@@ -5,9 +5,7 @@ import {
   ElementRef,
   OnInit,
   TemplateRef,
-  ViewChild,
-  input
-} from '@angular/core';
+  input, viewChild } from '@angular/core';
 
 import Toastify from 'toastify-js';
 import { environment } from 'src/environments/environment';
@@ -23,7 +21,7 @@ import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
     imports: [NgxFlickeringGridComponent, NgxBorderBeamComponent],
 })
 export class ContactUsComponent implements OnInit, AfterViewInit {
-  @ViewChild('form') form!: ElementRef;
+  form = viewChild<ElementRef>('form');
   url: string = environment.ContactFormUrl;
   data = input<any>();
 
@@ -35,7 +33,7 @@ export class ContactUsComponent implements OnInit, AfterViewInit {
 
   onSubmit(evt: Event): void {
     // @ts-ignore
-    window.Pageclip.form(this.form.nativeElement, {
+    window.Pageclip.form(this.form().nativeElement, {
       onSubmit: () => {
         // console.log('submitted');
       },
