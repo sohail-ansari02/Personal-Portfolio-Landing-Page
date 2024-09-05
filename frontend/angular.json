@@ -44,7 +44,10 @@
           "options": {
             "prerender": true,
             "allowedCommonJsDependencies": [
-              "toastify-js"
+              "toastify-js",
+              "event-source-polyfill",
+              "@sanity/image-url",
+              "@sanity/eventsource"
             ],
             "outputPath": {
               "base": "dist/personal-portfolio-landing-page"
