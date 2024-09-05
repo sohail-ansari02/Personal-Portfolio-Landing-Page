@@ -6,12 +6,14 @@ import {
   effect,
   input,
 } from '@angular/core';
+import { NgxStarrySkyComponent } from '@omnedia/ngx-starry-sky';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-hero',
+    templateUrl: './hero.component.html',
+    styleUrls: ['./hero.component.scss'],
+    standalone: true,
+    imports: [NgxStarrySkyComponent],
 })
 export class HeroComponent implements OnDestroy {
   data = input<any>();
@@ -20,7 +22,6 @@ export class HeroComponent implements OnDestroy {
     this.words = [this.data()?.heading];
   });
 
-  constructor() {}
   ngOnDestroy(): void {
     this.wordEffect.destroy();
   }

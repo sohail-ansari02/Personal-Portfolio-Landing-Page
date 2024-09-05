@@ -1,14 +1,17 @@
-import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, inject, input } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { SwapperDirective } from '../../directives/swapper.directive';
 import { Breakpoints } from 'src/app/core/utils';
 type direction = 'prev' | 'next';
 @Component({
-  selector: 'app-swapper-button',
-  templateUrl: './swapper-button.component.html',
-  styleUrls: ['./swapper-button.component.scss'],
+    selector: 'app-swapper-button',
+    templateUrl: './swapper-button.component.html',
+    styleUrls: ['./swapper-button.component.scss'],
+    standalone: true,
 })
 export class SwapperButtonComponent implements OnInit, AfterViewInit {
+  private breakpointObserver = inject(BreakpointObserver);
+
   @Input() set swapper(swapperDirective: SwapperDirective) {
     // console.log(swapperDirective);
     this._swapper = swapperDirective;
@@ -23,7 +26,10 @@ export class SwapperButtonComponent implements OnInit, AfterViewInit {
   counter: number = 0;
   isMobile: boolean = false;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+
+  constructor() {}
   ngOnInit(): void {
     // console.log('SwapperButtonComponent', this.swapper.swapper);
     this.breakpointObserver
@@ -44,7 +50,7 @@ export class SwapperButtonComponent implements OnInit, AfterViewInit {
     let totalWidth = this.swapperEl.scrollWidth;
     if (dir == 'next') {
       this.counter++;
-      let cardToShow = this._swapper.cardToShow;
+      let cardToShow = this._swapper.cardToShow();
       let showIndex = cardToShow + 1;
       this.swapperEl.offsetWidth;
       this.swapperEl.scrollTo(this.swapperEl.offsetWidth * (this.counter), 0);

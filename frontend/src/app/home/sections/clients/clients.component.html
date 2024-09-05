@@ -2,10 +2,9 @@
   <section class="clients container section">
     <h2 class="clients__heading">Testimonials</h2>
     <h3 class="clients__sub-heading">Building Trust with Our Clients</h3>
-    <app-swapper-button
-      [swapper]="swapper"
+    <app-swapper-button [swapper]="swapper"
       class="clients__swapper-btn"
-    ></app-swapper-button>
+     />
 
     <ul
       #swapper="swapper"
@@ -14,13 +13,14 @@
       [cardToShow]="4"
       [gap]="30"
       class="clients__list swapper"
-    >
-      <li
-        *ngFor="let client of clients"
-        class="clients__list-item swapper-item"
       >
-        <app-client-card [data]="client"></app-client-card>
-      </li>
+      @for (client of clients; track client) {
+        <li
+          class="clients__list-item swapper-item"
+          >
+          <app-client-card [data]="client" />
+        </li>
+      }
     </ul>
   </section>
 </om-flickering-grid>

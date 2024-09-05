@@ -2,12 +2,20 @@ import { ChangeDetectionStrategy, Component, input, OnInit } from '@angular/core
 import { Tabs } from 'src/app/shared/interfaces/tabs';
 import { InfoList } from '../../interfaces/info-list';
 import { Project, ProjectType } from '../../interfaces/project';
+import { NgxStarrySkyComponent } from '@omnedia/ngx-starry-sky';
+
+import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-projects',
+    templateUrl: './projects.component.html',
+    styleUrls: ['./projects.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+    NgxStarrySkyComponent,
+    NgxShineBorderComponent
+],
 })
 export class ProjectsComponent implements OnInit, Tabs<Project> {
   data = input<any>();

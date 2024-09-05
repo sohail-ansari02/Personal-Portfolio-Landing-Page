@@ -20,12 +20,13 @@ interface IPosition {
 type MouseDirection = "UP" | "DOWN";
 
 @Directive({
-  selector: '[appStickyNavbar]',
-  host: {
-    '(mouseenter)': 'showOnHover()? hover.set(true) : null',
-    '(mouseleave)': 'showOnHover()? hover.set(false) : null',
-  },
-  exportAs: 'appStickyNavbar'
+    selector: '[appStickyNavbar]',
+    host: {
+        '(mouseenter)': 'showOnHover()? hover.set(true) : null',
+        '(mouseleave)': 'showOnHover()? hover.set(false) : null',
+    },
+    exportAs: 'appStickyNavbar',
+    standalone: true
 })
 export class StickyNavbarDirective implements OnDestroy {
   showOnHover = input(false);

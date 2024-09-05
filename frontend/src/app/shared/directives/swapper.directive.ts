@@ -1,25 +1,27 @@
-import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  Input,
-  OnInit,
-} from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, OnInit, inject, input } from '@angular/core';
 // import { Swapper } from '../classes/swapper';
 import { toRem } from 'src/app/core/utils';
 
 @Directive({
-  selector: '.swapper',
-  exportAs: 'swapper,',
+    selector: '.swapper',
+    exportAs: 'swapper,',
+    standalone: true,
 })
 export class SwapperDirective implements OnInit, AfterViewInit {
-  @Input() total: number = 0;
-  @Input() cardWidth: number = 0;
-  @Input() cardToShow: number = 0;
-  @Input() gap: number = 0;
+  e1 = inject(ElementRef);
+
+  total = input<number>(0);
+  cardWidth = input<number>(0);
+  cardToShow = input<number>(0);
+  gap = input<number>(0);
 
   swapper: HTMLElement;
-  constructor(public e1: ElementRef) {
+
+  /** Inserted by Angular inject() migration for backwards compatibility */
+  constructor(...args: unknown[]);
+  constructor() {
+    const e1 = this.e1;
+
     this.swapper = e1.nativeElement;
   }
   ngOnInit(): void {
@@ -68,9 +70,9 @@ export class SwapperDirective implements OnInit, AfterViewInit {
   }
   initStyling(): void {
     this.swapper.style.gap = toRem(30);
-    let s = `repeat(${this.total},  calc(
-      (100% - ${toRem(this.gap)} * ( ${this.cardToShow} - 1) )
-      / ${this.cardToShow})
+    let s = `repeat(${this.total()},  calc(
+      (100% - ${toRem(this.gap())} * ( ${this.cardToShow()} - 1) )
+      / ${this.cardToShow()})
       )`;
 
     this.swapper.style.gridTemplateColumns = s;

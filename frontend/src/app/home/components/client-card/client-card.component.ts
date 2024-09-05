@@ -1,17 +1,20 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
+
 import { Client } from '../../interfaces/client';
+import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
+import { RangePipe } from '../../../shared/pipes/range.pipe';
 
 @Component({
-  selector: 'app-client-card',
-  templateUrl: './client-card.component.html',
-  styleUrls: ['./client-card.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'app-client-card',
+    templateUrl: './client-card.component.html',
+    styleUrls: ['./client-card.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [NgxShineBorderComponent, RangePipe]
 })
 export class ClientCardComponent implements OnInit {
-  @Input() data: Client | undefined = undefined;
-  constructor() { }
+  data = input.required<Client>();
 
   ngOnInit(): void {
   }
-
 }

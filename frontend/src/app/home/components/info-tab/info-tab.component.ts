@@ -2,18 +2,21 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, effect, inject, 
 import { InfoList } from '../../interfaces/info-list';
 import { Info } from '../../interfaces/info';
 import { Tabs } from 'src/app/shared/interfaces/tabs';
+import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-info-tab',
-  templateUrl: './info-tab.component.html',
-  styleUrls: ['./info-tab.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-info-tab',
+    templateUrl: './info-tab.component.html',
+    styleUrls: ['./info-tab.component.scss'],
+    standalone: true,
+    imports: [
+    NgClass
+],
 })
 export class InfoTabComponent implements OnInit, Tabs<Info> {
   tabData = input<InfoList<Info>[]>([]);
   selectedTab: string = '';
   selectedData: Info[] = [];
-  constructor() {}
 
   ngOnInit(): void {
   }

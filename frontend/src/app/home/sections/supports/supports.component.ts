@@ -8,12 +8,15 @@ import {
 } from '@angular/core';
 
 import { single } from 'rxjs';
+import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
+
 
 @Component({
-  selector: 'app-supports',
-  templateUrl: './supports.component.html',
-  styleUrls: ['./supports.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-supports',
+    templateUrl: './supports.component.html',
+    styleUrls: ['./supports.component.scss'],
+    standalone: true,
+    imports: [NgxMarqueeComponent],
 })
 export class SupportsComponent implements OnInit {
   data = input<any>();

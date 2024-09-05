@@ -1,6 +1,6 @@
-  <a role="button" class="skip-to-content-link btn" href="#about me">
-    Skip to content
-  </a>
+<a role="button" class="skip-to-content-link btn" href="#about me">
+  Skip to content
+</a>
 <header id="home" class="header container">
   <img
     src="assets/images/logo/sohail-ansari.logo.svg"
@@ -9,9 +9,9 @@
     height="50"
     class="header__logo"
     fetchpriority="high"
-  />
-  <!-- <span>
-   [ LOGO ]
+    />
+    <!-- <span>
+    [ LOGO ]
   </span> -->
   <button class="header__mobile-nav-btn" (click)="onToggle()">
     <img
@@ -19,40 +19,41 @@
       alt="menu button"
       width="31.333"
       height="32"
-    />
-  </button>
-  <nav
-  *ngIf="showMobileMenu"
+      />
+    </button>
+    @if (showMobileMenu) {
+      <nav
     [ngClass]="{
       header__nav: true,
       'header__nav--open': openMenu
     }"
-  >
-    <div class="header__mobile-nav-btn header__nav-btn" (click)="onToggle()">
-      <img
-        src="assets/images/icons/close.svg"
-        alt="menu button"
-        width="31.333"
-        height="32"
-      />
-    </div>
-    <ul class="header__links">
-      <li
+        >
+        <div class="header__mobile-nav-btn header__nav-btn" (click)="onToggle()">
+          <img
+            src="assets/images/icons/close.svg"
+            alt="menu button"
+            width="31.333"
+            height="32"
+            />
+          </div>
+          <ul class="header__links">
+            @for (link of links; track link) {
+              <li
+                (click)="onToggle()"
+                class="header__link-item"
+                >
+                <a class="header__link" href="#{{ link }}">{{ link }}</a>
+              </li>
+            }
+          </ul>
+          <!-- <button class="header__btn btn">Let’s chat</button> -->
+        </nav>
+      }
+      <div
         (click)="onToggle()"
-        *ngFor="let link of links"
-        class="header__link-item"
-      >
-        <a class="header__link" href="#{{ link }}">{{ link }}</a>
-      </li>
-    </ul>
-
-    <!-- <button class="header__btn btn">Let’s chat</button> -->
-  </nav>
-  <div
-    (click)="onToggle()"
     [ngClass]="{
       'header__nav-overlay': true,
       'header__nav-overlay--show': openMenu
     }"
-  ></div>
-</header>
+      ></div>
+    </header>
