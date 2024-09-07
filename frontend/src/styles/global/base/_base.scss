@@ -81,3 +81,11 @@ input,textarea{
   border-radius: 4px;
   background-color: $--clr-background;
 }
+
+
+.cover-background{
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: -1;
+}

@@ -16,19 +16,19 @@ export class HomeService {
   };
   private builder = imageUrlBuilder(this.sanityClientCredentials.option);
 
-  private masterData$ = new BehaviorSubject({
-    heroSection: undefined,
-    technology: undefined,
-    aboutMe: undefined,
-    services: undefined,
-    stats: undefined,
-    projects: undefined,
-    testimonials: undefined,
-    contact: undefined,
-  });
-  get masterData() {
-    return this.masterData$.asObservable();
-  }
+  // private masterData$ = new BehaviorSubject({
+  //   heroSection: undefined,
+  //   technology: undefined,
+  //   aboutMe: undefined,
+  //   services: undefined,
+  //   stats: undefined,
+  //   projects: undefined,
+  //   testimonials: undefined,
+  //   contact: undefined,
+  // });
+  // get masterData() {
+  //   return this.masterData$.asObservable();
+  // }
 
   constructor() {
     this.getAllData();
@@ -67,8 +67,8 @@ export class HomeService {
             return { ...data, imageUrl: this.urlFor(data.image) };
           }
         );
-        console.log('masterData', masterData);
-        this.masterData$.next(masterData);
+        // console.log('masterData', masterData);
+        // this.masterData$.next(masterData);
         return masterData;
       })
     );
