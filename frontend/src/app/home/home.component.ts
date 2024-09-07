@@ -1,4 +1,14 @@
-import { Component, DestroyRef, OnInit, inject } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  DestroyRef,
+  OnInit,
+  PLATFORM_ID,
+  TransferState,
+  inject,
+  makeStateKey,
+} from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 import { AboutMeComponent } from './sections/about-me/about-me.component';
 import { ContactUsComponent } from './sections/contact-us/contact-us.component';
@@ -22,17 +32,27 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     ServicesComponent,
     StatsComponent,
     ProjectsComponent,
-    ContactUsComponent
+    ContactUsComponent,
   ],
 })
 export class HomeComponent implements OnInit {
   private hs = inject(HomeService);
   private readonly destryRef = inject(DestroyRef);
   masterData: any;
+
+  platformId = inject(PLATFORM_ID);
+  transferState = inject(TransferState);
+  myKey = makeStateKey<any>('masterData');
   constructor() {}
   ngOnInit(): void {
-    this.hs.getAllData()
-      .pipe(takeUntilDestroyed(this.destryRef))
-      .subscribe((val) => (this.masterData = val));
+    if (isPlatformServer(this.platformId)) {
+      this.hs.getAllData().subscribe((val) => {
+        this.transferState.set(this.myKey, val);
+        console.log(Date.now(), 'server', val.heroSection.heading);
+      });
+    } else if (isPlatformBrowser(this.platformId)) {
+      this.masterData = this.transferState.get(this.myKey, undefined);
+      console.log(Date.now(), 'client', this.masterData?.heroSection?.heading);
+    }
   }
 }
