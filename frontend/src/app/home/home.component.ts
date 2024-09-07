@@ -45,14 +45,17 @@ export class HomeComponent implements OnInit {
   myKey = makeStateKey<any>('masterData');
   constructor() {}
   ngOnInit(): void {
-    if (isPlatformServer(this.platformId)) {
-      this.hs.getAllData().subscribe((val) => {
-        this.transferState.set(this.myKey, val);
-        console.log(Date.now(), 'server', val.heroSection.heading);
-      });
-    } else if (isPlatformBrowser(this.platformId)) {
-      this.masterData = this.transferState.get(this.myKey, undefined);
-      console.log(Date.now(), 'client', this.masterData?.heroSection?.heading);
-    }
+    this.hs.getAllData().subscribe((val) => {
+      this.masterData = val;
+    });
+    // if (isPlatformServer(this.platformId)) {
+    //   this.hs.getAllData().subscribe((val) => {
+    //     this.transferState.set(this.myKey, val);
+    //     console.log(Date.now(), 'server', val.heroSection.heading);
+    //   });
+    // } else if (isPlatformBrowser(this.platformId)) {
+    //   this.masterData = this.transferState.get(this.myKey, undefined);
+    //   console.log(Date.now(), 'client', this.masterData?.heroSection?.heading);
+    // }
   }
 }
