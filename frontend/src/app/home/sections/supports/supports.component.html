@@ -13,11 +13,11 @@
         @if(firstRow().length > 0 && secondRow().length > 0){ @for (item of
         firstRow(); track $index) {
         <span style="display: none;">
-          {{ item }}
+          {{ item.name }}
         </span>
-        } @for (item of secondRow(); track $index) {
+      } @for (item of secondRow(); track $index) {
         <span style="display: none;">
-          {{ item }}
+          {{ item.name }}
         </span>
         }
         <ng-container></ng-container>
