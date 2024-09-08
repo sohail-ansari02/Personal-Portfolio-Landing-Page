@@ -4,10 +4,13 @@
 <app-about-me id="about me" [data]="masterData?.aboutMe" />
 }
 <!-- <app-services id="services" [data]="masterData?.services" /> -->
-@defer () {
+@defer {
 <app-stats [data]="masterData?.stats" />
+} @defer{
 <app-projects id="projects" [data]="masterData?.projects" />
+}
 <!-- <app-clients /> -->
-<app-contact-us id="contact me" [data]="masterData?.contact" />
+@defer{
 
+<app-contact-us id="contact me" [data]="masterData?.contact" />
 }
