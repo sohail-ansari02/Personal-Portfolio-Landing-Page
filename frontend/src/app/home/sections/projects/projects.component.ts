@@ -5,6 +5,7 @@ import { Project, ProjectType } from '../../interfaces/project';
 import { NgxStarrySkyComponent } from '@omnedia/ngx-starry-sky';
 
 import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
+import { ShowOnClientSideDirective } from 'src/app/shared/directive/show-on-client-side.directive';
 
 @Component({
     selector: 'app-projects',
@@ -14,7 +15,8 @@ import { NgxShineBorderComponent } from '@omnedia/ngx-shine-border';
     standalone: true,
     imports: [
     NgxStarrySkyComponent,
-    NgxShineBorderComponent
+    NgxShineBorderComponent,
+    ShowOnClientSideDirective
 ],
 })
 export class ProjectsComponent implements OnInit, Tabs<Project> {

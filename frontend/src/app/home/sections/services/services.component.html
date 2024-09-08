@@ -1,35 +1,39 @@
-@if(data()){
-  @let info = data();
-  <om-retro-grid [gridColor]="'#fff'" [fadeColor]="'var(--clr-background)'">
-    <section class="services container section">
-      <h2 class="services__heading"> {{info.heading}} </h2>
-      <h3 class="services__sub-heading">
-        {{info.subheading}}
-        <!-- Elevating Design<span class="special"> Mastery</span> -->
-      </h3>
-      <p class="services__desc">
-        {{info.paragraph}}
-        <!-- Turning your ideas into a distinctive web project that not only inspires
-        but also captivates users. -->
-      </p>
-
-      <app-swapper-button [swapper]="swapper"
-        class="services__swapper-btn"
-       />
-      <ul
-        #swapper="swapper"
-        [total]="10"
-        [cardWidth]="360"
-        [cardToShow]="4"
-        [gap]="30"
-        class="services__list swapper"
-        >
-        @for (i of info.servicesArray; track i) {
-          <li class="services__list-item swapper-item">
-            <app-service-card  />
-          </li>
-        }
-      </ul>
-    </section>
+@if(data()){ @let info = data();
+<div class="container-full">
+  <om-retro-grid
+    *appShowOnClientSide
+    class="cover-background"
+    [gridColor]="'#fff'"
+    [fadeColor]="'var(--clr-background)'"
+  >
   </om-retro-grid>
+  <section class="services container section">
+    <h2 class="services__heading">{{ info.heading }}</h2>
+    <h3 class="services__sub-heading">
+      {{ info.subheading }}
+      <!-- Elevating Design<span class="special"> Mastery</span> -->
+    </h3>
+    <p class="services__desc">
+      {{ info.paragraph }}
+      <!-- Turning your ideas into a distinctive web project that not only inspires
+        but also captivates users. -->
+    </p>
+
+    <app-swapper-button [swapper]="swapper" class="services__swapper-btn" />
+    <ul
+      #swapper="swapper"
+      [total]="10"
+      [cardWidth]="360"
+      [cardToShow]="4"
+      [gap]="30"
+      class="services__list swapper"
+    >
+      @for (i of info.servicesArray; track i) {
+      <li class="services__list-item swapper-item">
+        <app-service-card />
+      </li>
+      }
+    </ul>
+  </section>
+</div>
 }

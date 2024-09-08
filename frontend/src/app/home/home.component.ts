@@ -5,12 +5,15 @@ import {
   OnInit,
   PLATFORM_ID,
   TransferState,
+  afterNextRender,
   inject,
   makeStateKey,
 } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 import { AboutMeComponent } from './sections/about-me/about-me.component';
+import { ClientCardComponent } from "./components/client-card/client-card.component";
+import { ClientsComponent } from "./sections/clients/clients.component";
 import { ContactUsComponent } from './sections/contact-us/contact-us.component';
 import { HeroComponent } from './sections/hero/hero.component';
 import { HomeService } from './home.service';
@@ -33,7 +36,9 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     StatsComponent,
     ProjectsComponent,
     ContactUsComponent,
-  ],
+    ClientCardComponent,
+    ClientsComponent
+],
 })
 export class HomeComponent implements OnInit {
   private hs = inject(HomeService);
@@ -43,7 +48,7 @@ export class HomeComponent implements OnInit {
   platformId = inject(PLATFORM_ID);
   transferState = inject(TransferState);
   myKey = makeStateKey<any>('masterData');
-  constructor() {}
+
   ngOnInit(): void {
     this.hs.getAllData().subscribe((val) => {
       this.masterData = val;

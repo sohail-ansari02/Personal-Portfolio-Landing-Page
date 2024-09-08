@@ -1,7 +1,8 @@
-import { BehaviorSubject, from, map } from 'rxjs';
+import { BehaviorSubject, from, map, of } from 'rxjs';
 
 import { Injectable } from '@angular/core';
 import { createClient } from '@sanity/client';
+import { homeDataConst } from './home.const';
 import imageUrlBuilder from '@sanity/image-url';
 
 @Injectable({
@@ -37,6 +38,7 @@ export class HomeService {
     return this.builder.image(source).url();
   }
   getAllData() {
+    return of(homeDataConst);
     return from(this.sanityClientCredentials.option.fetch(`*`)).pipe(
       map((val: any[]) => {
         let masterData = {

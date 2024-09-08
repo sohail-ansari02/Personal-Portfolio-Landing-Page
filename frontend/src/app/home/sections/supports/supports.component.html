@@ -1,53 +1,55 @@
 @if(data()){ @let info = data();
-  <div class="container-full">
-    <section class="supports-wrapper container section">
-      <h2 class="supports__heading">{{ info.subheading }}</h2>
-      <h3 class="supports__sub-heading">
-        <!-- Tools & Frameworks Powering My
-        <span class="special">Frontend Development</span> -->
-        {{ info.heading }}
-      </h3>
-      <p class="supports__desc">
-        {{ info.paragraph }}
-      </p>
-      <div class="supports container">
-        <div class="marquee-wrapper">
-          @if(firstRow().length > 0 && secondRow().length > 0){
-            <om-marquee>
-              @for (tech of firstRow(); track tech) {
-                <div
-                  #OmMarqueeContent
-                  class="supports-item"
-                  >
-                  <img
-                    class="supports-image"
-                    [src]="tech.imageUrl"
-                    [alt]="tech.name"
-                    [title]="tech.name"
-                    />
-                  </div>
-                }
-              </om-marquee>
-              <om-marquee [reverse]="true">
-                @for (tech of secondRow(); track tech) {
-                  <div
-                    #OmMarqueeContent
-                    class="supports-item"
-                    >
-                    <img
-                      class="supports-image"
-                      src="{{ tech.imageUrl }}"
-                      alt="{{ tech.name }}"
-                      title="{{ tech.name }}"
-                      />
-                    </div>
-                  }
-                </om-marquee>
-              }
-              <div class="marquee-gradient left"></div>
-              <div class="marquee-gradient right"></div>
-            </div>
+<div class="container-full">
+  <section class="supports-wrapper container section">
+    <h2 class="supports__heading">{{ info.subheading }}</h2>
+    <h3 class="supports__sub-heading">
+      {{ info.heading }}
+    </h3>
+    <p class="supports__desc">
+      {{ info.paragraph }}
+    </p>
+    <div class="supports container">
+      <div class="marquee-wrapper">
+        @if(firstRow().length > 0 && secondRow().length > 0){ @for (item of
+        firstRow(); track $index) {
+        <span style="display: none;">
+          {{ item }}
+        </span>
+        } @for (item of secondRow(); track $index) {
+        <span style="display: none;">
+          {{ item }}
+        </span>
+        }
+        <ng-container></ng-container>
+        <om-marquee *appShowOnClientSide>
+          @for (tech of firstRow(); track tech) {
+          <div #OmMarqueeContent class="supports-item">
+            <img
+              class="supports-image"
+              [src]="tech.imageUrl"
+              [alt]="tech.name"
+              [title]="tech.name"
+            />
           </div>
-        </section>
+          }
+        </om-marquee>
+        <om-marquee *appShowOnClientSide [reverse]="true">
+          @for (tech of secondRow(); track tech) {
+          <div #OmMarqueeContent class="supports-item">
+            <img
+              class="supports-image"
+              src="{{ tech.imageUrl }}"
+              alt="{{ tech.name }}"
+              title="{{ tech.name }}"
+            />
+          </div>
+          }
+        </om-marquee>
+        }
+        <div class="marquee-gradient left"></div>
+        <div class="marquee-gradient right"></div>
       </div>
-    }
+    </div>
+  </section>
+</div>
+}

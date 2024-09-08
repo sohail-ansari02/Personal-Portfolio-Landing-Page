@@ -1,5 +1,12 @@
 @if(data()){ @let info = data();
-<om-dotpattern styleClass="dotpattern" patternColor="var(--clr-primary)">
+<div class="container-full">
+  <om-dotpattern
+    *appShowOnClientSide
+    class="cover-background"
+    styleClass="dotpattern"
+    patternColor="var(--clr-primary)"
+  >
+  </om-dotpattern>
   <section class="about-me container section">
     <picture class="about-me__picture">
       <!-- srcset="
@@ -40,5 +47,5 @@
       <app-info-tab class="about-me__tabs" [tabData]="tabInfo" />
     </div>
   </section>
-</om-dotpattern>
+</div>
 }

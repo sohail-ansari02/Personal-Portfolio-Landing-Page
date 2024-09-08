@@ -7,16 +7,16 @@ import {
   signal,
 } from '@angular/core';
 
-import { single } from 'rxjs';
 import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
-
+import { ShowOnClientSideDirective } from 'src/app/shared/directive/show-on-client-side.directive';
+import { single } from 'rxjs';
 
 @Component({
     selector: 'app-supports',
     templateUrl: './supports.component.html',
     styleUrls: ['./supports.component.scss'],
     standalone: true,
-    imports: [NgxMarqueeComponent],
+    imports: [NgxMarqueeComponent,ShowOnClientSideDirective],
 })
 export class SupportsComponent implements OnInit {
   data = input<any>();
