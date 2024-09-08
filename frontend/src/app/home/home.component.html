@@ -1,8 +1,13 @@
 <app-hero [data]="masterData?.heroSection" id="hero" />
 <app-supports [data]="masterData?.technology" />
+@defer ( on immediate) {
 <app-about-me id="about me" [data]="masterData?.aboutMe" />
+}
 <!-- <app-services id="services" [data]="masterData?.services" /> -->
+@defer () {
 <app-stats [data]="masterData?.stats" />
 <app-projects id="projects" [data]="masterData?.projects" />
 <!-- <app-clients /> -->
-<app-contact-us id="contact me"  [data]="masterData?.contact" />
+<app-contact-us id="contact me" [data]="masterData?.contact" />
+
+}
