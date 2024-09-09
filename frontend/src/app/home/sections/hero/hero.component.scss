@@ -1,4 +1,7 @@
 @import "abstracts";
+:host{
+  position: relative;
+}
 .hero {
   $header-height: toRem(95);
   display: flex;

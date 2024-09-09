@@ -1,4 +1,7 @@
 @import "abstracts";
+:host{
+  position: relative;
+}
 .projects {
   text-align: center;
   &__heading {
