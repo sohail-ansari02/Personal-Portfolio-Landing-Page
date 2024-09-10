@@ -37,8 +37,10 @@ export class HomeService {
   private urlFor(source: any) {
     return this.builder.image(source).url();
   }
-  getAllData() {
+  getAllStaticData() {
     return of(homeDataConst);
+  }
+  getAllData() {
     return from(this.sanityClientCredentials.option.fetch(`*`)).pipe(
       map((val: any[]) => {
         let masterData = {
