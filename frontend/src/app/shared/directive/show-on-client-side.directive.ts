@@ -8,7 +8,7 @@ import {
 
 @Directive({
 	selector: "[appShowOnClientSide]",
-	standalone: true,
+	standalone: true, 
 })
 export class ShowOnClientSideDirective {
 	constructor(
