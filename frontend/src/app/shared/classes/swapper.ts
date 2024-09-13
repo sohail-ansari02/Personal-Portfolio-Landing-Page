@@ -3,7 +3,6 @@ import { input } from "@angular/core";
 // import { AfterViewInit, Directive, Input } from '@angular/core';
 // import { toRem } from 'src/app/core/utils';
 
-
 // @Directive()
 // export abstract class Swapper implements AfterViewInit {
 //   @Input() total: number = 0;

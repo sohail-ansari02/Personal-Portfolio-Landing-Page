@@ -1,5 +1,5 @@
 export interface Info {
-  name: string;
-  text?:string;
-  progress?: number;
+	name: string;
+	text?: string;
+	progress?: number;
 }
