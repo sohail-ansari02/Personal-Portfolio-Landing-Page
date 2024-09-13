@@ -14,7 +14,11 @@ import { ShowOnClientSideDirective } from "src/app/shared/directive/show-on-clie
 	templateUrl: "./stats.component.html",
 	styleUrls: ["./stats.component.scss"],
 	standalone: true,
-	imports: [NgxDotpatternComponent, NgxShineBorderComponent, ShowOnClientSideDirective],
+	imports: [
+		NgxDotpatternComponent,
+		NgxShineBorderComponent,
+		ShowOnClientSideDirective,
+	],
 })
 export class StatsComponent implements OnInit {
 	data = input<any>();

@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.hs.getAllStaticData().subscribe((val) => {
-		  this.masterData = val;
+			this.masterData = val;
 		});
 		// if (isPlatformServer(this.platformId)) {
 		// 	this.hs.getAllData().subscribe((val) => {

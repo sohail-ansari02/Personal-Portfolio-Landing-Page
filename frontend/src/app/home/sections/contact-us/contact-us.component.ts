@@ -21,7 +21,11 @@ import { toast } from "src/app/core/utils";
 	templateUrl: "./contact-us.component.html",
 	styleUrls: ["./contact-us.component.scss"],
 	standalone: true,
-	imports: [NgxFlickeringGridComponent, NgxBorderBeamComponent, ShowOnClientSideDirective],
+	imports: [
+		NgxFlickeringGridComponent,
+		NgxBorderBeamComponent,
+		ShowOnClientSideDirective,
+	],
 })
 export class ContactUsComponent implements OnInit, AfterViewInit {
 	form = viewChild<ElementRef>("form");
