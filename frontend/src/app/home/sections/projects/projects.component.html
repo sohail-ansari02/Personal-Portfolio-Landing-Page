@@ -1,13 +1,15 @@
 @if(data()){ @let info = data();
 <div class="container-full">
+  @defer(on immediate){
+
   <om-starry-sky
-    *appShowOnClientSide
     class="cover-background"
     [shootingStarsConfig]="{ minDelay: 500, maxDelay: 3000 }"
     [starsBackgroundConfig]="{ starDensity: 0.0015 }"
     [skyColor]="'var(--clr-background)'"
   >
   </om-starry-sky>
+  }
   <section class="projects container section">
     <h2 class="projects__heading">
       {{ info.heading }}
@@ -43,6 +45,7 @@
             class="projects__image"
             [src]="project?.imageUrl"
             [alt]="project?.name"
+            loading="lazy"
           />
           <div class="projects__list-item-name">
             <span>

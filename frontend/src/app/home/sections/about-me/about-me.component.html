@@ -1,12 +1,16 @@
 @if(data()){ @let info = data();
 <div class="container-full">
-  <om-dotpattern
-    *appShowOnClientSide
-    class="cover-background"
-    styleClass="dotpattern"
-    patternColor="var(--clr-primary)"
-  >
-  </om-dotpattern>
+  @defer(on immediate){
+
+  <div class="cover-background">
+    <om-dotpattern
+      class="cover-background"
+      styleClass="dotpattern"
+      patternColor="var(--clr-primary)"
+    >
+    </om-dotpattern>
+  </div>
+  }
   <section class="about-me container section">
     <picture class="about-me__picture">
       <!-- srcset="

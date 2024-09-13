@@ -4,16 +4,17 @@ import {
 	OnInit,
 	input,
 } from "@angular/core";
-import { NgxDotpatternComponent } from "@omnedia/ngx-dotpattern";
 
+import { NgxDotpatternComponent } from "@omnedia/ngx-dotpattern";
 import { NgxShineBorderComponent } from "@omnedia/ngx-shine-border";
+import { ShowOnClientSideDirective } from "src/app/shared/directive/show-on-client-side.directive";
 
 @Component({
 	selector: "app-stats",
 	templateUrl: "./stats.component.html",
 	styleUrls: ["./stats.component.scss"],
 	standalone: true,
-	imports: [NgxDotpatternComponent, NgxShineBorderComponent],
+	imports: [NgxDotpatternComponent, NgxShineBorderComponent, ShowOnClientSideDirective],
 })
 export class StatsComponent implements OnInit {
 	data = input<any>();

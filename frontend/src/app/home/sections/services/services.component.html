@@ -1,12 +1,13 @@
 @if(data()){ @let info = data();
 <div class="container-full">
+  @defer(on immediate){
   <om-retro-grid
-    *appShowOnClientSide
     class="cover-background"
     [gridColor]="'#fff'"
     [fadeColor]="'var(--clr-background)'"
   >
   </om-retro-grid>
+  }
   <section class="services container section">
     <h2 class="services__heading">{{ info.heading }}</h2>
     <h3 class="services__sub-heading">

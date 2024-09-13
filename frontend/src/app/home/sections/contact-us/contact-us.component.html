@@ -1,9 +1,16 @@
 @if(data()){ @let info = data();
 <div class="container-full">
-  <om-flickering-grid
-    *appShowOnClientSide
-    class="cover-background"
-  ></om-flickering-grid>
+  @defer(on immediate){
+
+  <div class="cover-background">
+    <om-flickering-grid
+      class="cover-background"
+      styleClass="dotpattern"
+      patternColor="var(--clr-primary)"
+    >
+    </om-flickering-grid>
+  </div>
+  }
   <div class="contact-wrapper container-full section">
     <section class="contact container">
       <img

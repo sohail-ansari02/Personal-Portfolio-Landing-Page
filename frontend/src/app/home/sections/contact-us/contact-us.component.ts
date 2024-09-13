@@ -9,18 +9,19 @@ import {
 	viewChild,
 } from "@angular/core";
 
+import { NgxBorderBeamComponent } from "@omnedia/ngx-border-beam";
+import { NgxFlickeringGridComponent } from "@omnedia/ngx-flickering-grid";
+import { ShowOnClientSideDirective } from "src/app/shared/directive/show-on-client-side.directive";
 import Toastify from "toastify-js";
 import { environment } from "src/environments/environment";
 import { toast } from "src/app/core/utils";
-import { NgxFlickeringGridComponent } from "@omnedia/ngx-flickering-grid";
-import { NgxBorderBeamComponent } from "@omnedia/ngx-border-beam";
 
 @Component({
 	selector: "app-contact-us",
 	templateUrl: "./contact-us.component.html",
 	styleUrls: ["./contact-us.component.scss"],
 	standalone: true,
-	imports: [NgxFlickeringGridComponent, NgxBorderBeamComponent],
+	imports: [NgxFlickeringGridComponent, NgxBorderBeamComponent, ShowOnClientSideDirective],
 })
 export class ContactUsComponent implements OnInit, AfterViewInit {
 	form = viewChild<ElementRef>("form");

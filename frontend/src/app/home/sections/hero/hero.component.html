@@ -1,18 +1,19 @@
 @if(data()){ @let info = data();
 <div class="container-full">
-  <om-starry-sky
-    *appShowOnClientSide
-    class="cover-background"
-    skyColor="var(--clr-background)"
-    [shootingStarsConfig]="{
-      minDelay: 500,
-      maxDelay: 1200,
-      starColor: 'var(--clr-secondary)',
-      trailColor: 'var(--clr-neutral)'
-    }"
-    [starsBackgroundConfig]="{ starDensity: 0.002, }"
-  >
-  </om-starry-sky>
+  @defer(on immediate){
+    <om-starry-sky
+      class="cover-background"
+      skyColor="var(--clr-background)"
+      [shootingStarsConfig]="{
+        minDelay: 500,
+        maxDelay: 1200,
+        starColor: 'var(--clr-secondary)',
+        trailColor: 'var(--clr-neutral)'
+      }"
+      [starsBackgroundConfig]="{ starDensity: 0.002, }"
+    >
+    </om-starry-sky>
+  }
 
   <section class="hero container section">
     <!-- {{ info?.heading }} -->

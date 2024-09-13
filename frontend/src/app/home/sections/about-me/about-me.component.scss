@@ -1,6 +1,12 @@
 @import "abstracts";
-:host{
+:host {
   position: relative;
+  isolation: isolate;
+}
+.container-full{
+  position: relative;
+  isolation: isolate;
+
 }
 .about-me {
   display: flex;
