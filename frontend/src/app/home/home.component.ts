@@ -12,6 +12,7 @@ import {
 import { isPlatformBrowser, isPlatformServer } from "@angular/common";
 
 import { AboutMeComponent } from "./sections/about-me/about-me.component";
+import { ActivatedRoute } from "@angular/router";
 import { ClientCardComponent } from "./components/client-card/client-card.component";
 import { ClientsComponent } from "./sections/clients/clients.component";
 import { ContactUsComponent } from "./sections/contact-us/contact-us.component";
@@ -49,18 +50,23 @@ export class HomeComponent implements OnInit {
 	transferState = inject(TransferState);
 	myKey = makeStateKey<any>("masterData");
 
+  constructor(){
+    inject(ActivatedRoute).data.subscribe((val)=> this.masterData = val['home']);
+
+  }
 	ngOnInit(): void {
 		// this.hs.getAllStaticData().subscribe((val) => {
 		// 	this.masterData = val;
 		// });
-		if (isPlatformServer(this.platformId)) {
-			this.hs.getAllData().subscribe((val) => {
-				this.transferState.set(this.myKey, val);
-				console.log(Date.now(), "server", val.heroSection.heading);
-			});
-		} else if (isPlatformBrowser(this.platformId)) {
-			this.masterData = this.transferState.get(this.myKey, undefined);
-			console.log(Date.now(), "client", this.masterData?.heroSection?.heading);
-		}
+
+		// if (isPlatformServer(this.platformId)) {
+		// 	this.hs.getAllData().subscribe((val) => {
+		// 		this.transferState.set(this.myKey, val);
+		// 		console.log(Date.now(), "server", val.heroSection.heading);
+		// 	});
+		// } else if (isPlatformBrowser(this.platformId)) {
+		// 	this.masterData = this.transferState.get(this.myKey, undefined);
+		// 	console.log(Date.now(), "client", this.masterData?.heroSection?.heading);
+		// }
 	}
 }
