@@ -1,6 +1,8 @@
 @import "abstracts";
 :host{
   display: inline-block;
+  transition: $transition-duration;
+  height: calc-size(auto);
 }
 .tab-info {
   &__buttons {
