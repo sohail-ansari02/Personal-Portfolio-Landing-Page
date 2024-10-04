@@ -2,6 +2,7 @@ import {
 	ChangeDetectionStrategy,
 	ChangeDetectorRef,
 	Component,
+	OnChanges,
 	OnInit,
 	effect,
 	inject,
@@ -25,9 +26,8 @@ import { ShowOnClientSideDirective } from "src/app/shared/directive/show-on-clie
 		ShowOnClientSideDirective,
 	],
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent implements OnChanges {
 	data = input<any>();
-	cdRef = inject(ChangeDetectorRef);
 
 	tabInfo: InfoList<Info>[] = [
 		{
@@ -44,8 +44,8 @@ export class AboutMeComponent implements OnInit {
 		},
 	];
 
-	infoEffect = effect(() => {
-		this.tabInfo[0].list = (this.data()?.skills ?? []).map((e: any) => {
+	ngOnChanges(): void {
+    this.tabInfo[0].list = (this.data()?.skills ?? []).map((e: any) => {
 			return <Info>{
 				name: e,
 			};
@@ -62,7 +62,5 @@ export class AboutMeComponent implements OnInit {
 				text: e.instituteName,
 			};
 		});
-	});
-
-	ngOnInit(): void {}
+  }
 }
