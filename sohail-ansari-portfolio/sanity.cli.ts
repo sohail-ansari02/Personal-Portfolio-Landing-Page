@@ -3,6 +3,7 @@ import {defineCliConfig} from 'sanity/cli'
 export default defineCliConfig({
   api: {
     projectId: '0b59bqps',
-    dataset: 'production'
-  }
+    dataset: 'production',
+  },
+  studioHost: 'sohail-ansari-portfolio-cms',
 })
