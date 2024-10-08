@@ -17,6 +17,9 @@
   // height: calc(100vh - $header-height);
   // padding: 0;
 
+  @include respond-to(medium) {
+    height: auto;
+  }
   @include respond-to(small) {
     flex-direction: column-reverse;
     gap: toRem(15);
@@ -75,6 +78,7 @@
   &__image {
     border-radius: 50%;
     width: toRem(553);
+    max-width: toRem(400);
     height: auto;
     aspect-ratio: 1;
     flex: 0 0.5 toRem(553);
